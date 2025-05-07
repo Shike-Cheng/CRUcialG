@@ -286,11 +286,11 @@ if __name__ == '__main__':
 
     logger.info(sys.argv)
     logger.info(args)
-    # ner的标签序号对应的字典
+
     ner_label2id, ner_id2label = get_labelmap(task_ner_labels[args.task])
-    # ner标签的个数+1
+
     num_ner_labels = len(task_ner_labels[args.task]) + 1
-    # model初始化
+
     model = EntityModel(args, num_ner_labels=num_ner_labels)
 
     dev_data = Dataset(args.dev_data)
