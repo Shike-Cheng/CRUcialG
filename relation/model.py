@@ -451,7 +451,6 @@ class DocREModel_KD(nn.Module):
             logits = logits_classifier.view(-1, self.config.num_labels)
             #logits = logits_classifier.view(-1, self.config.num_labels) + logits_label.view(-1, self.config.num_labels)
             output = (self.loss_fnt.get_label(logits, num_labels=self.num_labels), logits)
-            # print(output)   # 猜测是预测的标签
         if labels is not None:
             labels = [torch.tensor(label) for label in labels]
             labels = torch.cat(labels, dim=0).to(device)
