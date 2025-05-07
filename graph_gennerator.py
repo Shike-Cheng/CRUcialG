@@ -1,9 +1,3 @@
-'''
-Author: Wenrui Cheng
-Date: 2023-09-26 12:58:30
-Description: 合并实体和关系预测结果，保留NLP结果的原始信息（共指节点、关系）
-'''
-
 import json
 import argparse
 from operator import itemgetter
@@ -85,7 +79,6 @@ def get_graph(predict_data, data_js, ner_js, win_size):
         final_cti['doc_key'] = key
         final_cti["sentences"] = []
         win_id = 0
-        # 得到准确的CTI报告文本
         for win in value:
             if win_id == 0:
                 for sent in win["sentences"]:
@@ -143,13 +136,12 @@ class Initialize_attack_graph(object):
                 self.res.append(re)
 
     def delete_re(self):
-        # 删除一堆实体之间既存在共指又存在其他类型的关系
         final_re = []
         re_map = {}
         new_re_map = {}
         ner_name_map = {}
         for ner in self.nodes:
-                # ner_name_map[(ner[0], ner[1])] = ner[4]       # 这里做一个实体位置和名字的map
+                # ner_name_map[(ner[0], ner[1])] = ner[4]
             ner_name_map[(ner[0], ner[1])] = ner[4]
 
         for re1 in self.res:
@@ -160,8 +152,7 @@ class Initialize_attack_graph(object):
                 re_map[(re1[0], re1[1], re1[3], re1[4])].append(re1[8])
             elif (re1[3], re1[4], re1[0], re1[1]) in re_map:
                 re_map[(re1[3], re1[4], re1[0], re1[1])].append(re1[8])
-        # print(ner_name_map)
-        print(re_map)
+
         for key, values in re_map.items():
             if 'CO' in values and len(values) > 1:
                 if ner_name_map[(key[0], key[1])] in ['it', 'It', 'them', 'Them', 'this', 'This'] or ner_name_map[(key[2], key[3])] in ['it', 'It', 'them', 'Them', 'this', 'This']:
@@ -171,7 +162,7 @@ class Initialize_attack_graph(object):
                     new_re_map[key] = values
             else:
                 new_re_map[key] = values
-        # print(new_re_map)
+
         for key, values in new_re_map.items():
             for v in values:
                 for re2 in self.res:
@@ -214,15 +205,12 @@ class Initialize_attack_graph(object):
     def get_co_map(self):
         co_list_ = []
         co_map = {}
-        # ner_site_map = {}
         for i in range(len(self.nodes)):
             self.ner_site_map[(self.nodes[i][0], self.nodes[i][1])] = i
-        # print(ner_site_map)
         for re in self.res:
             if re[8] == 'CO':
                 co_list_.append(re)
         sum_cluster_ = self.find_cluster(co_list_)
-        print(sum_cluster_)
         for co_l in sum_cluster_:
             for co_re in co_l:
                 co_map[self.ner_site_map[(co_re[0], co_re[1])]] = self.ner_site_map[(co_l[0][0], co_l[0][1])]
@@ -269,22 +257,14 @@ class Initialize_attack_graph(object):
         return relations
 
     def time_sort_co(self):
-        # 得到关系的序号列表,并添加时序元素
         co_ners = []
         sort_re = []
         co_replace_sort_re = []
         for i in range(len(self.sum_res)):
             self.sum_res[i].append(i)
             sort_re.append([self.ner_site_map[(self.sum_res[i][0], self.sum_res[i][1])], self.ner_site_map[(self.sum_res[i][3], self.sum_res[i][4])], relation_map[self.sum_res[i][8]]])
-        print(sort_re)
-        # new_data['sort_relations'] = sort_re
         co_map = self.get_co_map()
-        # new_data['co_map'] = co_map
-        # print(new_data['co_map'])
-        # 得到共指节点列表
         co_ners = list(co_map.keys())
-        print(co_ners)
-        # 按照共指增加实体的name
         for n in self.nodes:
             if self.ner_site_map[(n[0], n[1])] in co_map:
                 if n[2] == self.nodes[co_map[self.ner_site_map[(n[0], n[1])]]][2]:
@@ -296,7 +276,6 @@ class Initialize_attack_graph(object):
                 else:
                     n[2] += '/' + self.nodes[co_map[self.ner_site_map[(n[0], n[1])]]][2]
 
-        # 按照共指替换sort_re中实体的序号,便于构图
         for re in sort_re:
             if re[0] in co_map:
                 co_replace_sort_re.append([co_map[re[0]], re[1], re[2]])
@@ -316,23 +295,13 @@ def merge_co(graph_js):
 
         init_graph = Initialize_attack_graph(data['ner'], data['relation'])
         new_data['original_ner'] = init_graph.nodes
-        # init_graph.res
-        # 删除不合理的边,同时存在共指和其他关系,得到除去共指关系的排序集合
         init_graph.delete_re()
-        # init_graph.sum_res
-        # 得到共指的实体替换字典
         init_graph.get_co_map()
-        # 得到使用替换字典转换得到的新的实体和关系列表,其中新增了关系的序号列表,用于构图
         new_data['original_relations'] = data['relation']
         new_data['ners'] = init_graph.nodes
         new_data['co_map'], new_data['sort_relations'], new_data['co_replace_sort_relations'], new_data['co_ners'] = init_graph.time_sort_co()
         new_data['relations'] = init_graph.sum_res
 
-        # print(new_data['sort_relations'])
-        # print(new_data['co_replace_sort_relations'])
-        # print(new_data['relations'])
-        # final_path = args.data_output + '\\' + new_data['doc_key'] + '.json'
-        # f = open(final_path, 'w', encoding='utf-8')
         json.dump(new_data, f)
         f.write('\n')
 
@@ -356,10 +325,6 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     win_size = args.sentence_window
-    # json_file = r"E:\CTI_to_ASG\TTP_test\TTP_test_to_predict_re_result.json"       # 关系预测结果
-    # data_file = r"E:\CTI_to_ASG\TTP_test\TTP_test_to_predict_re.json"    # 关系预测数据集
-    # ner_file = r"E:\CTI_to_ASG\TTP_test\TTP_test_ner_result.json"           # 实体预测结果
-    # hrt_file = r"E:\CTI_to_ASG\TTP_test\3TTP_graph"  # 图信息, output
     predict_json = json.load(open(args.data_re_result, "r", encoding="utf-8"))
     data_json = json.load(open(args.data_re, "r", encoding="utf-8"))
     ner_json = read(args.data_ner_result)
