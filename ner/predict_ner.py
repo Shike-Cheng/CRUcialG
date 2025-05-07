@@ -11,7 +11,7 @@ import time
 import psutil
 
 def init_sentences(txt_path, txt_name):
-    # sentences读入
+
     sentences = []
     with open(txt_path + '\\' + txt_name, 'r', encoding='utf-8',errors='replace') as f:
         lines = f.readlines()
@@ -35,7 +35,7 @@ def init_sentences(txt_path, txt_name):
     return words
 
 
-def give_window(x, y):  # 其中，x是步长，y是句子的个数
+def give_window(x, y):
     window_list = []
     if y < x - 1:
         small_list = []
@@ -58,7 +58,7 @@ def get_json_data(txt_path, win_size, json_path):
         # print(li)
         sum_sentences = init_sentences(txt_path, li)
         print(li)
-        len_1 = len(sum_sentences)  # 句子总数
+        len_1 = len(sum_sentences)
         if len_1 == 0:
             continue
         new_list = give_window(win_size, len_1 - 1)
@@ -116,10 +116,7 @@ def output_ner_predictions(model, batches, dataset, output_file):
         output_dict = model.run_batch(batches[i], training=False)
         pred_ner = output_dict['pred_ner']
         pred_prob = output_dict['ner_probs']
-        #print(pred_ner)
         pred_ner = reg_neridentity(batches[i], pred_ner)
-        #print("######################################")
-        #print(pred_ner)
         for sample, preds, probs in zip(batches[i], pred_ner, pred_prob):
             off = sample['sent_start_in_doc'] - sample['sent_start']
             k = sample['doc_key'] + '-' + str(sample['sentence_ix'])
@@ -184,7 +181,7 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     ner_label2id, ner_id2label = get_labelmap(task_ner_labels[args.task])
-    # ner标签的个数+1
+
     num_ner_labels = len(task_ner_labels[args.task]) + 1
 
     args.bert_model_dir = args.output_dir
@@ -204,13 +201,5 @@ if __name__ == '__main__':
     output_ner_predictions(model, test_batches, test_data, output_file=args.test_pred_filename)
 
     end_time = time.time()
-
-    # 计算代码运行时间（以秒为单位）
     execution_time = end_time - start_time
-
-    print("代码执行时间：", execution_time, "秒")
-
-    # 获取 CPU 利用率
-    cpu_usage = psutil.cpu_percent(interval=1)  # 获取 CPU 利用率，每秒采样一次
-
-    print("CPU 利用率：", cpu_usage, "%")
+    cpu_usage = psutil.cpu_percent(interval=1)
