@@ -1,6 +1,5 @@
 # GRUcialG
 
-
 ## Configurations and Required Packages
 | 1    | 1    |
 | ---- | ---- |
@@ -15,7 +14,10 @@
 - allennlp==1.2.0
 More information on the version of the environment configuration can be found in the GRUcialG.yaml file.
 
-## Dataset
+## Dataset and Model
+The 10,607 reports we collected can be found on [Google Cloud Drive](https://drive.google.com/file/d/1xYeR9TbEQEgEAwrZHRXQ24ssntse71TJ/view?usp=sharing). In addition, we have also published a dataset of 110 manually labelled CTI reports, which you can find at ‘dataset/cti’.
+
+
 
 ## Training and Testing
 ### NER Model
