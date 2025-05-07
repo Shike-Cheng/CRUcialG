@@ -1,0 +1,7812 @@
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+22
+MP
+MF
+MF
+MP
+MF
+TP
+MF
+MP
+MF
+MF
+SF
+MP
+TF
+SF
+SF
+TF
+SF
+MF
+SO
+MP
+MF
+MP
+25
+0 1 WR
+0 2 WR
+3 2 WR
+0 4 WR
+3 5 FR
+5 4 RD
+5 6 RD
+5 6 WR
+5 6 EX
+7 6 WR
+7 8 WR
+7 8 EX
+7 10 RD
+7 9 WR
+7 10 WR
+11 12 WR
+11 13 RD
+11 14 RD
+11 15 WR
+7 16 RD
+11 17 WR
+19 18 ST
+19 20 EX
+19 21 FR
+19 18 RF
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+27
+SO
+MP
+MF
+TP
+MP
+MF
+MP
+SO
+MP
+SF
+MF
+SO
+TP
+MP
+MP
+TP
+MP
+SF
+MF
+MP
+TP
+MP
+MP
+SO
+TF
+SO
+MF
+33
+1 0 ST
+1 0 RF
+1 2 WR
+1 3 FR
+3 4 FR
+4 5 EX
+4 6 FR
+4 7 RF
+4 8 FR
+8 9 RD
+8 9 WR
+8 10 WR
+8 11 RF
+8 12 FR
+12 10 EX
+12 13 FR
+12 14 FR
+13 15 FR
+12 16 FR
+16 17 RD
+16 17 WR
+14 19 FR
+19 18 EX
+19 20 IJ
+20 21 FR
+19 22 FR
+21 23 ST
+21 23 RF
+22 23 ST
+22 23 RF
+22 24 WR
+22 25 ST
+22 26 WR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+47
+SO
+MF
+MP
+SO
+MP
+MF
+SO
+MF
+MP
+MF
+SO
+MP
+SF
+TF
+SO
+TF
+MF
+TP
+TF
+MF
+TP
+MF
+MP
+SF
+MF
+SO
+MP
+SF
+SF
+SF
+MP
+MP
+SO
+TP
+SO
+SF
+SF
+SF
+TF
+TF
+MP
+TP
+TP
+MF
+MF
+TP
+TF
+75
+2 0 ST
+2 0 RF
+2 1 EX
+2 3 ST
+2 3 RF
+4 5 WR
+4 6 ST
+4 6 RF
+4 7 WR
+8 7 RD
+8 9 WR
+8 10 ST
+8 10 RF
+11 9 WR
+11 10 ST
+11 10 RF
+11 10 ST
+11 12 RD
+11 10 RF
+11 12 WR
+11 13 WR
+11 14 ST
+11 14 RF
+11 15 RD
+11 15 WR
+11 16 RD
+11 16 WR
+11 17 FR
+17 18 CD
+17 19 CD
+11 20 FR
+20 18 EX
+22 23 RD
+20 21 RD
+22 23 WR
+11 23 RD
+11 23 WR
+11 24 WR
+11 25 ST
+11 25 RF
+26 24 WR
+26 25 ST
+26 27 RD
+26 25 RF
+26 28 RD
+26 27 WR
+26 29 RD
+26 28 WR
+26 29 WR
+22 30 FR
+30 31 FR
+31 32 ST
+31 32 RF
+30 33 IJ
+30 34 ST
+30 34 RF
+22 35 RD
+22 35 WR
+22 36 RD
+22 36 WR
+22 37 RD
+22 37 WR
+22 37 RD
+22 37 WR
+22 38 WR
+22 39 WR
+22 39 RD
+40 41 FR
+40 42 FR
+41 43 RD
+42 43 RD
+41 44 WR
+42 44 WR
+40 45 FR
+40 46 WR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+52
+MP
+SO
+TF
+MF
+TP
+TP
+TP
+MP
+MF
+TP
+SO
+SF
+TP
+MF
+SO
+MF
+MF
+MP
+MF
+TP
+MF
+MF
+MF
+MF
+MP
+MP
+MP
+MF
+MP
+MF
+MF
+MF
+MP
+MF
+MP
+MF
+SF
+SF
+MP
+MF
+MF
+MF
+MP
+MF
+MF
+MF
+MP
+MF
+SF
+MF
+SO
+SO
+81
+0 1 ST
+0 1 RF
+0 2 WR
+0 3 WR
+4 3 WR
+4 7 FR
+5 3 WR
+6 3 WR
+6 7 RF
+6 7 ST
+7 8 WR
+9 8 WR
+9 10 ST
+9 10 RF
+9 11 RD
+9 11 WR
+0 11 RD
+0 11 WR
+0 12 FR
+12 13 EX
+0 14 ST
+0 14 RF
+12 15 RD
+12 15 WR
+12 15 EX
+12 16 RD
+12 16 WR
+12 16 EX
+17 15 WR
+17 16 WR
+17 18 WR
+19 18 WR
+19 20 WR
+19 21 WR
+19 22 WR
+19 20 WR
+19 21 WR
+19 22 WR
+19 23 WR
+24 23 EX
+24 25 FR
+26 27 WR
+26 28 FR
+28 27 WR
+28 29 WR
+28 30 WR
+28 31 WR
+32 29 WR
+32 30 WR
+32 31 WR
+32 33 WR
+34 33 WR
+34 35 WR
+34 36 RD
+34 37 RD
+34 37 WR
+38 35 EX
+38 39 EX
+38 40 WR
+38 41 WR
+42 40 WR
+42 41 WR
+42 43 EX
+42 44 WR
+42 45 WR
+46 44 WR
+46 45 WR
+46 47 WR
+46 48 RD
+46 48 WR
+46 49 WR
+49 48 RD
+49 48 WR
+46 50 ST
+46 50 RF
+0 47 WR
+0 49 WR
+0 50 ST
+0 50 RF
+0 51 ST
+0 51 RF
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+59
+MP
+MF
+MP
+TF
+MP
+MP
+MF
+MF
+MP
+MP
+MP
+MP
+MP
+MP
+MF
+MP
+MP
+MP
+MP
+MF
+MP
+MF
+MP
+MP
+MF
+MP
+MF
+SO
+MP
+MP
+MP
+MF
+MP
+MF
+SF
+MF
+MF
+MP
+TF
+MP
+MP
+MF
+TF
+MP
+SF
+MP
+SF
+MP
+MP
+MP
+TP
+SF
+TP
+TP
+MP
+MF
+SO
+MP
+TF
+56
+0 1 WR
+2 4 FR
+4 3 RD
+4 5 FR
+5 6 RD
+5 7 RD
+8 9 FR
+10 11 FR
+11 12 FR
+10 13 FR
+13 14 EX
+15 16 FR
+17 18 FR
+18 19 EX
+20 21 EX
+20 22 FR
+23 21 RD
+25 24 EX
+25 26 WR
+25 26 EX
+23 27 ST
+23 27 RF
+25 27 RF
+15 28 FR
+15 29 FR
+15 30 FR
+15 31 EX
+32 33 RD
+32 33 WR
+15 34 RD
+15 35 RD
+15 36 RD
+37 38 RD
+40 39 FR
+40 41 WR
+40 42 WR
+43 42 RD
+43 44 RD
+43 44 WR
+45 46 RD
+15 44 UK
+45 46 WR
+45 47 FR
+45 48 FR
+15 49 FR
+49 51 RD
+49 50 UK
+49 51 WR
+15 51 RD
+15 51 WR
+15 52 FR
+52 53 FR
+53 54 FR
+52 55 WR
+52 56 ST
+57 58 WR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+55
+TP
+MF
+MF
+MF
+SO
+MP
+MF
+SF
+SO
+MF
+MP
+MF
+TP
+TP
+MP
+SO
+MF
+TF
+SF
+SF
+SF
+SF
+TF
+TP
+MF
+TF
+SO
+MP
+MF
+MF
+MF
+TP
+TF
+SO
+MF
+SO
+MF
+TP
+TP
+MF
+MF
+MF
+MP
+MP
+SO
+TP
+SO
+TP
+SO
+SO
+SO
+MF
+MF
+SO
+MF
+74
+0 1 WR
+0 2 WR
+0 3 WR
+5 2 WR
+0 4 ST
+5 6 WR
+5 7 RD
+0 6 RD
+0 8 ST
+0 9 WR
+10 9 RD
+10 11 WR
+13 12 FR
+12 11 WR
+12 14 FR
+14 15 ST
+14 15 RF
+14 16 EX
+14 17 WR
+14 18 RD
+14 19 RD
+14 20 RD
+14 21 RD
+14 22 WR
+14 23 FR
+23 22 EX
+14 24 UK
+23 25 WR
+23 26 ST
+23 26 RF
+27 26 ST
+27 26 RF
+27 28 EX
+27 29 RD
+31 30 RD
+31 32 WR
+31 33 ST
+31 33 RF
+31 34 WR
+37 34 WR
+37 35 ST
+37 35 RF
+37 36 RD
+37 38 FR
+38 39 RD
+37 40 RD
+37 41 WR
+37 42 FR
+42 41 EX
+42 43 FR
+43 45 FR
+45 44 ST
+45 44 RF
+45 46 ST
+45 46 RF
+47 46 ST
+47 46 RF
+47 46 ST
+47 46 RF
+47 48 ST
+47 48 RF
+47 48 ST
+47 48 RF
+0 48 ST
+0 48 RF
+0 49 ST
+0 49 RF
+0 50 ST
+0 50 RF
+0 51 RD
+0 52 RD
+0 53 ST
+0 53 RF
+0 54 WR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+93
+MF
+TP
+MP
+MF
+MP
+MP
+MF
+MP
+SO
+SO
+MP
+MP
+SF
+SO
+MP
+SO
+MF
+MF
+MF
+MP
+MF
+SO
+MF
+MP
+MP
+TF
+TF
+TF
+SO
+TF
+SO
+SO
+MF
+TP
+SO
+MF
+MP
+SF
+MP
+MF
+MP
+MF
+SF
+SF
+MP
+SF
+MF
+MP
+SO
+SO
+MF
+MP
+MP
+TF
+MP
+MF
+MP
+SF
+SF
+SO
+SO
+MF
+MF
+MP
+MP
+SF
+MP
+TF
+MP
+SF
+MP
+SF
+SF
+SF
+MP
+SF
+SO
+TF
+SF
+SF
+SF
+TF
+SF
+SO
+MP
+MF
+SO
+MF
+MF
+MP
+MF
+SF
+MF
+114
+1 2 FR
+2 0 EX
+2 3 WR
+4 5 FR
+5 6 WR
+5 7 FR
+7 8 ST
+7 8 RF
+7 9 ST
+7 9 RF
+10 8 ST
+10 8 RF
+10 9 ST
+10 9 RF
+10 11 FR
+11 12 RD
+11 13 ST
+14 15 ST
+14 15 RF
+14 16 WR
+14 17 WR
+14 18 EX
+14 19 FR
+19 18 RD
+19 16 EX
+19 20 WR
+19 21 ST
+19 21 RF
+19 22 EX
+23 24 FR
+24 25 WR
+24 25 RD
+24 26 WR
+24 25 UK
+23 27 RD
+23 28 ST
+23 29 RD
+23 30 ST
+23 31 RF
+33 32 EX
+33 34 ST
+36 35 RD
+36 37 RD
+36 38 FR
+38 39 WR
+40 42 RD
+40 39 WR
+40 43 RD
+40 42 WR
+40 43 WR
+40 44 FR
+44 45 RD
+44 41 EX
+44 45 WR
+44 46 EX
+47 48 ST
+47 48 RF
+47 49 ST
+47 49 RF
+47 50 WR
+51 52 FR
+52 53 WR
+54 53 RD
+54 55 WR
+56 55 WR
+56 57 RD
+56 58 RD
+56 59 ST
+56 60 RF
+56 61 WR
+56 62 WR
+56 62 EX
+64 63 FR
+63 65 RD
+66 67 WR
+68 69 RD
+68 69 WR
+68 71 RD
+68 71 WR
+70 69 RD
+70 69 WR
+70 71 RD
+70 71 WR
+70 71 RD
+70 71 WR
+70 72 RD
+70 72 WR
+70 73 RD
+70 73 WR
+74 71 RD
+74 71 WR
+74 72 RD
+74 72 WR
+74 73 RD
+74 73 WR
+74 75 RD
+74 76 ST
+74 77 WR
+74 78 RD
+74 79 RD
+74 80 RD
+74 81 WR
+74 82 RD
+74 83 ST
+84 85 WR
+84 86 RF
+84 87 WR
+84 89 FR
+89 88 WR
+89 88 EX
+84 91 RD
+84 90 WR
+84 91 WR
+84 92 WR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+83
+MP
+TP
+MP
+MP
+MF
+SO
+TP
+MF
+MP
+TF
+MP
+MF
+MF
+SF
+MP
+MF
+MP
+MP
+MF
+SF
+MF
+TF
+TF
+TF
+SO
+TP
+SO
+MP
+TP
+TP
+SF
+MP
+MP
+TF
+TF
+MP
+TF
+MF
+MP
+SF
+SF
+SF
+SF
+SF
+TF
+TF
+SF
+MP
+SF
+TF
+TF
+TF
+TF
+MF
+TF
+TF
+MP
+TF
+MP
+MP
+TF
+MP
+MP
+TF
+TP
+SO
+TF
+MP
+TF
+TF
+SF
+TF
+MF
+TF
+TF
+TF
+MF
+TF
+MP
+TF
+TF
+TF
+MF
+88
+0 1 FR
+1 2 FR
+2 5 ST
+2 5 RF
+6 3 FR
+6 4 RD
+6 5 ST
+6 5 RF
+3 7 EX
+6 7 WR
+3 8 FR
+8 9 WR
+10 11 WR
+10 12 WR
+10 13 CD
+10 14 FR
+14 12 EX
+14 15 UK
+14 16 FR
+14 17 FR
+16 18 WR
+17 19 UK
+17 20 EX
+17 21 RD
+17 21 WR
+17 22 WR
+17 25 FR
+25 23 RD
+25 24 ST
+25 24 RF
+25 26 ST
+25 26 RF
+27 26 ST
+27 26 RF
+27 29 FR
+29 28 UK
+29 30 RD
+29 30 WR
+31 30 RD
+31 30 WR
+31 30 RD
+31 30 WR
+32 33 WR
+32 34 WR
+35 36 WR
+35 38 FR
+38 37 EX
+38 39 RD
+38 40 RD
+38 41 RD
+38 42 RD
+38 43 RD
+38 44 WR
+38 45 WR
+38 46 RD
+38 47 FR
+47 48 RD
+47 48 WR
+47 48 RD
+47 49 WR
+47 50 WR
+47 51 WR
+47 52 WR
+47 53 EX
+47 54 WR
+47 57 WR
+56 55 RD
+58 57 RD
+59 60 WR
+6 61 UK
+62 63 UK
+6 64 FR
+6 65 ST
+6 66 WR
+67 68 RD
+67 69 WR
+67 70 RD
+67 71 WR
+67 72 EX
+67 73 RD
+67 74 WR
+67 75 WR
+67 76 EX
+67 77 WR
+78 79 RD
+78 80 WR
+78 81 WR
+78 82 RD
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+38
+MP
+TP
+MP
+MF
+MF
+MF
+MP
+TP
+MF
+MF
+MF
+MF
+TP
+MF
+MF
+MP
+TP
+MF
+MF
+MP
+MP
+MP
+TF
+SO
+MP
+TF
+MP
+MF
+MF
+MP
+MF
+MP
+MF
+MF
+MP
+MF
+SO
+MF
+39
+0 3 WR
+1 3 RD
+2 3 EX
+2 4 EX
+2 5 WR
+2 5 EX
+7 6 FR
+6 8 WR
+6 8 EX
+7 8 RD
+7 9 WR
+7 10 WR
+7 11 WR
+12 8 WR
+12 9 WR
+12 10 WR
+12 11 WR
+12 13 WR
+12 14 WR
+15 14 WR
+15 16 FR
+15 17 RD
+15 18 WR
+19 20 FR
+21 22 WR
+21 23 ST
+19 24 FR
+24 25 WR
+26 27 WR
+26 28 EX
+29 30 WR
+31 32 EX
+31 33 WR
+29 34 FR
+34 30 EX
+34 35 WR
+34 36 ST
+34 36 RF
+34 37 EX
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+85
+MP
+MF
+SO
+MP
+MF
+MP
+MF
+MF
+MF
+TP
+MF
+MF
+MF
+MP
+MP
+MF
+MP
+MF
+MF
+MF
+MF
+MP
+MF
+MP
+MP
+MP
+MF
+MP
+MF
+MP
+MF
+MF
+MF
+MP
+MF
+TP
+MP
+MF
+MF
+MF
+MP
+MP
+MF
+MF
+MP
+MF
+MP
+MF
+MP
+MP
+SF
+SF
+SF
+SO
+MF
+TP
+TP
+MP
+MF
+TP
+MF
+MP
+MF
+MP
+MP
+MF
+SO
+MF
+MF
+MP
+TF
+MF
+SO
+SF
+MP
+MP
+MP
+MP
+SO
+MP
+TF
+SF
+MP
+MF
+MP
+80
+0 1 WR
+0 2 ST
+0 2 RF
+3 4 RD
+5 6 WR
+5 7 WR
+5 8 WR
+9 8 WR
+9 6 RD
+9 10 RD
+9 11 WR
+9 12 WR
+13 12 EX
+13 14 FR
+14 15 WR
+14 15 EX
+16 17 WR
+16 18 WR
+16 19 WR
+16 20 WR
+21 20 EX
+21 22 WR
+23 24 FR
+25 26 WR
+25 27 FR
+29 28 EX
+29 30 WR
+29 31 WR
+29 32 EX
+33 31 EX
+33 34 WR
+33 35 IJ
+35 34 EX
+36 37 WR
+36 37 EX
+36 38 WR
+36 39 WR
+40 39 EX
+41 39 EX
+44 42 WR
+44 43 WR
+44 45 WR
+46 47 RD
+48 47 WR
+49 50 RD
+49 51 RD
+49 52 RD
+49 53 RF
+55 54 EX
+56 54 EX
+57 58 EX
+59 58 EX
+61 60 EX
+61 62 RD
+61 62 WR
+63 62 RD
+64 62 RD
+63 65 RD
+64 66 ST
+64 66 RF
+63 66 ST
+63 67 WR
+63 68 WR
+69 70 WR
+69 71 WR
+69 72 ST
+69 72 RF
+74 71 WR
+74 72 ST
+74 72 RF
+74 73 RD
+75 73 RD
+76 73 RD
+77 73 RD
+79 78 RF
+79 80 WR
+79 81 RD
+82 83 WR
+3 83 RD
+9 84 FR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+23
+MF
+MF
+TP
+MP
+MF
+MP
+TP
+TP
+MP
+SO
+MF
+MF
+MF
+MF
+MF
+MP
+TP
+MF
+MF
+MF
+MF
+MF
+MP
+25
+2 0 WR
+2 1 WR
+2 1 EX
+2 3 FR
+5 4 WR
+3 6 FR
+6 7 FR
+7 8 FR
+8 4 EX
+8 10 EX
+8 9 ST
+8 9 RF
+8 11 WR
+8 11 EX
+8 12 WR
+8 13 RD
+15 14 EX
+15 16 IJ
+16 18 FR
+18 17 EX
+18 19 WR
+18 20 RD
+18 22 FR
+22 19 EX
+22 21 UK
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+58
+MP
+MF
+MF
+SO
+MP
+MP
+MF
+TF
+TF
+TF
+TP
+TF
+MP
+SF
+MF
+MF
+MF
+MF
+SO
+MF
+MF
+MP
+MP
+MP
+MF
+MF
+TP
+MP
+MF
+MF
+MP
+MF
+MP
+MP
+MF
+MP
+MP
+MP
+MF
+SO
+MP
+MF
+MF
+MF
+MP
+MF
+MF
+MF
+MP
+MF
+TP
+MF
+MP
+MF
+MP
+MP
+MF
+TP
+58
+0 1 RD
+0 2 RD
+0 3 ST
+0 3 RF
+4 6 WR
+4 7 WR
+4 8 WR
+4 9 WR
+4 10 FR
+12 13 RD
+10 11 EX
+12 13 WR
+12 14 EX
+5 15 WR
+5 16 WR
+5 17 WR
+5 18 ST
+5 18 RF
+5 19 WR
+21 19 WR
+21 20 WR
+23 24 EX
+23 25 WR
+21 26 FR
+22 20 WR
+26 25 RD
+26 25 EX
+26 27 FR
+27 28 WR
+27 29 WR
+30 28 WR
+30 29 WR
+30 31 EX
+32 33 FR
+32 34 EX
+35 34 UK
+37 38 EX
+36 39 ST
+36 39 RF
+37 39 ST
+37 39 RF
+37 40 FR
+40 41 WR
+40 42 WR
+40 43 WR
+44 41 WR
+44 42 WR
+44 43 WR
+44 45 WR
+44 46 WR
+48 47 WR
+44 49 WR
+44 50 FR
+50 51 WR
+52 53 WR
+54 53 RD
+55 56 WR
+55 57 FR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+26
+MF
+MF
+MP
+TP
+SO
+TP
+MF
+TP
+MP
+MF
+SO
+MF
+MP
+TP
+MF
+MP
+SO
+TP
+SF
+SF
+TP
+SO
+TP
+TP
+MP
+TP
+45
+2 0 EX
+2 1 WR
+2 3 FR
+3 4 ST
+5 4 RF
+5 6 WR
+7 6 RD
+7 6 EX
+7 8 FR
+8 9 WR
+8 10 ST
+8 10 RF
+7 10 ST
+7 10 RF
+7 10 ST
+7 10 RF
+7 11 WR
+7 12 FR
+12 9 EX
+12 11 WR
+12 13 IJ
+12 14 WR
+13 14 WR
+12 15 FR
+15 14 EX
+15 16 ST
+15 16 RF
+15 17 FR
+17 18 RD
+17 19 RD
+20 19 RD
+20 19 WR
+20 21 ST
+20 21 RF
+20 21 ST
+20 21 RF
+22 21 ST
+22 21 RF
+22 21 ST
+22 21 RF
+22 24 FR
+23 21 ST
+23 21 RF
+24 19 RD
+24 25 FR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+11
+MF
+MP
+TP
+SO
+TP
+MF
+MF
+MP
+SF
+SO
+TP
+13
+2 0 RD
+4 3 ST
+4 3 RF
+4 5 WR
+4 1 FR
+1 5 EX
+10 7 FR
+7 8 RD
+7 8 WR
+7 9 ST
+1 10 FR
+7 8 RD
+10 6 EX
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+48
+MP
+MF
+MF
+SO
+SF
+MP
+MF
+MF
+MF
+SO
+MF
+MF
+SF
+MF
+SF
+MF
+MF
+MP
+MP
+MF
+MF
+TF
+MF
+MF
+TF
+TF
+MF
+SO
+SF
+MF
+MP
+MF
+SF
+MF
+MF
+TF
+MF
+SF
+MF
+MF
+MF
+MF
+MF
+MF
+MF
+SO
+MP
+MF
+59
+0 1 EX
+0 2 WR
+0 3 ST
+0 4 RD
+0 3 RF
+0 4 WR
+5 3 ST
+5 3 RF
+5 6 WR
+5 8 WR
+5 9 ST
+5 9 RF
+5 10 EX
+5 12 RD
+5 11 WR
+5 12 WR
+5 13 WR
+17 7 WR
+17 8 WR
+17 9 ST
+17 9 RF
+17 11 WR
+17 16 WR
+18 14 CD
+18 15 EX
+18 16 EX
+18 19 EX
+18 20 WR
+18 21 WR
+18 22 EX
+17 23 WR
+18 23 WR
+18 24 RD
+18 25 RD
+18 26 WR
+18 23 WR
+18 28 RD
+18 27 ST
+18 28 WR
+18 29 EX
+18 30 FR
+18 31 EX
+18 32 CD
+18 33 EX
+18 34 EX
+18 35 WR
+18 36 EX
+18 37 RD
+18 38 WR
+18 38 EX
+18 39 WR
+18 40 EX
+18 41 EX
+18 42 WR
+18 42 EX
+18 43 WR
+18 44 WR
+18 45 ST
+46 47 EX
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+81
+MP
+SF
+SF
+SO
+MF
+MF
+TF
+MP
+SO
+SO
+TP
+MF
+SO
+SO
+MF
+SF
+SO
+TP
+MP
+SF
+MF
+SF
+SO
+SO
+MP
+SF
+MP
+SF
+TF
+SF
+SF
+TP
+MF
+SF
+TP
+MP
+TF
+TP
+TF
+SO
+MP
+MF
+SO
+MF
+MP
+MP
+SO
+MP
+TP
+MP
+SO
+MP
+MP
+TF
+MF
+MP
+MF
+SO
+TF
+MP
+SO
+MP
+MF
+MP
+MP
+MF
+MF
+MP
+MF
+TF
+MP
+SF
+SF
+TP
+MF
+MP
+SF
+TP
+SF
+SO
+MF
+106
+0 5 EX
+0 1 RD
+0 2 RD
+0 3 ST
+0 3 RF
+0 4 WR
+0 6 WR
+7 3 ST
+7 3 RF
+7 4 WR
+7 5 WR
+7 8 ST
+10 9 RF
+10 11 RD
+10 11 WR
+10 12 ST
+10 12 RF
+10 12 ST
+10 12 RF
+10 13 ST
+10 16 RF
+10 14 WR
+10 15 RD
+10 15 WR
+16 15 RD
+16 15 WR
+17 16 ST
+17 16 RF
+17 14 WR
+17 18 FR
+18 19 RD
+18 20 EX
+18 21 RD
+18 22 ST
+24 23 ST
+24 23 RF
+24 25 RD
+26 27 EX
+26 28 RD
+26 29 RD
+26 30 EX
+26 31 FR
+26 32 EX
+26 33 UK
+10 34 FR
+10 36 WR
+35 36 RD
+35 37 UK
+35 38 WR
+35 39 ST
+35 39 RF
+40 39 ST
+40 39 RF
+40 41 WR
+40 42 RF
+40 43 WR
+44 43 WR
+44 45 FR
+45 46 ST
+45 47 FR
+49 48 UK
+49 50 ST
+49 50 RF
+49 50 ST
+49 50 RF
+51 50 ST
+51 50 RF
+51 50 ST
+51 50 RF
+44 52 FR
+52 53 WR
+52 53 RD
+52 54 EX
+44 55 FR
+55 56 RD
+51 57 ST
+51 57 RF
+55 57 RF
+55 58 WR
+55 58 RD
+44 59 FR
+44 60 ST
+44 60 RF
+44 61 FR
+61 60 ST
+61 60 RF
+61 62 WR
+61 63 FR
+63 62 EX
+44 64 FR
+64 65 WR
+44 66 WR
+44 67 FR
+67 68 WR
+44 69 WR
+44 70 FR
+44 71 RD
+44 72 RD
+44 73 FR
+44 74 WR
+44 75 FR
+75 76 RD
+75 77 FR
+77 78 RD
+77 79 ST
+77 80 WR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+79
+MP
+MP
+MP
+MP
+TP
+MP
+MF
+TP
+TP
+MP
+MP
+MP
+MP
+SO
+MP
+MP
+MP
+MP
+SO
+SF
+MP
+MP
+MF
+MF
+MF
+MF
+MP
+SF
+MP
+MF
+SF
+MP
+MF
+MF
+MP
+MP
+MP
+MP
+MP
+MF
+MF
+MP
+MP
+MP
+MP
+MP
+MP
+MP
+MF
+MP
+MF
+MP
+MP
+SO
+TF
+MF
+MP
+MP
+MP
+MP
+SO
+TF
+TF
+SO
+MP
+MF
+MF
+MF
+TF
+MF
+MF
+MF
+MF
+MP
+MF
+MP
+MF
+MF
+MP
+78
+0 1 FR
+0 2 FR
+3 4 FR
+3 5 FR
+5 6 WR
+7 8 FR
+9 10 FR
+11 12 FR
+11 13 ST
+11 13 RF
+15 18 ST
+15 18 RF
+14 18 ST
+14 18 RF
+16 18 ST
+16 18 RF
+17 18 ST
+17 18 RF
+17 19 RD
+17 19 WR
+20 19 RD
+20 19 WR
+20 21 FR
+20 22 WR
+20 23 WR
+20 24 WR
+26 27 RD
+20 25 WR
+26 27 WR
+28 30 RD
+28 29 EX
+28 30 WR
+31 30 RD
+31 32 RD
+31 33 RD
+31 34 FR
+35 36 FR
+35 37 FR
+35 38 FR
+35 39 EX
+41 39 EX
+41 40 EX
+41 42 FR
+43 40 RD
+41 44 FR
+44 45 FR
+47 46 FR
+47 48 UK
+49 50 EX
+49 51 FR
+47 52 FR
+43 53 ST
+43 53 RF
+47 53 ST
+47 53 RF
+47 54 WR
+47 55 WR
+56 57 FR
+56 58 FR
+56 59 FR
+59 60 ST
+59 60 RF
+59 61 WR
+59 62 RD
+59 63 ST
+59 63 RF
+64 65 UK
+64 66 WR
+64 67 WR
+64 68 UK
+64 69 RD
+64 70 WR
+64 71 WR
+64 73 FR
+73 72 WR
+73 74 EX
+75 76 EX
+78 77 WR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+72
+TP
+MF
+SO
+MF
+MP
+TP
+SF
+MP
+MP
+MF
+TF
+TF
+SO
+MF
+MF
+MF
+MF
+MF
+MF
+MF
+MP
+MP
+MF
+MF
+TP
+MF
+MP
+SO
+TF
+MF
+MF
+TP
+SO
+SO
+SO
+TP
+SO
+MP
+TP
+MP
+MF
+MF
+TP
+MF
+MF
+MF
+MF
+MF
+MF
+MF
+SO
+MF
+MF
+MP
+MP
+MF
+MP
+MP
+MF
+MF
+MF
+SO
+MP
+MF
+MP
+TP
+MF
+MF
+TF
+TF
+MF
+MF
+112
+0 1 WR
+0 2 ST
+0 2 RF
+0 3 EX
+5 4 FR
+4 6 RD
+4 6 WR
+4 7 FR
+7 8 FR
+8 9 WR
+8 10 WR
+8 11 WR
+8 12 RF
+8 13 WR
+8 14 WR
+8 15 WR
+8 16 WR
+8 17 WR
+8 18 WR
+8 19 WR
+20 13 WR
+20 14 WR
+20 15 WR
+20 16 WR
+20 17 WR
+20 18 WR
+20 19 WR
+21 22 WR
+20 23 WR
+21 23 WR
+24 23 WR
+24 25 RD
+26 25 RD
+24 27 ST
+24 27 RF
+26 27 ST
+26 27 RF
+24 28 WR
+26 29 WR
+26 30 WR
+31 29 WR
+31 30 WR
+31 32 ST
+31 32 RF
+31 32 ST
+31 32 RF
+31 33 ST
+31 33 RF
+31 34 ST
+31 34 RF
+35 32 ST
+35 32 RF
+35 33 ST
+35 33 RF
+35 34 ST
+35 34 RF
+35 34 ST
+35 34 RF
+35 36 ST
+35 36 RF
+35 36 ST
+35 36 RF
+37 36 ST
+37 36 RF
+37 38 FR
+38 39 FR
+39 40 WR
+39 41 WR
+39 42 FR
+39 43 EX
+42 43 WR
+42 50 ST
+42 50 RF
+39 44 EX
+42 45 WR
+42 46 WR
+42 47 WR
+42 48 WR
+42 49 WR
+42 51 WR
+42 52 WR
+53 45 WR
+53 46 WR
+53 47 WR
+53 48 WR
+53 49 WR
+53 50 ST
+53 50 RF
+53 51 WR
+53 52 WR
+53 54 FR
+53 55 UK
+53 56 UK
+53 57 UK
+53 58 UK
+53 59 WR
+53 60 UK
+54 61 ST
+54 61 RF
+62 61 ST
+62 61 RF
+62 61 ST
+62 61 RF
+62 63 WR
+64 63 RD
+62 65 FR
+65 66 WR
+65 67 WR
+65 68 WR
+65 69 WR
+65 70 RD
+65 71 WR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+28
+MF
+MF
+SO
+MF
+MF
+TP
+MP
+MF
+MF
+MF
+SF
+TP
+SF
+MP
+MP
+MF
+MF
+MF
+MF
+MF
+MF
+MP
+MP
+SF
+MP
+SO
+MP
+TF
+29
+5 0 WR
+5 1 WR
+5 3 WR
+5 4 WR
+5 6 FR
+6 2 ST
+6 2 RF
+6 7 EX
+6 8 WR
+6 9 WR
+6 10 RD
+6 11 FR
+11 12 RD
+11 13 FR
+6 14 FR
+11 9 WR
+14 15 EX
+6 16 WR
+14 17 EX
+6 18 WR
+6 19 WR
+6 20 WR
+21 22 FR
+22 23 RD
+22 23 WR
+21 24 FR
+24 25 ST
+21 26 FR
+21 27 WR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+76
+MP
+MF
+MF
+MF
+MF
+MF
+MF
+MF
+MF
+MP
+MP
+MF
+MF
+MF
+MF
+MP
+TP
+TP
+TP
+MP
+MF
+MF
+MP
+MF
+MF
+SO
+MP
+MF
+MP
+MF
+MF
+MP
+SF
+SF
+MF
+MF
+MF
+MP
+SO
+MF
+MF
+MF
+MP
+MF
+MF
+SF
+SF
+MP
+MF
+MP
+MP
+MF
+MP
+MF
+MP
+MF
+MP
+MF
+MP
+MP
+MF
+TF
+MF
+MP
+MP
+MF
+MF
+MP
+MF
+MP
+MF
+MF
+MP
+MF
+MP
+MP
+87
+0 1 WR
+0 3 RD
+0 8 EX
+0 2 WR
+0 4 WR
+0 5 WR
+0 6 WR
+0 7 WR
+9 4 WR
+9 5 WR
+9 6 WR
+9 7 WR
+9 3 WR
+9 8 WR
+10 11 RD
+10 12 EX
+10 13 WR
+15 14 WR
+15 16 FR
+15 17 FR
+15 18 FR
+18 19 FR
+19 20 WR
+19 21 WR
+22 20 WR
+22 21 WR
+22 23 WR
+22 24 WR
+22 24 EX
+22 25 ST
+22 25 RF
+26 27 EX
+28 27 RD
+26 29 WR
+26 29 EX
+28 29 WR
+28 30 WR
+31 30 WR
+31 32 RD
+31 30 WR
+31 33 RD
+31 32 WR
+31 33 WR
+31 34 WR
+31 35 EX
+31 36 WR
+37 36 WR
+37 38 ST
+37 38 RF
+37 39 WR
+37 40 WR
+37 41 EX
+42 38 ST
+42 38 RF
+42 43 WR
+37 45 RD
+42 44 WR
+37 45 WR
+42 46 RD
+42 46 WR
+47 46 RD
+47 46 WR
+47 48 WR
+49 48 RD
+50 51 EX
+52 53 EX
+54 55 WR
+54 56 FR
+56 55 EX
+58 57 EX
+58 59 IJ
+63 60 RD
+64 60 RD
+64 61 WR
+64 62 WR
+64 65 WR
+64 66 WR
+67 65 WR
+67 66 WR
+67 68 WR
+67 68 EX
+69 70 WR
+72 70 WR
+72 71 WR
+72 73 WR
+74 73 WR
+75 74 UK
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+29
+SO
+MP
+MP
+MF
+SO
+MP
+MF
+MP
+MF
+MP
+MF
+MF
+MF
+MP
+MP
+MP
+MF
+MP
+TP
+MF
+SO
+TP
+TP
+SF
+SF
+MP
+MP
+SO
+MP
+36
+1 0 ST
+1 0 RF
+2 3 WR
+2 4 ST
+5 6 WR
+7 6 EX
+7 8 WR
+9 8 EX
+9 10 WR
+9 11 WR
+9 12 WR
+13 12 RD
+15 16 WR
+17 18 FR
+18 19 WR
+18 20 ST
+18 20 RF
+13 21 FR
+14 12 RD
+21 19 RD
+21 19 EX
+18 22 FR
+21 23 RD
+21 23 WR
+22 19 EX
+22 24 RD
+22 23 RD
+22 24 WR
+25 24 RD
+25 24 WR
+25 27 ST
+25 27 RF
+26 24 RD
+26 27 ST
+26 27 RF
+26 28 FR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+37
+MF
+TP
+MF
+MP
+SO
+SO
+SO
+SO
+MP
+MP
+TF
+MF
+TP
+MF
+SO
+SO
+MP
+MF
+MF
+MP
+MP
+MF
+MP
+MP
+MF
+SO
+MP
+MP
+MF
+MP
+MF
+TF
+SO
+MF
+MP
+MP
+MF
+40
+1 0 RD
+1 2 FR
+1 3 FR
+3 2 EX
+3 4 ST
+3 4 RF
+3 5 ST
+3 5 RF
+3 6 ST
+3 7 RF
+8 4 ST
+8 4 RF
+8 5 ST
+8 5 RF
+8 9 FR
+9 10 WR
+8 11 WR
+8 11 EX
+8 12 IJ
+12 13 RD
+12 14 RF
+12 15 ST
+16 17 WR
+19 18 RD
+20 18 EX
+22 21 RD
+22 23 FR
+23 24 WR
+23 24 EX
+23 25 ST
+23 25 RF
+26 24 RD
+27 28 WR
+35 29 FR
+29 31 WR
+29 32 ST
+29 33 WR
+29 34 FR
+29 30 WR
+35 36 WR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+40
+SO
+MF
+MF
+MF
+MF
+MP
+MF
+MF
+MF
+MF
+MF
+MP
+MP
+MF
+MF
+MP
+SF
+MF
+SO
+MF
+SO
+MP
+SO
+MP
+SF
+SF
+SO
+MP
+SO
+MF
+MF
+MP
+MF
+MP
+MF
+MP
+MP
+TP
+MF
+SO
+46
+5 0 ST
+5 0 RF
+5 1 WR
+5 2 WR
+5 3 WR
+5 4 WR
+5 6 RD
+5 7 WR
+5 8 WR
+5 9 WR
+5 10 WR
+11 13 WR
+12 13 WR
+11 14 WR
+12 10 RD
+15 16 RD
+15 17 WR
+15 17 EX
+15 18 ST
+15 18 RF
+15 19 WR
+21 20 ST
+21 20 RF
+21 22 ST
+21 22 RF
+23 22 ST
+23 22 RF
+23 24 RD
+23 25 RD
+23 25 WR
+23 26 ST
+23 26 RF
+27 28 ST
+27 29 WR
+31 29 WR
+31 30 WR
+31 32 WR
+33 32 WR
+33 34 WR
+35 34 EX
+35 36 FR
+36 30 UK
+36 37 FR
+37 38 WR
+37 39 ST
+37 39 RF
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+13
+MP
+MF
+MP
+TP
+MF
+MF
+TP
+MF
+MP
+SO
+MP
+MF
+SF
+16
+0 1 WR
+2 1 RD
+2 3 FR
+3 4 RD
+3 4 WR
+6 5 RD
+6 5 WR
+6 7 WR
+8 7 EX
+8 9 RF
+8 10 FR
+8 11 WR
+10 11 EX
+10 12 RD
+10 12 WR
+10 11 UK
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+42
+MP
+MF
+MP
+MP
+TP
+MP
+MP
+MF
+TF
+MP
+MP
+MF
+MF
+MP
+TP
+MF
+MF
+MP
+MF
+SO
+MP
+MF
+MF
+MF
+MP
+MP
+MF
+MF
+MF
+MF
+MF
+MP
+MF
+SO
+MF
+MF
+MF
+MP
+MP
+MF
+MF
+MF
+42
+0 1 WR
+2 1 EX
+2 3 FR
+3 4 FR
+4 1 RD
+4 5 FR
+6 7 RD
+6 7 EX
+6 8 WR
+9 8 RD
+10 11 WR
+5 12 WR
+9 12 WR
+10 12 WR
+14 13 FR
+13 14 FR
+14 11 EX
+13 12 WR
+13 15 WR
+13 15 EX
+13 16 WR
+17 18 WR
+17 19 ST
+17 19 RF
+20 21 WR
+20 22 RD
+24 23 EX
+25 26 WR
+25 27 WR
+25 28 EX
+25 29 WR
+25 30 WR
+31 32 WR
+31 33 ST
+31 33 RF
+37 36 WR
+38 39 RD
+6 31 UK
+37 34 WR
+37 35 WR
+6 40 WR
+6 41 EX
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+71
+MP
+MF
+TP
+TF
+TP
+SF
+TF
+TF
+MP
+MF
+TP
+TF
+TF
+TF
+TF
+TF
+TF
+MF
+MF
+MF
+MP
+SF
+MP
+SF
+TP
+SF
+SF
+MF
+MF
+SF
+MF
+TP
+MP
+TF
+MF
+MF
+SO
+TP
+SF
+SF
+SF
+TF
+TF
+TF
+SO
+TP
+SF
+TF
+TF
+TF
+TF
+SO
+MP
+TF
+TF
+TF
+MF
+TP
+SF
+MF
+MP
+MP
+MP
+MF
+SF
+SO
+MF
+TP
+MF
+SO
+SO
+92
+0 1 EX
+0 2 FR
+2 3 RD
+0 3 CD
+0 4 FR
+4 5 RD
+4 5 WR
+8 6 WR
+8 7 WR
+4 9 RD
+8 10 FR
+4 10 IJ
+10 11 WR
+10 12 WR
+10 13 WR
+10 14 WR
+10 15 WR
+10 16 WR
+0 16 RD
+0 17 WR
+0 18 UK
+0 19 UK
+20 17 WR
+20 21 RD
+20 21 WR
+20 21 RD
+20 21 WR
+22 21 RD
+22 21 WR
+22 21 RD
+22 21 WR
+22 23 RD
+24 23 RD
+22 23 WR
+24 23 WR
+24 23 EX
+0 26 RD
+0 25 CD
+0 26 WR
+0 27 WR
+24 27 RD
+24 27 EX
+24 28 WR
+24 29 RD
+24 29 WR
+30 29 RD
+30 29 WR
+0 31 IJ
+31 28 WR
+0 30 WR
+0 32 FR
+32 30 EX
+32 33 WR
+32 34 EX
+32 35 WR
+32 36 ST
+32 36 RF
+37 35 WR
+37 38 RD
+37 39 RD
+37 40 RD
+37 41 WR
+37 42 WR
+37 43 WR
+37 44 ST
+45 46 RD
+45 47 WR
+45 48 WR
+45 49 WR
+45 50 WR
+45 51 ST
+52 51 ST
+52 53 WR
+52 54 WR
+52 55 WR
+52 56 WR
+57 56 WR
+57 58 RD
+60 58 RD
+57 58 WR
+60 58 WR
+60 61 FR
+61 62 FR
+62 59 EX
+61 63 WR
+61 64 RD
+61 65 ST
+61 65 RF
+61 66 WR
+67 68 RD
+67 69 ST
+67 70 ST
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+35
+MP
+TP
+MP
+MF
+MF
+MF
+TP
+MF
+MP
+MF
+MF
+MF
+MF
+MF
+MP
+TP
+MF
+MF
+MP
+MP
+MP
+TF
+SO
+MP
+TF
+MP
+MF
+MP
+MF
+MP
+MF
+MF
+MP
+MF
+SO
+40
+0 3 WR
+1 3 RD
+2 3 EX
+2 4 EX
+2 5 WR
+2 5 EX
+6 7 RD
+6 7 WR
+6 8 FR
+8 7 EX
+8 9 WR
+8 10 WR
+8 11 WR
+8 12 WR
+8 13 WR
+14 15 FR
+14 16 RD
+14 17 WR
+19 18 FR
+18 20 FR
+20 21 WR
+20 22 ST
+18 23 FR
+23 24 WR
+25 10 WR
+25 11 WR
+25 12 WR
+25 9 WR
+25 13 WR
+25 26 WR
+25 5 EX
+27 28 WR
+29 30 EX
+29 31 WR
+27 32 FR
+32 28 EX
+32 33 WR
+32 34 ST
+32 34 RF
+32 33 EX
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+56
+MP
+MF
+MF
+SO
+MP
+MP
+MF
+TF
+TF
+MP
+SF
+TP
+TF
+MF
+MP
+SF
+MF
+MF
+SO
+MF
+MF
+MF
+MP
+MP
+MP
+MF
+MF
+MF
+TP
+MP
+MF
+MF
+MP
+MF
+MP
+MP
+MF
+MP
+MF
+MP
+MF
+SO
+MP
+MF
+MF
+MF
+MP
+MF
+MF
+MP
+MF
+MF
+TP
+MF
+MP
+TP
+57
+0 1 RD
+0 2 RD
+0 3 ST
+0 3 RF
+4 6 WR
+4 7 WR
+9 10 RD
+4 8 WR
+9 10 WR
+0 11 FR
+11 12 EX
+14 15 RD
+14 13 EX
+14 15 WR
+5 16 WR
+5 17 WR
+5 18 ST
+5 18 RF
+5 19 WR
+5 20 EX
+5 21 WR
+22 21 WR
+24 25 EX
+24 26 EX
+24 27 WR
+22 28 FR
+23 21 WR
+28 27 RD
+28 27 EX
+28 29 FR
+29 30 WR
+29 31 WR
+32 30 WR
+32 31 WR
+32 33 EX
+34 35 FR
+34 36 EX
+37 38 WR
+39 40 EX
+39 41 ST
+39 41 RF
+39 42 FR
+42 43 WR
+42 44 WR
+42 45 WR
+46 43 WR
+46 44 WR
+46 45 WR
+46 47 WR
+46 48 WR
+49 50 WR
+46 51 WR
+46 52 FR
+52 53 WR
+54 53 EX
+54 53 UK
+54 55 FR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+15
+SF
+MP
+SO
+TP
+SO
+MF
+MF
+SO
+MP
+MF
+TF
+MF
+MP
+MF
+SO
+21
+1 0 RD
+1 0 WR
+1 2 ST
+1 3 FR
+3 4 ST
+3 4 RF
+1 4 RF
+1 5 WR
+1 5 EX
+1 6 WR
+1 7 RF
+1 8 FR
+8 5 EX
+8 6 CD
+8 6 EX
+8 9 WR
+12 9 WR
+12 10 WR
+12 11 EX
+12 13 WR
+12 14 RF
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+31
+MF
+MF
+TP
+SO
+MF
+MF
+TP
+MP
+MP
+MF
+MF
+MF
+MP
+SF
+TP
+SF
+MF
+TP
+MF
+MF
+MF
+MF
+MF
+MF
+TP
+SF
+TP
+MP
+SO
+MP
+TF
+40
+2 0 RD
+2 1 WR
+2 3 ST
+2 3 RF
+2 4 WR
+2 5 WR
+6 3 ST
+6 3 RF
+6 4 WR
+6 5 WR
+6 7 FR
+6 8 FR
+7 9 WR
+8 9 WR
+8 10 WR
+8 11 WR
+12 9 WR
+12 10 WR
+12 11 WR
+12 13 RD
+12 14 FR
+12 15 RD
+12 16 WR
+14 16 EX
+12 17 FR
+17 18 EX
+12 19 WR
+17 20 EX
+12 21 WR
+12 22 WR
+12 23 WR
+12 24 FR
+24 25 RD
+24 25 WR
+26 25 RD
+26 25 WR
+12 27 FR
+27 28 ST
+12 29 FR
+12 30 WR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+36
+MF
+MP
+MF
+MF
+MF
+TP
+MF
+SO
+MF
+MF
+MP
+TP
+MF
+TP
+MF
+MP
+SO
+MF
+MP
+MP
+TF
+TF
+SF
+TF
+SO
+MF
+MP
+MF
+SO
+MF
+MF
+MP
+SO
+MF
+MF
+MF
+41
+1 0 WR
+1 2 WR
+1 4 WR
+5 3 RD
+5 4 WR
+5 6 EX
+5 7 ST
+5 7 RF
+5 8 WR
+5 8 EX
+5 9 WR
+11 12 EX
+10 13 FR
+11 9 WR
+13 14 WR
+15 16 ST
+15 16 RF
+15 17 EX
+18 17 RD
+19 20 WR
+19 21 WR
+18 22 RD
+18 22 WR
+19 22 RD
+19 23 WR
+19 24 ST
+19 24 RF
+19 25 WR
+26 25 WR
+26 27 RD
+19 28 ST
+19 28 RF
+26 29 WR
+26 30 WR
+31 29 WR
+31 30 WR
+31 32 ST
+31 32 RF
+31 33 WR
+31 34 WR
+26 35 WR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+38
+MP
+TP
+MP
+MF
+MF
+MF
+MP
+MF
+MP
+MF
+MF
+MF
+MP
+TP
+MF
+MF
+MP
+TP
+MF
+MF
+MF
+TP
+MP
+TF
+SO
+MP
+TF
+TP
+MF
+MF
+MP
+MF
+MP
+MF
+MF
+MP
+MF
+SO
+39
+0 3 WR
+1 3 RD
+2 3 EX
+2 4 EX
+2 5 WR
+2 5 EX
+6 7 EX
+6 8 FR
+8 7 WR
+8 9 WR
+8 10 WR
+8 11 WR
+12 9 WR
+12 10 WR
+12 11 WR
+12 14 WR
+13 14 RD
+13 14 WR
+13 15 WR
+16 15 WR
+16 17 FR
+16 18 RD
+16 19 WR
+21 22 FR
+22 20 EX
+22 23 WR
+22 24 ST
+22 25 FR
+25 26 WR
+27 28 WR
+27 29 EX
+30 31 WR
+32 33 EX
+32 34 WR
+30 35 FR
+35 31 EX
+35 36 WR
+35 37 ST
+35 37 RF
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+14
+SO
+MP
+MP
+MF
+MP
+SF
+TP
+TP
+TP
+TP
+SF
+MP
+TP
+TP
+16
+1 0 ST
+1 0 RF
+2 0 ST
+2 0 RF
+2 3 WR
+1 3 RD
+1 3 EX
+1 5 CD
+1 6 FR
+1 7 FR
+4 8 FR
+8 9 IJ
+4 10 RD
+4 10 WR
+11 12 UK
+11 13 UK
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+14
+MP
+MF
+MP
+TP
+MF
+MF
+TP
+MF
+MP
+SO
+MF
+MF
+SF
+TF
+15
+0 1 WR
+2 1 RD
+2 3 FR
+3 4 RD
+3 4 WR
+6 5 RD
+6 5 WR
+6 7 WR
+8 7 EX
+8 9 RF
+8 10 WR
+8 11 WR
+8 12 RD
+8 12 WR
+8 13 WR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+15
+SO
+SO
+MP
+MF
+MF
+TP
+SF
+SO
+MF
+MP
+SO
+SO
+MP
+SO
+MP
+16
+2 0 ST
+2 0 RF
+2 1 ST
+2 4 WR
+2 4 EX
+5 1 RF
+5 3 RD
+2 6 RD
+2 7 ST
+2 8 WR
+2 8 EX
+9 10 RF
+9 11 ST
+12 9 UK
+12 11 ST
+14 13 ST
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+93
+MF
+TP
+MP
+MF
+MP
+MP
+MF
+MP
+SO
+SO
+MP
+MP
+SF
+SO
+MP
+SO
+MF
+MF
+MF
+MP
+MF
+SO
+MF
+MP
+MP
+TF
+TF
+TF
+SO
+TF
+SO
+SO
+MF
+TP
+SO
+MF
+MP
+SF
+MP
+MF
+MP
+MF
+SF
+SF
+MP
+SF
+MF
+MP
+SO
+SO
+MF
+MP
+MP
+TF
+MP
+MF
+MP
+SF
+SF
+SO
+SO
+MF
+MF
+MP
+MP
+SF
+MP
+TF
+MP
+SF
+MP
+SF
+SF
+SF
+MP
+SF
+SO
+TF
+SF
+SF
+SF
+TF
+SF
+SO
+MP
+MF
+SO
+MF
+MF
+MP
+MF
+SF
+MF
+114
+1 2 FR
+2 0 EX
+2 3 WR
+4 5 FR
+5 6 WR
+5 7 FR
+7 8 ST
+7 8 RF
+7 9 ST
+7 9 RF
+10 8 ST
+10 8 RF
+10 9 ST
+10 9 RF
+10 11 FR
+11 12 RD
+11 13 ST
+14 15 ST
+14 15 RF
+14 16 WR
+14 17 WR
+14 18 EX
+14 19 FR
+19 18 RD
+19 16 EX
+19 20 WR
+19 21 ST
+19 21 RF
+19 22 EX
+23 24 FR
+24 25 WR
+24 25 RD
+24 26 WR
+24 25 UK
+23 27 RD
+23 28 ST
+23 29 RD
+23 30 ST
+23 31 RF
+33 32 EX
+33 34 ST
+36 35 RD
+36 37 RD
+36 38 FR
+38 39 WR
+40 42 RD
+40 39 WR
+40 43 RD
+40 42 WR
+40 43 WR
+40 44 FR
+44 45 RD
+44 41 EX
+44 45 WR
+44 46 EX
+47 48 ST
+47 48 RF
+47 49 ST
+47 49 RF
+47 50 WR
+51 52 FR
+52 53 WR
+54 53 RD
+54 55 WR
+56 55 WR
+56 57 RD
+56 58 RD
+56 59 ST
+56 60 RF
+56 61 WR
+56 62 WR
+56 62 EX
+64 63 FR
+63 65 RD
+66 67 WR
+68 69 RD
+68 69 WR
+68 71 RD
+68 71 WR
+70 69 RD
+70 69 WR
+70 71 RD
+70 71 WR
+70 71 RD
+70 71 WR
+70 72 RD
+70 72 WR
+70 73 RD
+70 73 WR
+74 71 RD
+74 71 WR
+74 72 RD
+74 72 WR
+74 73 RD
+74 73 WR
+74 75 RD
+74 76 ST
+74 77 WR
+74 78 RD
+74 79 RD
+74 80 RD
+74 81 WR
+74 82 RD
+74 83 ST
+84 85 WR
+84 86 RF
+84 87 WR
+84 89 FR
+89 88 WR
+89 88 EX
+84 91 RD
+84 90 WR
+84 91 WR
+84 92 WR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+94
+MF
+MP
+MP
+MF
+MF
+MP
+TP
+SO
+MP
+MP
+MP
+MF
+MP
+MP
+MP
+MP
+SO
+TP
+MF
+MP
+MP
+SF
+SF
+SF
+MF
+MP
+TF
+SO
+MP
+MP
+TP
+MP
+MP
+MP
+TF
+TF
+SO
+MP
+SO
+MF
+MP
+MP
+MP
+MF
+MP
+TP
+MF
+MP
+MP
+MP
+MP
+SO
+MF
+MF
+MF
+MP
+SO
+MP
+MF
+SO
+SO
+SO
+MF
+MP
+MP
+MF
+MP
+MF
+MP
+MP
+MF
+MP
+MP
+MF
+MF
+MF
+MP
+TF
+TF
+SO
+MP
+MP
+MP
+MP
+MP
+MP
+MP
+MF
+MF
+MF
+MP
+MP
+MP
+MF
+104
+1 0 WR
+2 0 WR
+5 4 WR
+6 3 RD
+10 7 ST
+10 7 RF
+10 8 IJ
+10 9 IJ
+10 11 WR
+12 11 WR
+12 16 ST
+12 16 RF
+13 11 WR
+13 16 ST
+13 16 RF
+14 11 WR
+14 16 ST
+14 16 RF
+15 11 WR
+15 16 ST
+15 16 RF
+17 18 EX
+19 21 RD
+19 20 FR
+19 21 WR
+19 23 RD
+19 22 RD
+19 23 WR
+25 24 WR
+25 26 RD
+29 27 ST
+29 27 RF
+29 28 FR
+32 30 FR
+30 31 FR
+33 34 RD
+33 35 RD
+31 36 ST
+31 36 RF
+32 36 ST
+32 36 RF
+33 36 ST
+37 38 ST
+37 38 RF
+37 39 WR
+40 39 WR
+44 43 WR
+40 45 FR
+41 39 WR
+42 39 WR
+45 43 EX
+45 46 EX
+47 46 RD
+47 51 ST
+47 51 RF
+48 46 RD
+48 51 ST
+48 51 RF
+49 51 ST
+49 51 RF
+50 52 EX
+50 53 RD
+50 54 WR
+55 54 WR
+55 56 ST
+55 56 RF
+55 57 FR
+57 56 ST
+57 56 RF
+57 58 WR
+50 58 WR
+50 59 ST
+50 59 RF
+50 60 ST
+50 60 RF
+50 61 ST
+50 61 RF
+50 62 RD
+63 62 WR
+64 65 EX
+66 67 RD
+68 69 FR
+69 70 WR
+71 70 WR
+71 72 FR
+71 73 RD
+72 74 WR
+72 75 WR
+76 75 WR
+76 74 RD
+50 77 RD
+50 78 RD
+50 79 ST
+80 78 RD
+82 81 FR
+82 83 FR
+84 85 FR
+86 89 WR
+86 87 RD
+86 88 WR
+90 89 WR
+90 91 IJ
+90 92 IJ
+90 93 RD
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+31
+SO
+MP
+MP
+MF
+SO
+MF
+MP
+MF
+MP
+MF
+MP
+MF
+MF
+MF
+MP
+MP
+MF
+MP
+TP
+MF
+SO
+TP
+MF
+TP
+MP
+SF
+SF
+MP
+MP
+SO
+MP
+37
+1 0 ST
+1 0 RF
+2 3 WR
+2 4 ST
+2 5 WR
+6 5 WR
+6 7 WR
+8 7 EX
+8 9 WR
+10 9 EX
+10 11 WR
+10 12 WR
+10 13 WR
+14 13 RD
+15 16 WR
+17 18 FR
+18 19 WR
+18 20 ST
+18 20 RF
+21 19 RD
+21 19 EX
+21 19 WR
+23 22 EX
+23 24 FR
+24 25 RD
+24 25 WR
+23 26 RD
+23 25 RD
+23 26 WR
+27 26 RD
+27 26 WR
+27 29 ST
+27 29 RF
+30 28 FR
+28 29 ST
+28 29 RF
+28 26 RD
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+55
+MP
+MF
+MF
+SO
+MP
+MP
+MF
+SO
+MP
+SO
+MP
+MP
+MF
+MP
+MF
+MF
+SO
+SO
+SO
+SO
+MP
+MF
+SO
+SO
+SO
+SO
+SO
+MP
+MF
+MF
+MF
+MP
+SO
+MP
+MF
+SO
+MF
+MF
+MP
+MF
+MF
+TP
+SO
+MF
+MP
+SO
+MP
+MF
+MP
+SO
+SO
+MF
+MP
+MF
+SO
+85
+0 1 EX
+0 2 WR
+0 3 ST
+0 3 RF
+0 4 FR
+0 5 FR
+5 6 EX
+0 7 ST
+0 7 RF
+0 8 FR
+10 9 ST
+10 9 RF
+11 12 EX
+11 13 FR
+13 9 ST
+13 9 RF
+0 12 RD
+0 14 EX
+0 15 WR
+0 16 ST
+0 16 RF
+0 16 ST
+0 16 RF
+0 17 ST
+0 17 RF
+0 18 ST
+0 18 RF
+0 19 ST
+0 19 RF
+0 20 FR
+20 17 ST
+20 17 RF
+20 18 ST
+20 18 RF
+20 19 ST
+20 19 RF
+20 21 EX
+20 22 ST
+20 22 RF
+20 23 ST
+20 23 RF
+20 24 ST
+20 24 RF
+20 25 ST
+20 25 RF
+27 23 ST
+27 23 RF
+27 24 ST
+27 24 RF
+27 22 ST
+27 22 RF
+27 25 ST
+27 25 RF
+27 26 ST
+27 26 RF
+27 28 WR
+27 29 WR
+31 30 WR
+33 32 ST
+33 32 RF
+33 34 EX
+0 34 WR
+0 35 ST
+0 35 RF
+0 36 EX
+0 37 WR
+0 38 FR
+38 39 EX
+38 41 IJ
+44 41 FR
+41 40 EX
+41 42 ST
+41 42 RF
+41 40 RD
+41 43 WR
+46 45 ST
+46 45 RF
+48 49 ST
+48 49 RF
+52 47 UK
+52 50 ST
+52 51 WR
+52 53 WR
+52 54 ST
+52 54 RF
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+24
+MP
+MF
+MF
+MP
+MF
+TP
+MF
+MP
+MF
+MF
+SF
+MP
+TF
+SF
+SF
+TF
+SF
+MF
+SO
+MP
+MF
+MP
+MF
+MF
+27
+0 1 WR
+0 2 WR
+3 2 WR
+0 4 WR
+3 5 FR
+5 4 RD
+5 6 RD
+5 6 WR
+5 6 EX
+7 6 WR
+7 8 WR
+7 8 EX
+7 10 RD
+7 9 WR
+7 10 WR
+11 12 WR
+11 13 RD
+11 14 RD
+11 15 WR
+11 16 RD
+11 17 WR
+19 18 ST
+19 20 EX
+19 21 FR
+19 18 RF
+21 22 WR
+21 23 EX
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+39
+MP
+MF
+MF
+MF
+TP
+TP
+MF
+SO
+MF
+TP
+MF
+TP
+TP
+MF
+MF
+TP
+MP
+SO
+MP
+MP
+TF
+TF
+TF
+TF
+SF
+SO
+MF
+SO
+SO
+MF
+MP
+MF
+SO
+MP
+SO
+MF
+MF
+MP
+MF
+45
+0 1 WR
+0 3 WR
+0 2 WR
+4 3 WR
+4 5 FR
+5 2 RD
+5 6 EX
+4 7 ST
+4 7 RF
+4 8 WR
+4 8 EX
+9 10 EX
+9 11 FR
+11 12 FR
+11 14 WR
+15 13 EX
+16 17 ST
+16 17 RF
+19 20 WR
+19 21 WR
+19 22 WR
+19 23 WR
+18 24 RD
+18 24 WR
+19 24 RD
+19 25 ST
+19 25 RF
+19 26 WR
+19 26 EX
+19 26 UK
+19 27 RF
+19 28 ST
+19 28 RF
+19 29 WR
+30 29 WR
+30 31 WR
+30 32 ST
+30 32 RF
+33 32 ST
+33 32 RF
+33 34 ST
+33 34 RF
+33 35 WR
+33 36 WR
+37 38 WR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+20
+SO
+MP
+MF
+MP
+SF
+SF
+MP
+MF
+MP
+MF
+MF
+MP
+TP
+TP
+SO
+MP
+TP
+SO
+MF
+SF
+27
+1 0 ST
+1 0 RF
+1 0 ST
+1 0 RF
+1 2 WR
+1 3 FR
+3 2 EX
+1 4 RD
+1 4 WR
+3 4 RD
+3 5 RD
+3 6 FR
+6 7 EX
+8 9 EX
+11 10 RD
+11 12 IJ
+13 14 ST
+13 15 FR
+13 16 FR
+16 17 ST
+16 17 RF
+16 18 RD
+16 18 WR
+16 19 RD
+16 18 EX
+16 19 WR
+15 19 RD
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+48
+MP
+MF
+SO
+MF
+SF
+MP
+MF
+MF
+SO
+MF
+MP
+SF
+MF
+SF
+MF
+MF
+MP
+MF
+MF
+TF
+MF
+MF
+TF
+TF
+MF
+SO
+SF
+MP
+MP
+MF
+SF
+MF
+MF
+TF
+MF
+MP
+SF
+MF
+MF
+MF
+MF
+MF
+MF
+MF
+SO
+MF
+MP
+MF
+58
+0 1 EX
+0 2 ST
+0 2 RF
+0 4 RD
+0 3 WR
+0 4 WR
+5 2 ST
+5 2 RF
+5 6 WR
+5 8 ST
+5 8 RF
+5 9 EX
+10 7 WR
+10 8 ST
+10 8 RF
+10 9 RD
+10 11 RD
+5 11 RD
+10 11 WR
+5 11 WR
+5 12 WR
+5 13 CD
+5 14 WR
+5 15 WR
+16 17 EX
+16 18 WR
+16 19 WR
+16 20 EX
+16 21 WR
+16 22 RD
+16 23 RD
+27 21 WR
+27 26 RD
+27 25 ST
+27 26 WR
+27 24 EX
+27 28 FR
+27 29 EX
+27 30 CD
+27 31 EX
+27 32 EX
+27 33 WR
+27 34 EX
+35 36 RD
+35 37 WR
+35 37 EX
+35 38 WR
+27 38 WR
+27 39 EX
+27 40 WR
+27 41 EX
+27 42 WR
+27 42 EX
+27 43 WR
+27 44 ST
+27 45 WR
+46 45 WR
+46 47 EX
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+69
+MF
+MP
+MP
+MF
+MF
+MP
+MF
+MF
+MF
+MF
+MF
+MP
+MF
+MF
+TP
+MP
+MF
+MF
+MF
+MP
+MP
+MP
+MP
+MF
+MF
+MF
+MF
+MP
+MF
+MF
+MP
+MP
+MP
+MP
+MP
+MP
+MP
+MF
+MP
+MP
+MP
+MP
+SF
+SF
+SF
+SO
+MF
+MP
+MF
+MP
+TP
+SO
+MP
+MP
+MP
+SO
+MP
+TP
+MP
+MP
+MP
+MP
+MF
+MF
+MP
+MP
+MP
+MF
+MF
+69
+1 0 WR
+1 2 FR
+2 3 WR
+2 4 WR
+5 6 WR
+5 7 WR
+1 8 RD
+1 9 WR
+1 10 WR
+1 11 FR
+11 7 WR
+11 14 FR
+14 12 RD
+14 13 WR
+15 16 WR
+15 17 WR
+20 17 WR
+20 18 WR
+19 18 RD
+22 23 RD
+22 24 WR
+19 25 WR
+20 25 WR
+21 18 RD
+21 25 WR
+22 25 WR
+27 25 WR
+27 26 WR
+27 28 RD
+30 29 WR
+30 29 EX
+32 31 FR
+34 33 FR
+35 37 RD
+36 37 RD
+38 39 FR
+39 40 FR
+40 41 FR
+41 42 RD
+41 43 RD
+38 44 RD
+41 45 ST
+41 45 RF
+41 46 RD
+47 45 ST
+47 45 RF
+47 46 RD
+47 48 WR
+49 48 WR
+49 50 FR
+50 51 ST
+50 51 RF
+52 53 FR
+53 54 FR
+54 55 ST
+54 55 RF
+56 57 FR
+57 58 FR
+61 59 FR
+61 60 FR
+58 62 WR
+61 62 WR
+61 63 WR
+64 62 WR
+64 63 WR
+65 63 WR
+66 60 UK
+66 67 RD
+66 68 RD
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+26
+MF
+MF
+MP
+MF
+SO
+MF
+MP
+MF
+MF
+TF
+MP
+SF
+MP
+MP
+MF
+MF
+MF
+MF
+MF
+MF
+SF
+MP
+MP
+SO
+MP
+TF
+33
+2 0 WR
+2 1 WR
+2 3 WR
+2 4 ST
+2 4 RF
+2 5 WR
+6 3 WR
+6 4 ST
+6 4 RF
+6 5 WR
+6 7 WR
+6 8 WR
+6 9 EX
+6 10 FR
+10 7 WR
+10 8 WR
+10 11 RD
+10 12 FR
+13 11 RD
+13 11 WR
+6 14 EX
+6 15 WR
+6 16 EX
+6 17 WR
+6 18 WR
+6 19 WR
+6 21 FR
+21 20 RD
+21 20 WR
+6 22 FR
+22 23 ST
+6 24 FR
+24 25 WR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+10
+MF
+TP
+MF
+MP
+MP
+TP
+MP
+MF
+MF
+SO
+10
+1 0 RD
+1 3 FR
+3 2 EX
+3 0 RD
+5 4 FR
+4 0 EX
+6 7 EX
+6 8 UK
+6 9 ST
+6 9 RF
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+16
+MP
+TP
+MP
+TP
+MF
+MF
+MF
+TF
+MF
+MF
+MP
+MF
+MP
+MP
+MF
+SO
+19
+0 1 FR
+1 2 FR
+2 3 FR
+3 4 RD
+3 5 RD
+3 6 WR
+3 6 EX
+3 8 WR
+3 9 WR
+3 10 FR
+10 8 WR
+10 9 WR
+10 11 WR
+12 11 EX
+12 13 FR
+13 7 WR
+13 14 WR
+12 15 ST
+12 15 RF
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+48
+MP
+TP
+TP
+TP
+SF
+SF
+MF
+MP
+SO
+SO
+MF
+MF
+MP
+MP
+MP
+MP
+MP
+MP
+SF
+MF
+SF
+SF
+SF
+SF
+SF
+MP
+SF
+SO
+MP
+SF
+SF
+MF
+MF
+MF
+MP
+SF
+SF
+MF
+MP
+SF
+MP
+MP
+TP
+SF
+MF
+SF
+MF
+MF
+70
+0 1 FR
+0 2 FR
+0 3 FR
+1 4 RD
+1 4 WR
+2 4 RD
+2 4 WR
+3 4 RD
+3 4 WR
+3 4 RD
+3 4 WR
+3 5 RD
+3 5 WR
+3 6 WR
+6 4 RD
+6 4 WR
+6 5 RD
+6 5 WR
+7 6 WR
+7 8 ST
+7 8 RF
+7 9 ST
+7 9 RF
+7 10 WR
+0 9 ST
+0 9 RF
+0 11 WR
+0 12 FR
+13 10 WR
+15 14 FR
+14 16 FR
+17 18 RD
+0 19 EX
+0 20 RD
+0 21 RD
+0 21 WR
+0 21 RD
+0 21 WR
+0 22 RD
+0 23 RD
+25 26 RD
+0 24 RD
+25 26 WR
+25 27 ST
+25 27 RF
+28 29 RD
+28 30 RD
+28 30 WR
+28 31 WR
+31 30 RD
+31 30 WR
+28 32 WR
+34 31 WR
+34 32 WR
+34 33 EX
+34 36 RD
+34 35 RD
+34 36 WR
+38 37 EX
+38 39 RD
+0 40 FR
+42 43 RD
+0 41 FR
+42 43 WR
+42 45 RD
+42 45 WR
+42 46 EX
+44 45 RD
+44 45 WR
+42 47 EX
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+21
+SO
+SO
+MP
+TF
+SO
+SO
+SO
+MF
+TP
+TF
+MF
+MP
+SO
+MF
+MF
+MF
+SO
+SO
+TF
+SO
+MP
+43
+2 0 ST
+2 0 RF
+2 3 RD
+2 1 WR
+2 4 ST
+2 4 RF
+2 6 ST
+2 6 RF
+2 7 WR
+8 5 ST
+8 5 RF
+8 6 ST
+8 6 RF
+8 7 WR
+8 9 RD
+11 10 RD
+11 8 IJ
+8 12 ST
+8 12 RF
+8 13 RD
+8 15 WR
+11 16 ST
+11 16 RF
+11 17 ST
+11 17 RF
+11 16 ST
+11 16 RF
+11 16 ST
+11 16 RF
+11 19 ST
+11 19 RF
+11 16 ST
+11 16 RF
+8 20 FR
+20 15 EX
+20 14 WR
+20 17 ST
+20 17 RF
+20 19 ST
+20 19 RF
+20 18 WR
+20 16 ST
+20 16 RF
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+51
+MP
+MF
+SO
+MF
+MF
+SF
+SF
+MP
+MF
+MF
+MF
+SO
+MF
+SF
+MF
+MF
+SF
+MF
+MF
+MP
+MF
+MF
+TF
+MF
+MF
+MP
+TF
+TF
+MF
+MF
+SO
+SF
+MF
+MP
+MF
+SF
+MP
+MF
+MF
+TF
+MF
+SF
+MF
+MF
+MF
+MF
+MF
+MF
+SO
+MP
+MF
+61
+0 1 EX
+0 2 ST
+0 2 RF
+0 3 WR
+0 5 RD
+0 4 WR
+0 5 WR
+7 2 ST
+7 2 RF
+7 4 WR
+7 6 RD
+7 6 WR
+7 8 WR
+7 10 WR
+7 11 ST
+7 11 RF
+7 13 RD
+7 12 EX
+7 13 WR
+7 14 WR
+7 15 WR
+19 9 WR
+19 10 WR
+19 11 ST
+19 11 RF
+19 14 WR
+19 16 CD
+19 17 EX
+19 18 EX
+19 20 EX
+19 21 WR
+19 22 WR
+19 23 EX
+19 24 WR
+25 24 WR
+25 26 RD
+25 27 RD
+25 28 WR
+25 29 EX
+25 31 RD
+25 30 ST
+25 31 WR
+25 32 EX
+25 33 FR
+25 34 EX
+25 35 CD
+36 37 EX
+36 38 EX
+36 39 WR
+36 40 EX
+25 41 RD
+25 42 WR
+25 42 EX
+25 43 WR
+25 44 EX
+25 45 EX
+25 46 WR
+25 46 EX
+25 47 WR
+25 48 ST
+49 50 EX
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+22
+MP
+MF
+MF
+MF
+SO
+TP
+MF
+MF
+TP
+MP
+MP
+MF
+MP
+MP
+MF
+MF
+MP
+MP
+MF
+MF
+MP
+MP
+25
+0 1 EX
+0 2 WR
+0 3 WR
+0 4 ST
+0 4 RF
+0 5 FR
+5 3 WR
+5 2 EX
+5 6 RD
+5 6 WR
+5 6 EX
+0 7 WR
+8 6 WR
+8 9 FR
+9 7 EX
+8 10 FR
+10 11 EX
+12 13 FR
+13 14 EX
+12 16 FR
+16 15 EX
+17 18 EX
+17 20 FR
+20 19 UK
+20 21 IJ
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+75
+SO
+SO
+SO
+SO
+MP
+MF
+SO
+SO
+SO
+MP
+MF
+MF
+MF
+MP
+TP
+MP
+MP
+MF
+TP
+MP
+MP
+MF
+MF
+MP
+TP
+TP
+TP
+MP
+MP
+TF
+MP
+TF
+MP
+TF
+MF
+TP
+MP
+MF
+MF
+MF
+MF
+TF
+TF
+MP
+MP
+MP
+SO
+MP
+MF
+MF
+MP
+MP
+MF
+MF
+MP
+SO
+MP
+MP
+SF
+SF
+MF
+TP
+TP
+SF
+MP
+SO
+MP
+MF
+MP
+TP
+TF
+SO
+MF
+MP
+MF
+85
+4 0 ST
+4 0 RF
+4 1 ST
+4 1 RF
+4 2 ST
+4 2 RF
+4 3 ST
+4 3 RF
+4 5 WR
+4 6 ST
+4 6 RF
+4 7 ST
+4 7 RF
+4 8 ST
+4 8 RF
+9 6 ST
+9 6 RF
+9 7 ST
+9 7 RF
+9 8 ST
+9 8 RF
+9 10 EX
+9 10 WR
+9 12 WR
+13 12 EX
+13 14 UK
+13 15 FR
+16 17 WR
+16 17 EX
+16 18 UK
+19 11 EX
+19 20 FR
+20 21 WR
+20 21 EX
+19 22 WR
+23 24 FR
+23 25 FR
+23 26 FR
+28 27 FR
+28 29 WR
+30 31 WR
+32 33 RD
+32 34 WR
+32 35 FR
+36 37 WR
+36 38 WR
+36 39 WR
+36 40 WR
+36 43 FR
+43 41 WR
+43 42 WR
+44 42 RD
+44 46 ST
+44 46 RF
+45 46 ST
+45 46 RF
+45 47 FR
+28 48 RD
+28 49 WR
+45 50 FR
+51 52 WR
+51 53 WR
+51 54 FR
+16 56 FR
+56 55 ST
+57 58 RD
+56 55 RF
+57 58 WR
+57 58 RD
+57 59 RD
+57 59 WR
+57 60 WR
+57 61 UK
+62 63 RD
+62 63 WR
+64 65 ST
+64 65 RF
+16 66 FR
+66 67 WR
+68 69 FR
+69 70 WR
+69 71 ST
+69 71 RF
+73 72 WR
+73 74 WR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+14
+MF
+MP
+MF
+SO
+MF
+TP
+TP
+TP
+SF
+MF
+SO
+MP
+MF
+MF
+15
+1 0 EX
+1 2 EX
+1 3 ST
+1 3 RF
+1 4 EX
+1 5 FR
+1 6 FR
+1 7 FR
+1 8 RD
+1 9 WR
+1 10 ST
+11 10 RF
+11 12 RD
+11 12 WR
+1 13 UK
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+30
+MF
+TP
+MP
+MF
+MP
+SF
+MF
+MP
+SF
+MP
+TP
+MF
+SF
+SO
+MP
+MF
+MP
+MF
+MF
+SO
+MF
+MP
+SF
+SF
+MF
+MF
+MP
+SF
+SF
+SF
+48
+1 0 RD
+1 2 FR
+1 4 FR
+4 3 EX
+2 5 RD
+2 5 WR
+4 5 RD
+4 5 WR
+1 6 EX
+1 7 FR
+9 8 RD
+9 8 WR
+9 10 FR
+10 11 WR
+10 13 ST
+10 13 RF
+14 11 EX
+14 12 RD
+14 13 ST
+14 13 RF
+14 15 WR
+16 15 WR
+16 17 WR
+16 18 WR
+16 19 ST
+16 19 RF
+16 20 WR
+21 20 WR
+21 22 RD
+21 22 WR
+21 22 RD
+21 22 WR
+21 23 RD
+21 23 WR
+21 24 WR
+24 22 RD
+24 22 WR
+24 23 RD
+24 23 WR
+1 24 WR
+1 25 WR
+26 27 RD
+26 25 UK
+26 27 WR
+26 28 RD
+26 28 WR
+26 29 RD
+26 29 WR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+94
+MF
+MP
+MF
+MF
+MF
+MF
+MF
+MF
+MF
+MF
+MF
+MP
+MF
+MF
+MF
+MF
+MP
+TP
+TP
+TP
+MP
+MF
+MP
+MF
+SO
+MF
+MP
+MP
+MF
+MF
+MP
+MF
+MP
+SF
+SF
+MF
+MF
+MF
+MF
+MF
+MP
+SO
+MF
+MF
+MF
+SO
+MP
+MF
+MF
+SF
+SF
+MF
+MF
+MP
+MF
+TP
+MP
+TF
+TF
+MP
+MF
+MP
+MF
+MF
+SO
+MP
+MF
+MP
+MF
+SO
+MF
+MP
+MP
+MP
+MP
+MF
+MP
+TF
+MF
+MF
+MF
+MP
+MF
+MP
+MF
+MP
+MF
+MF
+MF
+MP
+MF
+MP
+MP
+MP
+112
+1 0 WR
+1 3 RD
+1 8 EX
+1 2 WR
+1 4 WR
+1 5 WR
+1 6 WR
+1 7 WR
+1 9 WR
+1 10 WR
+11 4 WR
+11 5 WR
+11 6 WR
+11 7 WR
+11 8 WR
+11 9 WR
+11 3 WR
+11 10 WR
+11 12 RD
+11 13 EX
+11 14 WR
+16 15 WR
+16 17 FR
+16 18 FR
+16 19 FR
+20 21 WR
+22 21 WR
+22 25 WR
+22 23 WR
+22 23 EX
+22 24 ST
+22 24 RF
+26 25 WR
+27 28 EX
+27 29 WR
+27 29 EX
+30 29 RD
+26 31 WR
+30 31 WR
+32 33 RD
+32 31 WR
+32 34 RD
+32 33 WR
+32 34 WR
+32 35 WR
+32 36 EX
+32 37 WR
+32 38 WR
+32 39 WR
+32 37 EX
+40 39 WR
+40 41 ST
+40 41 RF
+40 42 WR
+40 43 WR
+40 44 EX
+46 45 ST
+46 45 RF
+46 47 WR
+46 49 RD
+46 48 WR
+46 49 WR
+46 51 EX
+51 50 RD
+51 50 WR
+46 52 WR
+53 52 WR
+53 54 WR
+55 54 RD
+55 54 EX
+55 56 FR
+53 57 WR
+53 58 WR
+59 60 EX
+61 62 EX
+61 63 WR
+61 64 ST
+61 64 RF
+65 63 WR
+65 64 ST
+65 64 RF
+65 66 WR
+65 67 FR
+67 66 EX
+67 68 WR
+67 69 ST
+67 69 RF
+71 68 WR
+71 69 ST
+71 69 RF
+71 70 EX
+71 72 IJ
+73 75 RD
+74 75 RD
+73 76 IJ
+73 77 WR
+73 78 WR
+76 79 WR
+76 80 WR
+81 79 WR
+81 80 WR
+81 82 WR
+81 82 EX
+83 84 WR
+83 85 FR
+85 86 RD
+85 87 RD
+85 88 WR
+89 88 WR
+89 90 WR
+91 90 WR
+92 93 UK
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+12
+MF
+MP
+MP
+TP
+MF
+TP
+MF
+MP
+SO
+MP
+MF
+SF
+18
+1 0 WR
+2 0 RD
+2 3 FR
+3 4 WR
+3 4 RD
+5 4 RD
+5 4 WR
+5 4 RD
+5 4 EX
+5 6 WR
+7 6 EX
+7 8 RF
+7 9 FR
+7 10 WR
+9 10 EX
+9 11 RD
+9 11 WR
+9 10 UK
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+17
+MP
+MF
+SO
+MP
+MF
+SO
+MF
+SO
+MP
+MF
+MF
+MF
+TF
+MF
+SO
+MP
+MF
+21
+0 1 WR
+0 2 ST
+3 1 WR
+3 4 WR
+0 4 WR
+0 5 RF
+0 6 WR
+0 6 EX
+0 7 RF
+0 8 FR
+8 9 EX
+8 10 CD
+8 10 EX
+8 11 WR
+8 14 ST
+8 14 RF
+15 11 WR
+15 12 WR
+15 13 EX
+15 14 RF
+15 16 WR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+56
+MF
+MP
+MP
+MP
+SO
+TP
+MF
+MP
+TF
+MF
+MF
+MP
+MF
+MF
+MF
+MF
+SO
+SO
+SO
+MP
+MF
+MF
+TP
+MF
+MP
+MF
+MF
+MP
+MP
+MP
+MF
+MP
+TP
+SO
+SF
+MF
+TP
+TP
+MP
+TF
+TP
+MP
+TF
+TF
+TF
+SF
+SF
+MP
+SF
+SF
+SF
+SF
+SF
+SF
+TF
+SO
+70
+1 0 WR
+2 0 WR
+2 4 ST
+2 4 RF
+1 4 ST
+1 4 RF
+3 4 ST
+3 4 RF
+5 6 EX
+7 8 WR
+7 9 RD
+7 10 WR
+7 11 FR
+11 9 EX
+11 12 WR
+11 13 WR
+11 14 WR
+11 15 WR
+11 16 ST
+11 16 RF
+11 17 ST
+11 17 RF
+11 18 ST
+11 18 RF
+19 14 WR
+19 16 ST
+19 16 RF
+19 17 ST
+19 17 RF
+19 18 ST
+19 18 RF
+19 20 WR
+19 22 FR
+22 21 WR
+22 23 RD
+22 23 WR
+22 23 EX
+24 23 WR
+24 25 EX
+24 26 WR
+24 26 EX
+27 26 RD
+28 26 EX
+28 29 FR
+29 30 WR
+31 32 FR
+27 33 ST
+27 33 RF
+32 33 ST
+32 33 RF
+31 34 RD
+31 36 FR
+36 35 WR
+31 37 FR
+37 35 WR
+38 39 WR
+38 40 FR
+41 42 RD
+41 43 RD
+41 44 RD
+41 45 RD
+41 46 RD
+47 48 RD
+47 49 RD
+47 50 RD
+47 51 RD
+47 52 RD
+47 53 RD
+47 54 WR
+47 55 ST
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+15
+MF
+MF
+MP
+SO
+MF
+TP
+TP
+TP
+SO
+MF
+SF
+MP
+MF
+MF
+MF
+16
+2 0 EX
+2 1 EX
+2 3 ST
+2 3 RF
+2 4 EX
+2 5 FR
+2 6 FR
+2 7 FR
+2 8 ST
+2 9 WR
+2 10 RD
+11 8 RF
+11 12 RD
+11 12 WR
+11 13 WR
+2 14 UK
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+62
+TP
+TP
+SO
+TP
+MF
+SO
+SO
+TF
+TF
+MP
+TP
+SO
+SO
+MF
+MP
+SO
+MF
+MP
+MF
+SO
+MF
+MF
+MF
+MP
+MF
+SO
+SF
+MP
+TF
+SO
+MF
+MF
+TP
+TF
+MF
+TP
+MF
+SF
+SO
+MP
+MF
+MP
+SF
+SF
+MP
+MP
+SO
+TP
+SO
+SF
+SF
+SF
+SF
+SF
+TF
+TF
+TP
+TP
+MF
+MF
+TP
+TF
+106
+0 2 ST
+0 2 RF
+1 2 ST
+1 2 RF
+1 2 ST
+1 2 RF
+3 2 ST
+3 2 RF
+3 4 RD
+3 5 ST
+3 6 RF
+3 7 WR
+3 8 WR
+9 7 RD
+10 7 WR
+10 11 RF
+10 12 ST
+10 12 RF
+14 12 ST
+14 12 RF
+14 13 EX
+14 15 ST
+14 15 RF
+14 16 WR
+17 18 WR
+17 19 ST
+17 19 RF
+17 20 WR
+17 21 WR
+23 20 WR
+23 22 EX
+23 24 WR
+23 25 ST
+23 25 RF
+23 24 WR
+23 25 ST
+23 25 RF
+23 25 ST
+23 25 RF
+23 26 RD
+23 26 WR
+27 28 WR
+27 29 ST
+27 29 RF
+27 28 WR
+27 28 RD
+27 30 RD
+27 30 WR
+27 31 WR
+27 32 FR
+32 33 CD
+32 34 CD
+27 35 FR
+35 33 EX
+35 36 RD
+27 37 RD
+27 37 WR
+23 37 RD
+23 37 WR
+23 38 ST
+23 38 RF
+23 38 ST
+23 38 RF
+23 38 ST
+23 38 RF
+23 38 ST
+23 38 RF
+41 40 EX
+23 42 RD
+23 42 WR
+39 38 ST
+39 38 RF
+39 42 RD
+39 42 WR
+41 42 RD
+41 42 WR
+41 43 RD
+41 43 WR
+27 44 FR
+44 45 FR
+45 46 ST
+45 46 RF
+44 47 IJ
+44 48 ST
+44 48 RF
+27 49 RD
+27 49 WR
+27 50 RD
+27 50 WR
+27 51 RD
+27 51 WR
+27 52 RD
+27 52 WR
+27 53 RD
+27 53 WR
+27 54 WR
+54 53 RD
+54 53 WR
+27 55 WR
+9 56 FR
+9 57 FR
+56 58 RD
+57 58 RD
+56 59 WR
+9 60 FR
+9 61 WR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+43
+SO
+MF
+MP
+SO
+MF
+SO
+MF
+MF
+MP
+MP
+SO
+MP
+SF
+TF
+SO
+TF
+MF
+TF
+MF
+TP
+TP
+MF
+MP
+SF
+SO
+SO
+MP
+MP
+SO
+TP
+SO
+SF
+SF
+SF
+SF
+TF
+TF
+MF
+MF
+MP
+TP
+MP
+TF
+70
+2 0 ST
+2 0 RF
+2 1 EX
+2 3 ST
+2 3 RF
+2 4 RD
+2 5 ST
+2 5 RF
+2 6 EX
+2 7 WR
+8 7 RD
+8 10 ST
+8 10 RF
+9 7 RD
+9 10 ST
+9 10 RF
+9 10 ST
+9 10 RF
+11 10 ST
+11 10 RF
+11 10 ST
+11 12 RD
+11 10 RF
+11 12 WR
+11 13 WR
+11 14 ST
+11 14 RF
+11 15 RD
+11 15 WR
+11 16 RD
+11 16 WR
+11 19 FR
+19 17 CD
+19 18 CD
+11 20 FR
+20 17 EX
+22 23 RD
+11 21 RD
+22 23 WR
+11 23 RD
+11 23 WR
+11 24 ST
+11 24 RF
+11 24 ST
+11 24 RF
+22 26 FR
+26 25 RF
+26 25 ST
+26 27 FR
+27 28 ST
+27 28 RF
+26 29 IJ
+26 30 ST
+26 30 RF
+22 31 RD
+22 31 WR
+22 32 RD
+22 32 WR
+22 33 RD
+22 33 WR
+22 34 RD
+22 34 WR
+22 35 WR
+22 36 WR
+39 37 RD
+39 38 WR
+39 40 FR
+40 41 FR
+41 42 RD
+41 42 WR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+16
+MP
+SO
+MF
+MF
+MP
+MF
+MP
+MF
+MF
+TP
+MF
+MF
+MP
+MF
+TF
+MF
+14
+0 1 ST
+0 1 RF
+0 2 WR
+0 3 EX
+4 5 EX
+6 7 EX
+6 8 WR
+6 9 IJ
+9 10 WR
+12 10 WR
+12 11 EX
+12 13 EX
+12 14 WR
+12 15 EX
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+12
+MF
+MP
+TP
+MF
+TP
+SO
+MF
+MF
+SF
+MP
+SO
+TP
+14
+2 0 WR
+2 3 RD
+4 5 ST
+4 5 RF
+4 6 WR
+4 1 FR
+1 6 EX
+11 9 FR
+9 8 RD
+9 8 WR
+9 10 ST
+1 11 FR
+9 8 RD
+11 7 EX
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+43
+MP
+MF
+MP
+MP
+MP
+TP
+MP
+MP
+MF
+TF
+MP
+MP
+MF
+MF
+MP
+TP
+MP
+TP
+MP
+MF
+MP
+MF
+SO
+MP
+MF
+MF
+MP
+MF
+SO
+MF
+MF
+MF
+MP
+MF
+SO
+MF
+MF
+MF
+MP
+MP
+MF
+MF
+MF
+40
+0 1 WR
+2 3 FR
+3 4 FR
+4 5 FR
+5 1 RD
+5 6 FR
+7 8 RD
+7 8 EX
+7 9 RD
+10 9 RD
+11 12 WR
+10 13 WR
+11 13 WR
+15 14 RD
+15 14 EX
+14 13 WR
+17 16 FR
+16 19 EX
+18 19 WR
+20 21 WR
+20 22 ST
+20 22 RF
+23 24 WR
+26 25 EX
+26 27 WR
+26 28 ST
+26 28 RF
+26 29 WR
+26 30 EX
+26 31 WR
+32 33 WR
+32 34 ST
+32 34 RF
+38 37 WR
+39 40 RD
+7 32 UK
+38 35 WR
+38 36 WR
+7 41 WR
+7 42 EX
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+64
+TP
+MF
+SF
+MP
+MF
+TP
+MF
+TP
+TP
+MF
+SO
+TP
+MP
+MF
+TP
+MP
+MF
+MF
+MF
+MF
+TP
+MF
+TP
+MF
+MF
+MF
+MF
+MF
+MP
+TP
+MF
+MF
+MP
+SO
+MF
+MP
+SF
+MF
+MF
+MF
+MF
+MF
+MF
+MF
+MF
+MF
+MF
+MP
+MF
+MF
+SO
+MF
+MF
+MP
+SF
+SF
+MF
+MP
+MF
+MP
+MF
+SO
+MF
+MF
+91
+0 1 WR
+0 2 RD
+0 2 WR
+3 1 WR
+3 2 RD
+3 2 WR
+3 4 WR
+5 4 EX
+7 8 FR
+8 6 EX
+11 9 WR
+11 10 ST
+11 10 RF
+11 12 FR
+12 14 FR
+14 13 WR
+14 15 FR
+15 13 EX
+15 16 WR
+15 17 WR
+15 18 WR
+20 16 WR
+20 18 WR
+20 19 EX
+22 21 EX
+22 23 WR
+22 24 WR
+3 23 WR
+3 24 WR
+3 25 WR
+3 26 WR
+28 25 WR
+28 26 WR
+28 27 EX
+28 29 IJ
+29 30 RD
+29 30 WR
+29 30 EX
+29 31 RD
+29 31 WR
+29 31 EX
+32 30 WR
+32 31 WR
+32 33 ST
+32 33 RF
+32 33 ST
+32 33 RF
+11 33 ST
+11 33 RF
+11 35 FR
+35 34 EX
+35 36 RD
+35 37 RD
+35 38 WR
+35 39 WR
+35 40 WR
+35 41 WR
+35 42 WR
+35 43 WR
+35 44 WR
+35 45 WR
+35 46 WR
+47 38 WR
+47 39 WR
+47 40 WR
+47 41 WR
+47 42 WR
+47 43 WR
+47 44 WR
+47 45 WR
+47 46 WR
+47 48 EX
+47 49 WR
+47 50 ST
+47 50 RF
+47 51 WR
+47 52 WR
+53 51 WR
+53 52 WR
+53 54 RD
+53 55 RD
+53 56 WR
+53 57 FR
+57 56 EX
+57 58 WR
+59 60 WR
+59 60 EX
+59 61 ST
+59 61 RF
+59 62 WR
+59 63 WR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+49
+SO
+MF
+MP
+SO
+MF
+SO
+MF
+MP
+MP
+SO
+MP
+SF
+TF
+SO
+TF
+MF
+TP
+TF
+MF
+TP
+MF
+MP
+SF
+SO
+MP
+MF
+SO
+SO
+SO
+MP
+SF
+SF
+SF
+MP
+MP
+SO
+TP
+SO
+SF
+SF
+SF
+SF
+MP
+MF
+MF
+MP
+MP
+TP
+TF
+80
+2 0 ST
+2 0 RF
+2 1 EX
+2 3 ST
+2 3 RF
+2 4 RD
+2 5 ST
+2 5 RF
+2 6 WR
+7 6 RD
+7 9 ST
+7 9 RF
+8 6 RD
+8 9 ST
+8 9 RF
+8 9 ST
+8 9 RF
+10 9 ST
+10 9 RF
+10 9 ST
+10 9 RF
+10 11 RD
+10 11 WR
+10 12 RD
+10 13 ST
+10 13 RF
+10 14 RD
+10 15 RD
+10 16 FR
+16 17 CD
+16 18 CD
+10 19 FR
+19 17 EX
+21 22 RD
+19 20 RD
+21 22 WR
+21 23 ST
+21 23 RF
+24 23 ST
+24 23 RF
+24 25 RD
+24 25 WR
+24 26 ST
+24 26 RF
+10 25 RD
+10 27 ST
+10 27 RF
+10 27 ST
+10 27 RF
+29 28 ST
+29 30 RD
+29 28 RF
+29 31 RD
+29 30 WR
+29 32 RD
+29 31 WR
+29 32 WR
+10 33 FR
+33 34 FR
+34 35 ST
+34 35 RF
+33 36 IJ
+33 37 ST
+33 37 RF
+21 38 RD
+21 38 WR
+21 39 RD
+21 39 WR
+21 40 RD
+21 40 WR
+21 41 RD
+21 41 WR
+42 45 FR
+45 43 RD
+45 44 WR
+42 46 FR
+46 43 RD
+46 44 WR
+42 47 FR
+42 48 WR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+61
+MP
+MF
+MF
+SO
+MP
+MP
+MF
+TF
+TF
+TF
+TP
+TP
+SF
+MF
+MF
+MF
+MF
+SO
+MF
+MF
+MP
+MP
+MP
+MF
+MF
+MF
+TP
+MP
+MF
+MF
+MP
+MF
+MP
+MP
+MF
+MP
+MP
+MP
+MF
+SO
+MP
+MP
+MF
+MP
+MF
+MF
+MF
+MP
+MF
+MF
+MP
+MF
+MF
+TP
+MF
+MP
+MF
+MP
+MP
+MF
+TP
+59
+0 1 RD
+0 2 RD
+0 3 ST
+0 3 RF
+4 6 WR
+4 7 WR
+4 8 WR
+4 9 WR
+0 10 FR
+0 12 RD
+10 11 EX
+0 12 WR
+0 13 EX
+5 14 WR
+5 15 WR
+5 16 WR
+5 17 ST
+5 17 RF
+5 18 EX
+5 19 WR
+20 19 WR
+22 23 EX
+22 24 EX
+22 25 WR
+20 26 FR
+21 19 WR
+26 25 RD
+26 25 EX
+26 27 FR
+27 28 WR
+27 29 WR
+30 28 WR
+30 29 WR
+30 31 EX
+33 32 FR
+32 34 EX
+35 34 UK
+37 38 EX
+36 39 ST
+36 39 RF
+37 39 ST
+37 39 RF
+37 40 FR
+41 42 WR
+43 44 WR
+43 45 WR
+43 46 WR
+47 44 WR
+47 46 WR
+47 48 WR
+47 49 WR
+50 51 WR
+47 52 WR
+47 53 FR
+53 54 WR
+55 56 WR
+57 56 RD
+58 59 WR
+58 60 FR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+38
+SO
+MP
+MF
+MP
+TP
+MF
+MP
+SO
+MP
+SF
+MP
+SO
+MF
+SO
+MP
+SF
+MP
+MF
+MF
+MP
+MP
+TP
+MP
+SF
+SF
+MF
+MP
+MP
+TP
+MF
+TP
+MP
+MP
+SF
+TF
+SO
+SO
+MF
+52
+1 0 RF
+1 2 WR
+1 4 FR
+4 3 FR
+3 5 EX
+3 6 FR
+3 7 RF
+6 8 FR
+8 9 RD
+8 9 WR
+8 10 FR
+10 11 ST
+10 11 RF
+10 12 WR
+10 13 RF
+10 14 FR
+14 12 EX
+14 15 RD
+14 15 WR
+16 15 RD
+16 15 WR
+16 15 RD
+16 15 WR
+14 17 WR
+14 18 WR
+14 19 FR
+20 18 EX
+16 21 FR
+14 22 FR
+22 23 RD
+22 17 EX
+22 23 WR
+22 24 RD
+22 24 WR
+26 27 FR
+27 25 EX
+25 24 RD
+25 24 WR
+27 28 IJ
+28 29 RD
+28 29 WR
+28 29 EX
+30 29 WR
+30 31 FR
+27 32 FR
+31 33 RD
+31 33 WR
+32 33 RD
+32 34 WR
+32 35 ST
+32 36 RF
+32 37 RD
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+29
+MP
+MF
+TP
+MF
+SO
+MP
+MF
+MF
+SO
+MF
+MP
+MF
+TP
+SO
+MF
+MP
+SO
+MP
+SF
+MP
+TF
+MP
+SO
+MF
+MP
+TF
+TF
+TF
+TF
+37
+0 1 WR
+2 1 RD
+2 3 RD
+2 4 ST
+5 6 RD
+5 6 EX
+5 7 WR
+5 8 ST
+5 9 WR
+10 9 WR
+10 11 EX
+10 12 IJ
+12 13 ST
+12 13 RF
+12 14 RD
+12 14 WR
+12 14 EX
+15 13 ST
+15 13 RF
+15 14 WR
+15 16 ST
+15 16 RF
+15 16 ST
+15 16 RF
+17 16 ST
+17 16 RF
+17 18 RD
+19 20 RD
+19 20 WR
+19 22 ST
+21 22 RF
+21 23 WR
+24 23 RD
+21 25 WR
+21 26 WR
+21 27 WR
+21 28 WR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+41
+MP
+MF
+MF
+MF
+MP
+MF
+TP
+MF
+SO
+MF
+MF
+TP
+MF
+TP
+TP
+MF
+MF
+MP
+SO
+MF
+MP
+MP
+TF
+TF
+TF
+TF
+SF
+SO
+MF
+MP
+MF
+SO
+MF
+MP
+MF
+SO
+MP
+SO
+MF
+MF
+MF
+48
+0 1 WR
+0 2 WR
+0 3 WR
+4 5 RD
+4 6 FR
+6 7 EX
+4 8 ST
+4 8 RF
+4 9 WR
+4 9 EX
+4 10 RD
+4 11 FR
+11 12 EX
+4 13 FR
+13 14 FR
+14 15 WR
+14 16 EX
+17 18 ST
+17 18 RF
+17 19 EX
+20 19 RD
+21 22 WR
+21 23 WR
+21 24 WR
+21 25 WR
+20 26 RD
+20 26 WR
+21 26 RD
+21 27 ST
+21 27 RF
+21 28 WR
+29 28 WR
+29 30 RD
+21 31 ST
+21 31 RF
+29 32 WR
+33 32 WR
+33 34 WR
+33 34 EX
+33 35 ST
+33 35 RF
+36 35 ST
+36 35 RF
+36 37 ST
+36 37 RF
+36 38 WR
+36 39 WR
+29 40 WR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+14
+MF
+SO
+MP
+MF
+TP
+TP
+TP
+SF
+SO
+MF
+MP
+MF
+MF
+MF
+16
+2 0 EX
+2 1 ST
+2 1 RF
+2 0 EX
+2 3 EX
+2 4 FR
+2 5 FR
+2 6 FR
+2 7 RD
+2 8 ST
+2 9 WR
+10 8 RF
+10 11 RD
+10 11 WR
+10 12 WR
+2 13 UK
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+71
+SO
+MF
+MF
+MF
+MF
+MF
+MF
+MP
+MP
+MF
+MF
+MF
+SO
+MP
+MF
+MP
+MF
+MP
+MP
+MF
+MF
+MP
+MP
+MP
+MF
+MF
+TP
+MF
+MP
+MF
+MF
+MP
+MF
+MF
+MF
+MF
+MP
+MF
+MP
+MP
+MF
+MP
+MF
+MF
+MF
+MF
+MF
+TF
+MF
+MF
+MF
+TP
+MP
+TP
+TP
+MF
+MP
+MF
+MF
+SO
+MP
+MF
+MP
+SO
+MP
+MF
+TF
+MF
+MF
+MF
+TP
+92
+8 7 FR
+7 0 ST
+7 0 RF
+7 1 WR
+7 2 WR
+7 3 WR
+7 4 WR
+7 5 WR
+7 6 WR
+7 9 WR
+7 9 EX
+8 10 WR
+8 11 WR
+7 12 ST
+13 15 FR
+15 14 EX
+15 17 FR
+17 16 EX
+17 18 FR
+18 19 WR
+18 20 WR
+21 20 RD
+23 26 FR
+26 24 WR
+26 25 EX
+21 27 WR
+22 20 RD
+22 27 WR
+26 27 RD
+26 27 WR
+26 27 EX
+28 27 WR
+28 24 RD
+28 29 WR
+28 30 WR
+31 29 WR
+31 30 WR
+31 32 WR
+31 33 WR
+31 34 WR
+36 33 WR
+36 34 WR
+36 35 WR
+36 37 WR
+38 37 WR
+38 39 FR
+39 40 EX
+41 42 WR
+41 43 WR
+41 44 WR
+41 45 WR
+41 46 WR
+41 47 WR
+41 48 WR
+41 49 WR
+41 50 WR
+51 48 WR
+51 49 WR
+51 50 WR
+51 52 FR
+52 53 IJ
+52 54 FR
+54 55 WR
+51 56 FR
+56 55 EX
+56 57 RD
+56 58 WR
+56 59 ST
+56 59 RF
+60 58 WR
+60 59 ST
+60 59 RF
+60 59 ST
+60 59 RF
+60 61 WR
+60 63 ST
+60 63 RF
+62 61 WR
+62 63 ST
+62 63 RF
+62 63 ST
+62 63 RF
+64 63 ST
+64 63 RF
+64 65 WR
+64 66 WR
+64 67 WR
+64 68 WR
+70 65 WR
+70 67 WR
+70 68 WR
+70 69 WR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+46
+TP
+SO
+SO
+TP
+SO
+TP
+TP
+TF
+SO
+MF
+TP
+MP
+MP
+MP
+MP
+TP
+MF
+MP
+TP
+MP
+MP
+SF
+SF
+MP
+TP
+MF
+TP
+MF
+SO
+MP
+MF
+TP
+SO
+TP
+MF
+TP
+SO
+SO
+TP
+MF
+TP
+TP
+TP
+MP
+TP
+SF
+73
+0 1 ST
+0 1 RF
+0 2 ST
+0 2 RF
+3 2 ST
+3 2 RF
+3 4 ST
+5 7 WR
+6 8 ST
+6 8 RF
+6 8 ST
+6 8 RF
+6 9 WR
+10 8 ST
+10 8 RF
+10 9 WR
+10 9 WR
+10 11 FR
+10 12 FR
+10 13 FR
+10 14 FR
+11 15 FR
+15 16 WR
+15 16 WR
+17 16 WR
+17 16 WR
+17 18 FR
+18 19 FR
+19 21 RD
+19 21 RD
+19 21 WR
+23 20 FR
+20 21 RD
+20 21 RD
+20 21 WR
+20 22 RD
+20 22 RD
+20 22 WR
+20 24 FR
+26 25 RD
+26 27 WR
+24 28 ST
+26 28 RF
+29 27 RD
+29 31 FR
+31 30 RD
+31 32 ST
+33 30 WR
+33 34 WR
+33 34 WR
+35 34 WR
+35 34 WR
+35 36 ST
+35 36 RF
+35 36 ST
+35 36 RF
+35 37 ST
+35 37 RF
+38 36 ST
+38 36 RF
+38 37 ST
+38 37 RF
+38 37 ST
+38 37 RF
+38 39 WR
+38 39 WR
+40 39 WR
+40 39 WR
+40 43 FR
+41 39 WR
+42 39 WR
+43 44 FR
+43 45 UK
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+29
+MF
+MP
+TF
+MP
+MF
+TP
+SO
+MF
+MP
+MF
+MF
+MF
+SF
+MP
+TF
+TF
+MP
+MF
+TF
+TF
+TF
+TF
+SO
+TF
+TF
+SO
+MF
+MF
+SF
+27
+1 0 EX
+1 2 WR
+5 4 WR
+5 6 ST
+3 7 WR
+5 7 RD
+8 9 RD
+8 10 EX
+8 11 WR
+8 12 RD
+8 12 WR
+13 14 WR
+13 15 WR
+13 16 FR
+16 27 EX
+16 17 EX
+13 18 WR
+13 19 WR
+13 20 WR
+13 21 WR
+13 25 ST
+16 23 WR
+16 22 ST
+16 24 WR
+16 26 WR
+16 28 RD
+16 28 WR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+25
+MP
+MF
+MF
+SO
+MF
+TP
+MF
+MF
+TP
+MP
+MP
+MF
+MF
+MP
+MP
+MP
+MF
+MP
+MF
+MP
+MP
+MF
+MF
+TP
+MP
+27
+0 1 EX
+0 2 WR
+0 3 ST
+0 3 RF
+0 5 FR
+5 2 WR
+5 4 EX
+5 6 RD
+5 6 WR
+5 6 EX
+0 7 WR
+8 6 WR
+8 9 FR
+9 7 EX
+8 10 FR
+10 11 EX
+10 13 FR
+13 12 EX
+14 15 FR
+15 16 EX
+17 19 FR
+19 18 EX
+19 20 FR
+20 21 EX
+20 23 FR
+24 22 UK
+24 23 IJ
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+42
+MP
+MF
+MF
+MF
+MF
+SO
+SO
+SO
+SO
+MF
+SO
+SO
+MP
+MP
+MF
+SF
+SF
+SF
+TP
+SF
+SF
+SF
+SF
+SF
+SF
+MF
+TP
+MP
+MF
+MF
+MF
+SO
+SO
+SO
+MP
+SF
+MF
+MP
+MP
+MF
+SO
+MP
+66
+0 1 WR
+0 2 WR
+0 3 WR
+0 5 ST
+0 5 RF
+0 6 ST
+0 6 RF
+0 7 ST
+0 7 RF
+0 9 WR
+0 4 WR
+0 8 ST
+0 8 RF
+0 9 WR
+0 10 ST
+0 10 RF
+0 11 ST
+0 11 RF
+0 11 ST
+0 11 RF
+12 13 FR
+13 14 EX
+0 15 RD
+0 15 WR
+13 15 RD
+13 16 RD
+13 17 RD
+13 18 FR
+18 19 RD
+18 20 RD
+18 20 WR
+0 20 RD
+0 21 RD
+0 20 WR
+0 21 WR
+12 22 RD
+12 24 RD
+12 23 RD
+12 24 WR
+12 25 WR
+26 25 WR
+26 27 FR
+27 28 WR
+27 29 RD
+27 30 WR
+27 31 ST
+27 31 RF
+12 31 ST
+12 31 RF
+12 32 ST
+12 32 RF
+12 33 ST
+12 33 RF
+12 34 FR
+34 32 ST
+34 32 RF
+34 33 ST
+34 35 RD
+34 33 RF
+34 35 WR
+34 36 EX
+37 38 IJ
+37 39 RD
+37 39 WR
+37 40 RF
+37 41 FR
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+22
+MP
+MF
+MF
+SO
+MF
+TP
+MF
+MF
+TP
+MF
+MP
+MF
+MF
+MP
+MP
+MF
+MF
+TP
+MF
+MF
+TP
+MP
+27
+0 1 EX
+0 3 ST
+0 3 RF
+0 3 ST
+0 5 FR
+5 2 WR
+5 4 EX
+5 6 RD
+5 6 WR
+5 6 EX
+5 7 RD
+5 7 WR
+5 7 EX
+8 6 WR
+8 7 WR
+8 10 FR
+10 9 EX
+10 11 EX
+13 12 EX
+13 14 FR
+14 15 EX
+14 16 WR
+17 16 WR
+17 18 EX
+17 20 FR
+21 19 UK
+21 20 IJ
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+100
+MF
+MP
+MP
+MF
+MF
+MP
+TP
+MP
+MP
+MP
+SO
+MP
+MF
+SO
+MP
+MP
+TP
+MF
+TF
+MP
+MF
+MP
+MP
+MP
+MP
+SF
+SF
+SF
+MP
+MF
+TF
+TF
+SO
+MP
+MP
+TP
+MP
+MP
+MP
+MP
+MP
+TF
+TF
+SO
+SO
+MP
+MF
+MF
+MP
+MP
+MP
+MP
+MF
+MP
+MF
+MP
+SO
+MP
+MP
+MF
+MF
+SO
+MF
+MF
+MP
+SO
+MP
+MF
+MP
+SO
+SO
+SO
+MF
+MP
+MP
+MP
+MP
+MF
+MF
+MF
+MP
+TF
+MF
+SO
+MP
+MP
+MP
+MP
+MP
+MF
+MF
+MF
+MF
+MP
+MP
+MF
+MF
+MP
+MP
+MF
+97
+1 0 WR
+2 0 WR
+2 3 WR
+5 3 WR
+5 4 WR
+6 4 RD
+7 8 IJ
+7 9 IJ
+7 10 ST
+7 10 RF
+11 12 RD
+14 13 ST
+14 13 RF
+15 16 FR
+16 17 EX
+19 17 RD
+19 20 WR
+21 20 WR
+22 18 RD
+23 25 RD
+23 24 FR
+23 25 WR
+23 27 RD
+23 26 RD
+23 27 WR
+28 29 WR
+28 30 RD
+28 31 RD
+33 32 ST
+33 32 RF
+33 34 FR
+36 35 FR
+35 37 FR
+39 38 FR
+40 41 RD
+40 42 RD
+40 43 ST
+45 44 ST
+45 44 RF
+45 46 WR
+45 47 WR
+48 47 WR
+49 47 WR
+50 47 WR
+51 52 WR
+53 52 EX
+53 54 EX
+55 56 ST
+55 56 RF
+57 58 FR
+58 59 EX
+58 60 RD
+58 61 RF
+58 62 WR
+58 63 WR
+64 62 WR
+64 63 WR
+64 65 ST
+64 65 RF
+64 66 FR
+66 65 ST
+66 65 RF
+66 67 WR
+68 67 WR
+68 69 ST
+68 69 RF
+68 70 ST
+68 70 RF
+68 71 ST
+68 71 RF
+68 72 RD
+73 72 WR
+74 72 RD
+75 76 FR
+75 77 RD
+74 78 WR
+76 78 WR
+76 79 WR
+80 79 WR
+80 78 RD
+68 81 RD
+68 82 RD
+68 83 ST
+84 82 RD
+33 85 FR
+33 86 FR
+87 88 FR
+87 89 RD
+87 90 WR
+88 91 RD
+88 92 WR
+93 94 FR
+93 95 WR
+93 96 RD
+93 97 IJ
+93 98 IJ
+93 99 RD
+#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+69
+MF
+MF
+TP
+MP
+MF
+SO
+MP
+MP
+MF
+MF
+MP
+MP
+MF
+SO
+MP
+MF
+MP
+MF
+MP
+MF
+TP
+MF
+MP
+TF
+TF
+MF
+TP
+MP
+TF
+TF
+TF
+MF
+SO
+MF
+MF
+TP
+TP
+TP
+MP
+MP
+TP
+MF
+MF
+MP
+MF
+SO
+MP
+MF
+MP
+MF
+MP
+TP
+MF
+SO
+TP
+TP
+SO
+MF
+MF
+MP
+MF
+TP
+TP
+TP
+TP
+TP
+TP
+MP
+MF
+88
+2 1 WR
+2 3 FR
+3 0 EX
+3 4 WR
+3 5 ST
+3 5 RF
+2 6 FR
+6 4 EX
+6 7 FR
+7 8 WR
+7 8 EX
+6 9 WR
+6 10 FR
+10 11 FR
+11 12 WR
+11 12 EX
+2 14 FR
+14 0 EX
+14 13 ST
+14 13 RF
+14 15 WR
+16 15 EX
+16 18 FR
+18 17 EX
+18 19 WR
+20 19 EX
+18 21 WR
+18 22 FR
+22 21 EX
+22 23 WR
+22 24 WR
+22 25 WR
+26 27 FR
+27 25 EX
+27 28 WR
+27 29 WR
+27 30 WR
+27 31 WR
+27 32 ST
+27 32 RF
+27 34 WR
+27 35 FR
+35 33 EX
+27 36 FR
+35 34 WR
+36 33 EX
+27 37 FR
+37 33 EX
+38 39 FR
+39 40 FR
+40 41 WR
+40 41 EX
+2 43 FR
+43 42 EX
+43 44 WR
+43 45 ST
+43 45 RF
+43 46 FR
+46 44 UK
+46 48 FR
+48 47 EX
+48 49 WR
+48 50 FR
+50 49 EX
+48 51 FR
+51 52 WR
+51 53 ST
+51 53 RF
+51 54 FR
+54 52 EX
+48 55 FR
+55 56 ST
+55 56 RF
+48 57 UK
+55 58 WR
+38 58 WR
+38 61 FR
+38 58 WR
+59 58 WR
+59 61 IJ
+61 60 EX
+62 60 WR
+62 67 FR
+63 60 WR
+64 60 WR
+65 60 WR
+66 60 WR
+59 68 UK
