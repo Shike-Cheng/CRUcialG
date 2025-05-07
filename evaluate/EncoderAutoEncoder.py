@@ -40,9 +40,6 @@ def graph_to_data(graph, node_mapping, edge_mapping):
     edge_index = []
     edge_attr = []
 
-    '''
-    在 node_attrs 列表上遍历每个节点并使用属性值获取其索引时，使用了 node 变量作为节点的索引。然而，在以后的代码中， x 的大小是根据处理后的 node_attrs 列表长度确定的，因此必须保证 node_attrs 包含从 0 到 num_nodes-1 的连续整数。
-    '''
     for idx, (node, attrs) in enumerate(graph.nodes(data=True)):
         node_attrs.append(node_mapping[str(attrs['type'])])
         node_idx_mapping[node] = idx
@@ -105,7 +102,6 @@ def make_data(data_path):
     for _, snapshot in snapshotSeq.items():
         graphs.append(snapshot)
 
-    # 转换图为数据对象
     data_list = []
     for graph in graphs:
         data = graph_to_data(graph, node_mapping, edge_mapping)
@@ -132,7 +128,7 @@ def train(dataloader, d_l):
     scheduler = ReduceLROnPlateau(encoder_optimizer, mode='min', factor=0.1, patience=patience)
     model = model.to(device)
 
-    flag = False  # 记录是否很久没有效果提升
+    flag = False
 
     total_batch = 0
     total_batch_loss = 0
@@ -147,14 +143,14 @@ def train(dataloader, d_l):
             model.train()
             encoder_optimizer.zero_grad()
             z = model.encode(x, edge_index)
-            for i in range(5):  # 判别器优化
+            for i in range(5): 
                 discriminator_optimizer.zero_grad()
                 discriminator_loss = model.discriminator_loss(z)
                 discriminator_loss.backward()
                 discriminator_optimizer.step()
-            loss = model.recon_loss(z, edge_index)  # 模型重构损失
-            loss = loss + model.reg_loss(z)  # 模型正则化损失
-            loss = loss + (1 / num_nodes) * model.kl_loss()  # 模型KL散度损失
+            loss = model.recon_loss(z, edge_index) 
+            loss = loss + model.reg_loss(z)
+            loss = loss + (1 / num_nodes) * model.kl_loss() 
             loss.backward()
             encoder_optimizer.step()
             if total_batch % 100 == 0 and total_batch > 0:
@@ -167,7 +163,7 @@ def train(dataloader, d_l):
                     last_improve = total_batch
                 total_batch_loss = 0
             if total_batch - last_improve > patience:
-                # 超过1000batch没下降，结束训练
+
                 print("No optimization for a long time, auto-stopping...")
                 flag = True
                 break
@@ -224,7 +220,7 @@ def calculate(embedding1_path, embedding2_path):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--do_train', action='store_true', help="whether to run training")
-    # parser.add_argument('--data_dir', type=str, default=None, required=True, help="path to the training dataset")   数据集
+    # parser.add_argument('--data_dir', type=str, default=None, required=True, help="path to the training dataset")
     parser.add_argument('--scene', type=str, default='cru_vs_gt')
     args = parser.parse_args()
     # assert args.scene in ['cru_vs_gt', 'cru_vs_extractor', 'cru_vs_attackg']
@@ -250,14 +246,13 @@ if __name__ == '__main__':
             ASG_embedding = "evaluate/graph_similartiy/" + args.scene + '/' + types_map[args.scene][0] + '_embedding.pkl'
             GT_embedding = "evaluate/graph_similartiy/" + args.scene + '/' + types_map[args.scene][1] + '_embedding.pkl'
             avg_sim, sim_list = calculate(ASG_embedding, GT_embedding)
-            print(avg_sim, sim_list)
+
         else:
             ASG_embedding = "evaluate/graph_similartiy/" + args.scene + '/' + types_map[args.scene][0] + '_embedding.pkl'
             GT_embedding = "evaluate/graph_similartiy/" + args.scene + '/' + types_map[args.scene][1] + '_embedding.pkl'
             SOTA__embedding = "evaluate/graph_similartiy/" + args.scene + '/' + types_map[args.scene][2] + '_embedding.pkl'
             avg_sim, sim_list = calculate(ASG_embedding, GT_embedding)
             avg_sim1, sim_list1 = calculate(SOTA__embedding, GT_embedding)
-            print(avg_sim, sim_list)
-            print(avg_sim1, sim_list1)
+
 
 
