@@ -1,11 +1,3 @@
-'''
-Author: Wenrui Cheng
-Date: 2023-09-26 12:58:30
-FilePath: deal_with_generate.py
-Description: 这里对阶段自动补全后的图进行冗余节点的删除，构图
-'''
-# 应该增加合并相同name的实体，未完成
-
 import sys
 sys.path.append('..')
 import json
@@ -15,9 +7,9 @@ from graph2repair import Unreasonable_judgment_revise
 from config import Reasonable_judgment, no_re_map
 
 node_shapes = {
-    'F': 'rect',             # 正方形
-    'O': 'diamond',          # 菱形
-    'P': 'ellipse'           # 椭圆形（与圆形相同）
+    'F': 'rect',
+    'O': 'diamond',
+    'P': 'ellipse'
 }
 
 def read(json_file):
@@ -97,12 +89,6 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    # re_predict = r"E:\深信服测试\xiaoqi_graph_to_predict_result.json"
-    # final_graph_data = r"E:\深信服测试\xiaoqi_completion_data"
-    # final_graph = r"E:\深信服测试\xiaoqi_completion"
-
-
-    # re_predict_data = read(re_predict)
     re_predict_data = read(args.graph_generator_json)
     f = open(args.asg_reconstruction_json, 'w', encoding='utf-8')
     for d_js in re_predict_data:
