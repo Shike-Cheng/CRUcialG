@@ -1,15 +1,3 @@
-'''
-Author: Wenrui Cheng
-Date: 2023-09-26 12:58:30
-FilePath: deal_with_generate.py
-Description: 这里对阶段自动补全后的图进行共指节点的删除，构图
-'''
-
-# 修改，不应该删除游离节点，应该删除的是共指节点
-# 输出结果应该统一，便于消融实验的评估，即输出一个NLP的结果，不包含共指关系
-
-# 再修改，应该对边最后排序，合并同一名称的实体
-
 import json
 import argparse
 import os
@@ -19,38 +7,6 @@ def read(json_file):
     docs = [json.loads(line) for line in open(json_file)]
     return docs
 
-# def get_new_ner_re(ns, rs):
-#
-#     final_ner = []
-#     final_re = []
-#     free_nodes = []
-#     re_nodes = set()
-#     for e in rs:
-#         re_nodes.add(e[0])
-#         re_nodes.add(e[1])
-#     for i in range(len(ns)):
-#         if i in re_nodes:
-#             continue
-#         else:
-#             free_nodes.append(i)
-#     ner_indice_map = {}
-#     new_ner_indice_map = {}
-#     n_id = 0
-#     for n in ns:
-#         ner_indice_map[n_id] = (n[0], n[1])
-#         if n_id not in free_nodes:
-#             final_ner.append(n)
-#         n_id += 1
-#     # print(ner_indice_map)
-#     new_n_id = 0
-#     for n in final_ner:
-#         new_ner_indice_map[(n[0], n[1])] = new_n_id
-#         new_n_id += 1
-#     for re in rs:
-#         final_re.append([new_ner_indice_map[ner_indice_map[re[0]]], new_ner_indice_map[ner_indice_map[re[1]]], re[2]])
-#
-#     return final_ner, final_re
-no_re_map = {1: 'RD', 2: 'WR', 3: 'EX', 4: 'UK', 5: 'CD', 6: 'FR', 7: 'IJ', 8: 'ST', 9: 'RF', 10: 'CO'}
 class Unreasonable_judgment_revise(object):
     def __init__(self, nodes, edges):
         self.nodes = nodes
@@ -91,28 +47,28 @@ class Unreasonable_judgment_revise(object):
 
     def calculate_FR(self, node, start, edges):
         fr_count = 0
-        fr_list = []               # node作为客体，被FR的关系下标
+        fr_list = []
         for i in range(start, len(edges)):
             if node == edges[i][1] and edges[i][2] == 6:
                 fr_count += 1
                 fr_list.append(i)
 
         if fr_count > 0:
-            degree_list = []       # 每次被FR之后，node在该FR之后的出度
+            degree_list = []
             for j in fr_list:
                 degree_count = 0
-                for x in range(j, len(edges)):           # 计算在j之后，node的出度
+                for x in range(j, len(edges)):
                     if node == edges[x][0]:
                         degree_count += 1
                 degree_list.append(degree_count)
 
             if max(degree_list) == 0:
                 del fr_list[0]
-                return True, fr_list                     # 返回存在多次FR的情况，当node没有出度时，保留最开始的FR
+                return True, fr_list
             else:
                 max_index = degree_list.index(max(degree_list))
                 del fr_list[max_index]
-                return True, fr_list                     # 返回存在多次FR的情况，除去需要保留的那次FR
+                return True, fr_list
         else:
             return False, None
 
@@ -156,10 +112,8 @@ class Unreasonable_judgment_revise(object):
 
         delete_list = []
 
-        # 删除边
         de_ti_me = 0
         for e in self.edges:
-            # p/f在被进程UK后不能参与事件交互，删除其后续的事件交互
             if e[2] == 4:
                 flag, k_list1 = self.calculate_have_degree(e[1], de_ti_me, self.edges)
                 if flag:
@@ -167,7 +121,6 @@ class Unreasonable_judgment_revise(object):
                     delete_list += k_list1
                     de_ti_me += 1
                     continue
-            # p不能多次被FR，保留其后续作为主体，出度最多的FR或第一次的FR
             if e[2] == 6:
                 flag, k_list2 = self.calculate_FR(e[1], de_ti_me, self.edges)
                 if flag:
@@ -175,7 +128,6 @@ class Unreasonable_judgment_revise(object):
                     delete_list += k_list2
                     de_ti_me += 1
                     continue
-            # 客体进程无法对主体进程操作
             if self.node_type[e[0]][-1] == 'P' and self.node_type[e[1]][-1] == 'P':
                 flag, k_list3 = self.find_interaction(e[0], e[1], de_ti_me, self.edges)
                 if flag:
@@ -188,7 +140,6 @@ class Unreasonable_judgment_revise(object):
 
         self.edges = self.remove_elements_by_indices(self.edges, delete_list)
 
-        # 调整边的时序
         adjust_time = 0
         adjust_dict = {}
         for e in self.edges:
@@ -266,12 +217,12 @@ if __name__ == "__main__":
                         help="graph repair txt dataset")
 
     args = parser.parse_args()
-    # graphlist = os.listdir(args.graph_dir)
+
     data_json = read(args.graph_json)
     f = open(args.graph_to_repair_json, 'w', encoding='utf-8')
     for data in data_json:
         new_json = {}
-        # data = json.load(open(args.graph_dir + '\\' + li, "r", encoding="utf-8"))
+
         ners, res = get_new_ner_re(data['ners'], data['co_replace_sort_relations'], data['co_ners'])
         if len(ners) == 0:
             continue
