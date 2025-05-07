@@ -31,14 +31,14 @@ python ner/run_entity.py \
 	--context_window 300 \
 	--task CTI \
 	--data_dir ner/dataset \
-	--model ner/allenai/enscibert_scivocab_uncased1 \
+	--model ner/allenai/enscibert_scivocab_uncased \
 	--output_dir ner/dataset/output-en-test
 ```
 
 #### predict_ners
 
 ```shell
-python ner/predict_ner.py --task CTI --data_txt_dir ner/test_CTI --sentence_window 8 --data_dir ner/test_result/test_ner.json --output_dir ner/dataset/output-en-test --model ner/allenai/enscibert_scivocab_uncased1 --context_window 300 --test_pred_filename ner/test_result/test_ner_result.json
+python ner/predict_ner.py --task CTI --data_txt_dir ner/test_CTI --sentence_window 8 --data_dir ner/test_result/test_ner.json --output_dir ner/dataset/output-en-test --model ner/allenai/enscibert_scivocab_uncased --context_window 300 --test_pred_filename ner/test_result/test_ner_result.json
 ```
 
 ####  ner2re
@@ -55,7 +55,7 @@ python ner2re.py --data_ner_result ner/test_result/test_ner_result.json --data_f
 python relation/train.py \
 	--data_dir relation/dataset/ 
 	--transformer_type scibert \
-	--model_name_or_path enscibert_scivocab_uncased1 \
+	--model_name_or_path enscibert_scivocab_uncased \
 	--save_path relation/checkpoints/scibert-0907ctimodel.pt \
 	--save_last relation/checkpoints/scibert-0907ctimodel-last.pt \
 	--train_file train_annotated.json \
@@ -78,7 +78,7 @@ python relation/train.py \
 #### predict_re
 
 ```shell
-python relation/predict_re.py --data_dir relation/test_result/ --transformer_type scibert --model_name_or_path enscibert_scivocab_uncased1 --load_path relation/checkpoints/scibert-0907ctimodel.pt --test_file test_to_predict_re.json  --output_name test_to_predict_re_result.json --test_batch_size 1 --gradient_accumulation_steps 1 --num_labels 4 --learning_rate 3e-5 --max_grad_norm 1.0 --drop_prob 0.0 --warmup_ratio 0.06 --seed 9900 --num_class 11
+python relation/predict_re.py --data_dir relation/test_result/ --transformer_type scibert --model_name_or_path enscibert_scivocab_uncased --load_path relation/checkpoints/scibert-0907ctimodel.pt --test_file test_to_predict_re.json  --output_name test_to_predict_re_result.json --test_batch_size 1 --gradient_accumulation_steps 1 --num_labels 4 --learning_rate 3e-5 --max_grad_norm 1.0 --drop_prob 0.0 --warmup_ratio 0.06 --seed 9900 --num_class 11
 
 ```
 
