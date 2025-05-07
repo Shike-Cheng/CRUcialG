@@ -2,9 +2,11 @@
 
 
 ## Configurations and Required Packages
-| CPU    | Intel i9-13900K CPU (24 cores and 3.00 GHz)    |
-| Memory    | 64G    |
-| GPU    | NVIDIA GeForce RTX 4090    |
+| 1    | 1    |
+| ---- | ---- |
+| CPU       | Intel i9-13900K CPU (24 cores and 3.00 GHz)    |
+| Memory    | 64G                                            |
+| GPU       | NVIDIA GeForce RTX 4090                        |
 
 - python=3.7.16
 - CUDA=11.0
