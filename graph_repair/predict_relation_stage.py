@@ -28,9 +28,9 @@ import psutil
 
 def read_molecules(path):
     print('reading data from %s' % path)
-    node_features = np.load(path + '_np_node.npy')   # 节点类型
-    adj_features = np.load(path + '_np_adj.npy')     # 大的邻接矩阵，99，9，100，100
-    mol_sizes = np.load(path + '_np_mol.npy')        # 节点类型 99，100
+    node_features = np.load(path + '_np_node.npy')
+    adj_features = np.load(path + '_np_adj.npy')
+    mol_sizes = np.load(path + '_np_mol.npy')
 
     f = open(path + '_config.txt', 'r')
     data_config = eval(f.read())
@@ -332,9 +332,8 @@ if __name__ == '__main__':
 
     rea_count = 0
 
-    while graph_id < num:  # 依次生成每一个分子式
+    while graph_id < num:
         new_json = {}
-        # 得到游离节点
         ners = graph_nodes[graph_id]
         res = graph_edges[graph_id]
         n_list = [i for i in range(0, len(ners))]
@@ -348,11 +347,11 @@ if __name__ == '__main__':
         isolated_nodes = [node for node in G.nodes() if G.degree(node) == 0]
         new_edges = res
         for is_node in isolated_nodes:
-            print("开始预测图{}中游离节点{}的关系".format(graph_id, is_node))
+
             cur_node, cur_edge, is_node, node_gap = get_cut_index(is_node, ners, new_edges)
             node_numpy, edge_numpy, graph_line = np_builder1(cur_node, cur_edge, args.max_atoms, node_dict, edge_dict)
             in_edges = graphmodel.generate(node_numpy[0], edge_numpy[0], is_node, ners[is_node], graph_line, args.temperature, mute=True, max_atoms=args.max_atoms, cnt=cnt_gen)
-            print(in_edges)
+
             if node_gap:
                 for r in in_edges:
                     r[0] = r[0] + node_gap
@@ -368,11 +367,10 @@ if __name__ == '__main__':
             flag, stage_num, flow_index, edges_index = judge_graph.knowledge_judge()
             if flag:
                 break
-        # 开始对分裂的子图进行关系的预测
+
         judge_graph = Reasonable_judgment(ners, new_edges, edge_label_dict)
         flag, stage_num, flow_index, edges_index = judge_graph.knowledge_judge()
         if flag:
-            print("图{}通过四段合理性验证, 每个阶段通过事件流的事件流序号为{}, 每个阶段通过的边序号为{}".format(graph_id, flow_index, edges_index))
             new_json['doc_key'] = data_js[graph_id]['doc_key']
             new_json['ners'] = data_js[graph_id]['ners']
             new_json['relations'] = new_edges
@@ -387,7 +385,7 @@ if __name__ == '__main__':
             G1.add_edges_from(r_list1)
             connected_components = list(nx.connected_components(G1))
             len_subgraph = len(connected_components)
-            print("图{}中有{}个子图".format(graph_id, len_subgraph))
+
             if len_subgraph != 1:
                 sum_subgraph = len(connected_components)
                 for i in range(1, len_subgraph):
@@ -396,8 +394,7 @@ if __name__ == '__main__':
                     r_list2 = []
                     connected_components[i] = sorted(connected_components[i])
                     for is_node1 in connected_components[i]:
-                        print("开始预测图{}中分裂子图节点{}的关系".format(graph_id, is_node1))
-                        print(connected_components[i])
+
                         cur_node, cur_edge, is_node1, node_gap = get_cut_index1(is_node1, ners, new_edges)
                         # print(cur_edge)
                         node_numpy, edge_numpy, graph_line = np_builder1(cur_node, cur_edge, args.max_atoms, node_dict, edge_dict)
@@ -426,7 +423,6 @@ if __name__ == '__main__':
                     judge_graph = Reasonable_judgment(ners, new_edges, edge_label_dict)
                     flag, stage_num, flow_index, edges_index = judge_graph.knowledge_judge()
                     if flag:
-                        print("图{}通过四段合理性验证, 每个阶段通过事件流的事件流序号为{}, 每个阶段通过的边序号为{}".format(graph_id, flow_index, edges_index))
                         break
 
             new_json['doc_key'] = data_js[graph_id]['doc_key']
@@ -439,14 +435,6 @@ if __name__ == '__main__':
         graph_id += 1
 
     end_time = time.time()
-
-    # 计算代码运行时间（以秒为单位）
     execution_time = end_time - start_time
 
-    print("代码执行时间：", execution_time, "秒")
-
-    # 获取 CPU 利用率
-    cpu_usage = psutil.cpu_percent(interval=1)  # 获取 CPU 利用率，每秒采样一次
-
-    print("CPU 利用率：", cpu_usage, "%")
-    # json.dump(stage_record, s_f)
+    cpu_usage = psutil.cpu_percent(interval=1)
