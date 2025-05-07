@@ -15,7 +15,7 @@
 More information on the version of the environment configuration can be found in the GRUcialG.yaml file.
 
 ## Dataset and Model
-The 10,607 reports we collected and trained model can be found on [Google Cloud Drive](https://drive.google.com/file/d/1xYeR9TbEQEgEAwrZHRXQ24ssntse71TJ/view?usp=sharing). In addition, we have also published a dataset of 110 manually labelled CTI reports, which you can find at ‘dataset/cti’.
+The 10,607 reports we collected and trained model can be found on [Google Cloud Drive](https://drive.google.com/drive/folders/1bm97sgVu7_ccs6-yziQAPPVY161Vnh3X?usp=sharing). In addition, we have also published a dataset of 110 manually labelled CTI reports, which you can find at ‘dataset/cti’.
 
 
 
