@@ -5,11 +5,6 @@ import json
 import argparse
 
 
-# def read(json_file):
-#     data_ = open(json_file, "r", encoding="utf-8")
-#     docs = json.load(data_)
-#     return docs
-
 def read(json_file):
     docs = [json.loads(line) for line in open(json_file)]
     return docs
@@ -49,16 +44,14 @@ def read_graph(type_data):
             if not G.has_edge(sub_id, obj_id, event_type):
                 G.add_edge(sub_id, obj_id, time=r_id, key=event_type)
             else:
-                G[sub_id][obj_id][event_type]['time'] = r_id  # 仅维护同类型事件的最新的一条
+                G[sub_id][obj_id][event_type]['time'] = r_id
 
-            G.nodes()[sub_id]['time'], G.nodes()[obj_id]['time'] = r_id, r_id  # 更新节点时间
+            G.nodes()[sub_id]['time'], G.nodes()[obj_id]['time'] = r_id, r_id
 
         snapshotSeq[graph_id] = G.copy()
         graph_id += 1
 
     pkl_path = "E:\\CRUcialG\\evaluate\\graph_similartiy\\" + args.scene + '\\' + type_data + '.pkl'
-
-    # specificSnapshotFile = r"D:\APT攻击知识抽取\消融实验\new_pkl\22_change_test_atg.pkl"
 
     with open(pkl_path, 'wb') as fs:
         pickle.dump(snapshotSeq, fs)
