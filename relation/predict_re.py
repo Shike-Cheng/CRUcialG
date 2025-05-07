@@ -121,8 +121,6 @@ def main():
         json.dump(pred, fh)
     end_time = time.time()
     execution_time = end_time - start_time
-    print("代码执行时间：", execution_time)
     cpu_usage = psutil.cpu_percent(interval=1)
-    print("CPU利用率：", cpu_usage, "%")
 if __name__ == "__main__":
     main()
