@@ -71,7 +71,7 @@ class RelationGraphConvolution(nn.Module):
         support = torch.einsum('bid, edh-> beih', x, self.weight)
         # print(adj.shape)
         # print(support.shape)
-        output = torch.einsum('beij, bejh-> beih', adj,support)  # (batch, e, N, d) #将两个四维张量 adj 和 support 进行张量乘积，得到一个四维张量 output。
+        output = torch.einsum('beij, bejh-> beih', adj,support)
 
         if self.bias is not None:
             output += self.bias
@@ -638,7 +638,6 @@ class MaskedGraphAF(nn.Module):
         batch_size = x.size(0)
         assert batch_size == index.size(0)
 
-        # adj = adj[:, :3] # (batch, 3, N, N)，已修改
         adj = adj[:, :9]  # (batch, 3, N, N)
 
         node_emb = self.rgcn(x, adj) # (batch, N, d)
@@ -665,7 +664,7 @@ class MaskedGraphAF(nn.Module):
         '''
         # inputs for RelGCNs
         batch_size = x.size(0)
-        adj = adj[:, :9] # (batch, 3, N, N) TODO: check whether we have to use the 4-th slices(virtual bond) or not #这里要改成节点特征数
+        adj = adj[:, :9] # (batch, 3, N, N) TODO: check whether we have to use the 4-th slices(virtual bond) or not
 
         x = torch.where(self.mask_node, x.unsqueeze(1).repeat(1, self.repeat_num, 1, 1), torch.zeros([1]).cuda()).view(
             -1, self.graph_size, self.num_node_type)  # (batch*repeat_num, N, 9)
@@ -675,7 +674,7 @@ class MaskedGraphAF(nn.Module):
         # print(self.mask_edge.size())
         # print("adj")
         # print(adj.size())
-        adj = torch.where(self.mask_edge, adj.unsqueeze(1).repeat(1, self.repeat_num, 1, 1, 1), torch.zeros([1]).cuda()).view(-1, self.num_edge_type - 1, self.graph_size, self.graph_size)  # (batch*repeat_num, 3, N, N),错在这里有个维度为12的东西进去了
+        adj = torch.where(self.mask_edge, adj.unsqueeze(1).repeat(1, self.repeat_num, 1, 1, 1), torch.zeros([1]).cuda()).view(-1, self.num_edge_type - 1, self.graph_size, self.graph_size)
 
         node_emb = self.rgcn(x, adj)  # (batch*repeat_num, N, d)
 
@@ -719,18 +718,3 @@ if __name__ == '__main__':
     deq, jacob = maskgaf(data['node_feature'], data['adj_feature'], data['node_feature_cont'],
                          data['adj_feature_cont'].permute(0, 2, 1).contiguous())
 
-    print(data['node_feature'][0][2])
-    print(deq[0].size())
-    print(deq[1].size())
-
-    print(jacob[0].size())
-    print(jacob[1].size())
-    # print(deq[0][0])
-    # print(deq[0][1])
-    # print(deq[0][2])
-    # print(deq[0][3])
-    # print(deq[0][4])
-
-    # print(deq[0][45])
-    # print(deq[0][46])
-    # print(deq[0][47])
