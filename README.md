@@ -1,6 +1,22 @@
-## GRUcialG
+# GRUcialG
 
-### ner  model
+
+## Configurations and Required Packages
+| CPU    | Intel i9-13900K CPU (24 cores and 3.00 GHz)    |
+| Memory    | 64G    |
+| GPU    | NVIDIA GeForce RTX 4090    |
+
+- python=3.7.16
+- CUDA=11.0
+- torch==1.7.1+cu110
+- numpy==1.21.6
+- allennlp==1.2.0
+More information on the version of the environment configuration can be found in the GRUcialG.yaml file.
+
+## Dataset
+
+## Training and Testing
+### NER Model
 
 #### train
 
@@ -21,7 +37,6 @@ python ner/run_entity.py \
 
 ```shell
 python ner/predict_ner.py --task CTI --data_txt_dir ner/test_CTI --sentence_window 8 --data_dir ner/test_result/test_ner.json --output_dir ner/dataset/output-en-test --model ner/allenai/enscibert_scivocab_uncased1 --context_window 300 --test_pred_filename ner/test_result/test_ner_result.json
-
 ```
 
 ####  ner2re
@@ -56,7 +71,6 @@ python relation/train.py \
 	--num_train_epochs 50.0 \
 	--seed 9900 \
 	--num_class 11
-
 ```
 
 #### predict_re
@@ -119,12 +133,9 @@ python graph_repair/predict_node_edges.py \
 --nout 128 \
 --is_bn --gcn_layer 3 \
 --st_type exp --divide_loss
-
 ```
 
 #### ASG_Generation
 ```shell
 python ASG_gengerator.py --graph_generator_json test_result/test_result_to_repair_result.json --asg_reconstruction_json test_result/test_ASG_result.json --asg_reconstruction_graph test_result/
-
-
 ```
