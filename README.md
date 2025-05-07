@@ -90,13 +90,11 @@ python graph_gennerator.py --sentence_window 8 --data_re relation/test_result/te
 
 ### graph2repair 
 
-#### dataset
+#### train
 
 ```shell
-python graph2repair.py --graph_json test_result/test_result.json --graph_to_repair_json test_result/test_result_to_repair.json --graph_to_repair_txt test_result/test_result_to_repair.txt
+python graph_repair/trans_CTI.py
 ```
-
-#### train
 
 ```shell
 python -u -W ignore graph_repair/train_CTI.py \
@@ -117,6 +115,10 @@ python -u -W ignore graph_repair/train_CTI.py \
 ```
 
 #### predict_re
+
+```shell
+python graph2repair.py --graph_json test_result/test_result.json --graph_to_repair_json test_result/test_result_to_repair.json --graph_to_repair_txt test_result/test_result_to_repair.txt
+```
 
 ```shell
 python graph_repair/predict_relation_stage.py --path test_result/test_result_to_repair.txt --checkpoint_path graph_repair/save_pretrain/exp_ASG_99_train_epoch10_1gpu/checkpoint9 --predict_data_path test_result/test_result_to_repair.json --predict_result_path test_result/test_result_to_repair_result.json --predict_result_txt_path test_result/test_result_to_repair_result.txt --num_flow_layer 12 --nhid 128 --nout 128 --is_bn --gcn_layer 3 --st_type exp --divide_loss
