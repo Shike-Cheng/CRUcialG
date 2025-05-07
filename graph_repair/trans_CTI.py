@@ -1,18 +1,11 @@
 # !/usr/bin/env python
 # -*-coding:utf-8 -*-
 
-"""
-# File       : trans_ASG.py
-# Time       ：2023/7/5 21:14
-# Author     ：Qixuan Yuan
-# Description：数据集转为3个npy文件
-"""
 import numpy as np
 import re
 import os
 import shutil
 
-#制作每张图节点个数的npy文件
 def np_mol_builder(fname):
     file_path = "./dataset/" + fname
     f = open(file_path, "r", encoding="utf-8")
@@ -30,7 +23,6 @@ def np_mol_builder(fname):
     np.save("./data_preprocessed/99_train_np_mol.npy",np_mol)
     return (len(node_number_list),max(node_number_list))
 
-#制作每张图节点类型的npy文件
 def np_node_builder(fname):
     node_dic = {"MP":1,"TP":2,"MF":3,"SF":4,"TF":5,"SO":6}
     graph_number, max_node_num = np_mol_builder(fname)
@@ -54,7 +46,6 @@ def np_node_builder(fname):
     np.save("./data_preprocessed/99_train_np_node.npy",np_node)
     return np_node
 
-#制作每张图邻接矩阵的npy文件
 def np_adj_builder(fname):
     edge_dic = {"RD":1,"WR":2,"EX":3,"UK":4,"CD":5,"FR":6,"IJ":7,"ST":8,"RF":9}
     graph_number, max_node_num = np_node_builder(fname).shape
@@ -86,7 +77,6 @@ def np_adj_builder(fname):
     np.save("./data_preprocessed/99_train_np_adj.npy", np_adj)
     return np_adj
 
-#转换为一行表示一张图的形式
 def graph_txt_builder(fname):
     node_dic = {"MP":1,"TP":2,"MF":3,"SF":4,"TF":5,"SO":6}
     file_path = "./dataset/" + fname
@@ -119,16 +109,12 @@ def graph_txt_builder(fname):
             else:
                 continue
     return graph_list
-#统一转换三个numpy
+
 def np_trans(fname):
     np_mol_builder(fname)
-    print("节点个数文件已转换")
     np_node_builder(fname)
-    print("节点类型文件已转换")
     np_adj_builder(fname)
-    print("邻接矩阵文件已转换")
     graph_txt_builder(fname)
-    print("逐行图形式已写入")
     return graph_txt_builder(fname)
 
 if __name__ == '__main__':
