@@ -1,13 +1,6 @@
 # !/usr/bin/env python
 # -*-coding:utf-8 -*-
 
-"""
-# File       : train_CTI.py
-# Time       ：2023/7/6 14:10
-# Author     ：Qixuan Yuan
-# Description：
-"""
-
 from time import time
 import argparse
 import numpy as np
@@ -71,9 +64,9 @@ def restore_model(model, args, epoch=None):
 
 def read_molecules(path):
     print('reading data from %s' % path)
-    node_features = np.load(path + '_np_node.npy')   # 节点类型
-    adj_features = np.load(path + '_np_adj.npy')     # 大的邻接矩阵，99，9，100，100
-    mol_sizes = np.load(path + '_np_mol.npy')        # 节点类型 99，100
+    node_features = np.load(path + '_np_node.npy')
+    adj_features = np.load(path + '_np_adj.npy')
+    mol_sizes = np.load(path + '_np_mol.npy')
 
     f = open(path + '_config.txt', 'r')
     data_config = eval(f.read())
@@ -84,10 +77,7 @@ def read_molecules(path):
     for smiles in fp:
         all_smiles.append(smiles.strip())
     fp.close()
-    # print("This is all_smiles")
-    # print(all_smiles)
-    # print(node_features.shape)
-    # print(adj_features.shape)
+
     return node_features, adj_features, mol_sizes, data_config, all_smiles
 
 
@@ -121,7 +111,7 @@ class Trainer(object):
         print('initialize from %s Done!' % self.args.init_checkpoint)
 
     def generate_molecule(self, num=10, epoch=None, out_path=None, mute=False,
-                          save_good_mol=False):  # 看下这里是怎么把生成的numpy文件变成smi分子式的
+                          save_good_mol=False):
         self._model.eval()
         all_smiles = []
         pure_valids = []
@@ -130,35 +120,31 @@ class Trainer(object):
         cnt_mol = 0
         cnt_gen = 0
 
-        while cnt_mol < num:  # 依次生成每一个分子式
+        while cnt_mol < num:
             smiles, no_resample, num_atoms = self._model.generate(self.args.temperature, mute=mute,
                                                                   max_atoms=self.args.max_atoms, cnt=cnt_gen)
-            cnt_gen += 1  # 已经产生的分子的个数
+            cnt_gen += 1
 
-            if num_atoms < self.args.min_atoms:  # 不符合最少节点数的要求
+            if num_atoms < self.args.min_atoms:
                 x1 = 1
                 # print('#atoms of generated molecule less than %d, discarded!' % self.args.min_atoms)
-            else:  # 如果产生的节点符合需求
-                cnt_mol += 1  # 已经产生的符合需求的分子个数
+            else:
+                cnt_mol += 1
 
                 if cnt_mol % 100 == 0:
                     print('cur cnt mol: %d' % cnt_mol)
 
                 all_smiles.append(smiles)
                 pure_valids.append(no_resample)
-                if self.all_train_smiles is not None and smiles in self.all_train_smiles:  # 计算与训练数据相同的分子式个数
+                if self.all_train_smiles is not None and smiles in self.all_train_smiles:
                     appear_in_train += 1.0
-
-            # mol = Chem.MolFromSmiles(smiles)  # 将一个SMILES字符串转换为分子对象
-            # qed_score = env.qed(mol)  # 这两个变量都没啥用
-            # plogp_score = env.penalized_logp(mol)
 
         assert cnt_mol == num, 'number of generated molecules does not equal num'
 
-        unique_smiles = list(set(all_smiles))  # 不重复的smiles
-        unique_rate = len(unique_smiles) / num  # 唯一率
-        pure_valid_rate = sum(pure_valids) / num  # 类似唯一率的某个率
-        novelty = 1. - (appear_in_train / num)  # 生成分子的新颖性
+        unique_smiles = list(set(all_smiles))
+        unique_rate = len(unique_smiles) / num
+        pure_valid_rate = sum(pure_valids) / num
+        novelty = 1. - (appear_in_train / num)
 
         if epoch is None:
             print(
@@ -171,7 +157,6 @@ class Trainer(object):
                 num,
                 cnt_gen, self.args.min_atoms, time() - start_t, epoch, unique_rate, pure_valid_rate, novelty))
 
-        # 把生成的smiles写入文件
         if out_path is not None and self.args.save:
             fp = open(out_path, 'w')
             cnt = 0
@@ -194,7 +179,7 @@ class Trainer(object):
         for epoch in range(self.args.epochs):
             epoch_loss = self.train_epoch(epoch + start_epoch)
             total_loss.append(epoch_loss)
-            # 存checkpoint的路径
+
             mol_save_path = os.path.join(mol_out_dir,
                                          'epoch%d.txt' % (epoch + start_epoch)) if mol_out_dir is not None else None
             print(mol_save_path)
@@ -213,7 +198,6 @@ class Trainer(object):
                                 }
                     save_model(self._model, self._optimizer, self.args, var_list, epoch=epoch + start_epoch)
 
-        # 指的不是强化学习，就是更新最少的loss罢了
         print("Optimization Finished!")
         print("Total time elapsed: {:.4f}s".format(time() - t_total))
         if mol_out_dir is not None and self.args.save:
@@ -228,53 +212,53 @@ class Trainer(object):
     def train_epoch(self, epoch_cnt):
         t_start = time()
         batch_losses = []
-        self._model.train()#将模型设置为训练模式。
-        batch_cnt = 0 #用于统计已处理的batch数量。
-        epoch_example = 0 #用于存储示例输出值。
-        for i_batch, batch_data in enumerate(self.dataloader):#遍历数据加载器中的每个batch。
+        self._model.train()
+        batch_cnt = 0
+        epoch_example = 0
+        for i_batch, batch_data in enumerate(self.dataloader):
             batch_time_s = time()
 
-            self._optimizer.zero_grad()#将优化器的梯度缓冲区清零
+            self._optimizer.zero_grad()
 
             batch_cnt += 1
-            inp_node_features = batch_data['node']  # (B, N, node_dim)#获取batch中的节点特征。
-            inp_adj_features = batch_data['adj']  # (B, 4, N, N)#获取batch中的邻接特征
-            if self.args.cuda: #如果CUDA可用，则将输入数据移动到GPU上。
+            inp_node_features = batch_data['node']  # (B, N, node_dim)
+            inp_adj_features = batch_data['adj']  # (B, 4, N, N)
+            if self.args.cuda:
                 inp_node_features = inp_node_features.cuda()
                 inp_adj_features = inp_adj_features.cuda()
-            if self.args.deq_type == 'random': #如果使用随机的去量化方法。
+            if self.args.deq_type == 'random':
                 # print("inp_node_features")
                 # print(inp_node_features.size())
                 # print("inp_adj_features")
                 # print(inp_adj_features.size())
-                out_z, out_logdet, ln_var = self._model(inp_node_features, inp_adj_features)#传入节点特征和邻接特征，获得输出结果。
-                loss = self._model.log_prob(out_z, out_logdet)#计算损失函数。
+                out_z, out_logdet, ln_var = self._model(inp_node_features, inp_adj_features)
+                loss = self._model.log_prob(out_z, out_logdet)
 
                 # TODO: add mask for different molecule size, i.e. do not model the distribution over padding nodes.
 
-            elif self.args.deq_type == 'variational':#如果使用变分的去量化方法。
-                out_z, out_logdet, out_deq_logp, out_deq_logdet = self._model(inp_node_features, inp_adj_features)#这两行可能要这注意一下，不知道要不要改
+            elif self.args.deq_type == 'variational':
+                out_z, out_logdet, out_deq_logp, out_deq_logdet = self._model(inp_node_features, inp_adj_features)
                 ll_node, ll_edge, ll_deq_node, ll_deq_edge = self._model.log_prob(out_z, out_logdet, out_deq_logp,
                                                                                   out_deq_logdet)
                 loss = -1. * ((ll_node - ll_deq_node) + (ll_edge - ll_deq_edge))
             else:
                 raise ValueError('unsupported dequantization method: (%s)' % self.deq_type)
 
-            loss.backward() #反向传播，计算梯度
-            self._optimizer.step() #更新模型参数。
+            loss.backward()
+            self._optimizer.step()
 
-            batch_losses.append(loss.item()) #将当前batch的损失值添加到损失列表中
+            batch_losses.append(loss.item())
 
-            if batch_cnt % self.args.show_loss_step == 0 or (epoch_cnt == 0 and batch_cnt <= 100):#如果达到指定的步数或是第一个epoch中的前100个batch。
+            if batch_cnt % self.args.show_loss_step == 0 or (epoch_cnt == 0 and batch_cnt <= 100):
                 # print(out_z[0][0])
-                epoch_example = [out_z[0][0], out_z[1][0]] #保存示例输出值。
+                epoch_example = [out_z[0][0], out_z[1][0]]
                 print('epoch: %d | step: %d | time: %.5f | loss: %.5f | ln_var: %.5f' % (
-                epoch_cnt, batch_cnt, time() - batch_time_s, batch_losses[-1], ln_var)) #打印当前epoch和batch的信息。
+                epoch_cnt, batch_cnt, time() - batch_time_s, batch_losses[-1], ln_var))
 
-        epoch_loss = sum(batch_losses) / len(batch_losses) #计算整个epoch的平均损失。
-        print(epoch_example) #打印示例输出值
-        print('Epoch: {: d}, loss {:5.5f}, epoch time {:.5f}'.format(epoch_cnt, epoch_loss, time() - t_start)) #打印整个epoch的信息。
-        return epoch_loss #返回整个epoch的损失值。
+        epoch_loss = sum(batch_losses) / len(batch_losses)
+        print(epoch_example)
+        print('Epoch: {: d}, loss {:5.5f}, epoch time {:.5f}'.format(epoch_cnt, epoch_loss, time() - t_start))
+        return epoch_loss
 
 
 if __name__ == '__main__':
@@ -350,17 +334,15 @@ if __name__ == '__main__':
     args.cuda = not args.no_cuda and torch.cuda.is_available()
     if args.save:
         checkpoint_dir = args.all_save_prefix + 'save_pretrain/%s_%s_%s' % (
-        args.st_type, args.dataset, args.name)  # 存checkpoint的路径
+        args.st_type, args.dataset, args.name)
         args.save_path = checkpoint_dir
 
         if not os.path.exists(args.save_path):
             os.makedirs(args.save_path)
     set_seed(args.seed, args.cuda)
 
-    print(args)
-
     assert (args.train and not args.gen) or (args.gen and not args.train), 'please specify either train or gen mode'
-    node_features, adj_features, mol_sizes, data_config, all_smiles = read_molecules(args.path)  # 读入训练的数据集
+    node_features, adj_features, mol_sizes, data_config, all_smiles = read_molecules(args.path)
     train_dataloader = DataLoader(PretrainZinkDataset(node_features, adj_features, mol_sizes),
                                   batch_size=args.batch_size,
                                   shuffle=args.shuffle,
@@ -379,7 +361,7 @@ if __name__ == '__main__':
         else:
             mol_out_dir = None
 
-        trainer.fit(mol_out_dir=mol_out_dir)  # 这个fit是在干啥？   # 这里应该是一边训练，一边利用每轮训练的结果从0生成图
+        trainer.fit(mol_out_dir=mol_out_dir)
 
     if args.gen:
         print('start generating...')
