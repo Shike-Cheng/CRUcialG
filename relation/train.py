@@ -143,8 +143,7 @@ def evaluate(args, model, features, label_loader, tag="dev"):
             pred[np.isnan(pred)] = 0
             # print(pred)
             preds.append(pred)
-    # preds是对应的关系预测结果
-    # print(preds)
+
     preds = np.concatenate(preds, axis=0).astype(np.float32)
     ans = to_official(preds, features)
     #if len(ans) > 0:
