@@ -25,9 +25,9 @@ from logmaking import make_print_to_file
 
 def read_molecules(path):
     print('reading data from %s' % path)
-    node_features = np.load(path + '_np_node.npy')   # 节点类型
-    adj_features = np.load(path + '_np_adj.npy')     # 大的邻接矩阵，99，9，100，100
-    mol_sizes = np.load(path + '_np_mol.npy')        # 节点类型 99，100
+    node_features = np.load(path + '_np_node.npy')
+    adj_features = np.load(path + '_np_adj.npy')
+    mol_sizes = np.load(path + '_np_mol.npy')
 
     f = open(path + '_config.txt', 'r')
     data_config = eval(f.read())
@@ -264,40 +264,37 @@ if __name__ == '__main__':
 
     rea_count = 0
 
-    while graph_id < num:  # 依次生成每一个分子式
+    while graph_id < num:
         new_json = {}
-        print("开始图{}的补全".format(data_js[graph_id]['doc_key']))
+
         judge_graph = Reasonable_judgment(graph_nodes[graph_id], graph_edges[graph_id], edge_label_dict)
         flag, stage_num, flow_index, edges_index = judge_graph.knowledge_judge()
         stage_need_predict = get_miss_stage(edges_index, graph_edges[graph_id])
-        print("图{}需要补充的阶段为：{}".format(graph_id, stage_need_predict))
+
         if len(stage_need_predict) != 0:
             if stage_need_predict in [[0, 2], [0, 3], [1, 2], [1, 3], [0, 2, 3]]:
                 cut_node, cut_edge, target = get_up_to_index2(stage_need_predict, edges_index, graph_nodes[graph_id], graph_edges[graph_id])
                 node_numpy, edge_numpy, graph_line = np_builder(graph_nodes[graph_id], graph_edges[graph_id], cut_node, cut_edge, args.max_atoms, node_dict, edge_dict)
-                print("接下来补充第{}阶段".format(stage_need_predict[0]))
+
                 new_nodes, new_edges, new_nodes_name = graphmodel.generate(node_numpy[0], edge_numpy[0], cut_node, cut_edge, graph_nodes[graph_id], graph_edges[graph_id], data_js[graph_id]["ners"], graph_line, edge_label_dict, target, args.temperature, mute=True, max_atoms=args.max_atoms, cnt=cnt_gen)
 
                 judge_graph = Reasonable_judgment(new_nodes, new_edges, edge_label_dict)
                 flag, stage_num, flow_index, edges_index = judge_graph.knowledge_judge()
                 stage_need_predict = get_miss_stage(edges_index, new_edges)
-                print("接下来补充第{}阶段".format(stage_need_predict))
+
                 cut_node, cut_edge = get_up_to_index1(stage_need_predict, edges_index, new_nodes, new_edges)
                 node_numpy, edge_numpy, graph_line = np_builder(new_nodes, new_edges, cut_node, cut_edge, args.max_atoms, node_dict, edge_dict)
                 target = []
                 new_nodes, new_edges, new_nodes_name = graphmodel.generate(node_numpy[0], edge_numpy[0], cut_node, cut_edge, new_nodes, new_edges, new_nodes_name, graph_line, edge_label_dict, target, args.temperature, mute=True, max_atoms=args.max_atoms, cnt=cnt_gen)
 
             else:
-                print("接下来补充第{}阶段".format(stage_need_predict))
+
                 cut_node, cut_edge = get_up_to_index1(stage_need_predict, edges_index, graph_nodes[graph_id], graph_edges[graph_id])
-                print(cut_node, cut_edge)
+
                 node_numpy, edge_numpy, graph_line = np_builder(graph_nodes[graph_id], graph_edges[graph_id], cut_node, cut_edge, args.max_atoms, node_dict, edge_dict)
                 target = []
                 new_nodes, new_edges, new_nodes_name = graphmodel.generate(node_numpy[0], edge_numpy[0], cut_node, cut_edge, graph_nodes[graph_id], graph_edges[graph_id], data_js[graph_id]["ners"], graph_line, edge_label_dict, target, args.temperature, mute=True, max_atoms=args.max_atoms, cnt=cnt_gen)
 
-            print(new_nodes)
-            print(new_nodes_name)
-            print(new_edges)
             new_json['doc_key'] = data_js[graph_id]['doc_key']
             new_json['ners'] = new_nodes_name
             new_json['relations'] = new_edges
@@ -306,15 +303,11 @@ if __name__ == '__main__':
             judge_graph = Reasonable_judgment(new_nodes, new_edges, edge_label_dict)
             flag_, stage_num_, flow_index_, edges_index_ = judge_graph.knowledge_judge()
 
-
             if flag_:
                 rea_count += 1
-                print("图{}通过四段合理性验证, 每个阶段通过事件流的事件流序号为{}, 每个阶段通过的边序号为{}".format(graph_id, flow_index_, edges_index_))
-            else:
-                print("图{}通过{}段合理性验证, 每个阶段通过事件流的事件流序号为{}, 每个阶段通过的边序号为{}".format(graph_id, stage_num_, flow_index_, edges_index_))
+
         else:
             rea_count += 1
-            print("图{}通过四段合理性验证, 每个阶段通过事件流的事件流序号为{}, 每个阶段通过的边序号为{}".format(graph_id, flow_index, edges_index))
             new_json['doc_key'] = data_js[graph_id]['doc_key']
             # new_json['ners'] = graph_nodes[graph_id]
             new_json['ners'] = data_js[graph_id]['ners']
@@ -324,11 +317,5 @@ if __name__ == '__main__':
             f.write('\n')
         graph_id += 1
 
-    print("总计{}张图，补充完后{}通过合理性验证".format(num, rea_count))
-
     end_time = time.time()
-
-    # 计算代码运行时间（以秒为单位）
     execution_time = end_time - start_time
-
-    print("代码执行时间：", execution_time, "秒")
