@@ -1,4 +1,4 @@
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 22
 MP
 MF
@@ -48,7 +48,7 @@ MP
 19 20 EX
 19 21 FR
 19 18 RF
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 27
 SO
 MP
@@ -111,7 +111,7 @@ MF
 22 24 WR
 22 25 ST
 22 26 WR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 47
 SO
 MF
@@ -236,7 +236,7 @@ TF
 42 44 WR
 40 45 FR
 40 46 WR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 52
 MP
 SO
@@ -372,7 +372,7 @@ SO
 0 50 RF
 0 51 ST
 0 51 RF
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 59
 MP
 MF
@@ -490,7 +490,7 @@ TF
 52 55 WR
 52 56 ST
 57 58 WR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 55
 TP
 MF
@@ -622,7 +622,7 @@ MF
 0 53 ST
 0 53 RF
 0 54 WR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 93
 MF
 TP
@@ -832,7 +832,7 @@ MF
 84 90 WR
 84 91 WR
 84 92 WR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 83
 MP
 TP
@@ -1006,7 +1006,7 @@ MF
 78 80 WR
 78 81 WR
 78 82 RD
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 38
 MP
 TP
@@ -1086,7 +1086,7 @@ MF
 34 36 ST
 34 36 RF
 34 37 EX
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 85
 MP
 MF
@@ -1254,7 +1254,7 @@ MP
 82 83 WR
 3 83 RD
 9 84 FR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 23
 MF
 MF
@@ -1305,7 +1305,7 @@ MP
 18 22 FR
 22 19 EX
 22 21 UK
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 58
 MP
 MF
@@ -1424,7 +1424,7 @@ TP
 54 53 RD
 55 56 WR
 55 57 FR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 26
 MF
 MF
@@ -1498,7 +1498,7 @@ TP
 23 21 RF
 24 19 RD
 24 25 FR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 11
 MF
 MP
@@ -1525,7 +1525,7 @@ TP
 1 10 FR
 7 8 RD
 10 6 EX
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 48
 MP
 MF
@@ -1635,7 +1635,7 @@ MF
 18 44 WR
 18 45 ST
 46 47 EX
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 81
 MP
 SF
@@ -1825,7 +1825,7 @@ MF
 77 78 RD
 77 79 ST
 77 80 WR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 79
 MP
 MP
@@ -1985,7 +1985,7 @@ MP
 73 74 EX
 75 76 EX
 78 77 WR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 72
 TP
 MF
@@ -2172,7 +2172,7 @@ MF
 65 69 WR
 65 70 RD
 65 71 WR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 28
 MF
 MF
@@ -2232,7 +2232,7 @@ TF
 24 25 ST
 21 26 FR
 21 27 WR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 76
 MP
 MF
@@ -2398,7 +2398,7 @@ MP
 72 73 WR
 74 73 WR
 75 74 UK
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 29
 SO
 MP
@@ -2466,7 +2466,7 @@ MP
 26 27 ST
 26 27 RF
 26 28 FR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 37
 MF
 TP
@@ -2546,7 +2546,7 @@ MF
 29 34 FR
 29 30 WR
 35 36 WR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 40
 SO
 MF
@@ -2635,7 +2635,7 @@ SO
 37 38 WR
 37 39 ST
 37 39 RF
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 13
 MP
 MF
@@ -2667,7 +2667,7 @@ SF
 10 12 RD
 10 12 WR
 10 11 UK
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 42
 MP
 MF
@@ -2754,7 +2754,7 @@ MF
 37 35 WR
 6 40 WR
 6 41 EX
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 71
 MP
 MF
@@ -2920,7 +2920,7 @@ SO
 67 68 RD
 67 69 ST
 67 70 ST
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 35
 MP
 TP
@@ -2998,7 +2998,7 @@ SO
 32 34 ST
 32 34 RF
 32 33 EX
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 56
 MP
 MF
@@ -3114,7 +3114,7 @@ TP
 54 53 EX
 54 53 UK
 54 55 FR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 15
 SF
 MP
@@ -3153,7 +3153,7 @@ SO
 12 11 EX
 12 13 WR
 12 14 RF
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 31
 MF
 MF
@@ -3227,7 +3227,7 @@ TF
 27 28 ST
 12 29 FR
 12 30 WR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 36
 MF
 MP
@@ -3307,7 +3307,7 @@ MF
 31 33 WR
 31 34 WR
 26 35 WR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 38
 MP
 TP
@@ -3387,7 +3387,7 @@ SO
 35 36 WR
 35 37 ST
 35 37 RF
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 14
 SO
 MP
@@ -3420,7 +3420,7 @@ TP
 4 10 WR
 11 12 UK
 11 13 UK
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 14
 MP
 MF
@@ -3452,7 +3452,7 @@ TF
 8 12 RD
 8 12 WR
 8 13 WR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 15
 SO
 SO
@@ -3486,7 +3486,7 @@ MP
 12 9 UK
 12 11 ST
 14 13 ST
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 93
 MF
 TP
@@ -3696,7 +3696,7 @@ MF
 84 90 WR
 84 91 WR
 84 92 WR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 94
 MF
 MP
@@ -3897,7 +3897,7 @@ MF
 90 91 IJ
 90 92 IJ
 90 93 RD
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 31
 SO
 MP
@@ -3968,7 +3968,7 @@ MP
 28 29 ST
 28 29 RF
 28 26 RD
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 55
 MP
 MF
@@ -4111,7 +4111,7 @@ SO
 52 53 WR
 52 54 ST
 52 54 RF
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 24
 MP
 MF
@@ -4165,7 +4165,7 @@ MF
 19 18 RF
 21 22 WR
 21 23 EX
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 39
 MP
 MF
@@ -4252,7 +4252,7 @@ MF
 33 35 WR
 33 36 WR
 37 38 WR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 20
 SO
 MP
@@ -4302,7 +4302,7 @@ SF
 16 18 EX
 16 19 WR
 15 19 RD
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 48
 MP
 MF
@@ -4411,7 +4411,7 @@ MF
 27 45 WR
 46 45 WR
 46 47 EX
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 69
 MF
 MP
@@ -4552,7 +4552,7 @@ MF
 66 60 UK
 66 67 RD
 66 68 RD
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 26
 MF
 MF
@@ -4614,7 +4614,7 @@ TF
 22 23 ST
 6 24 FR
 24 25 WR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 10
 MF
 TP
@@ -4637,7 +4637,7 @@ SO
 6 8 UK
 6 9 ST
 6 9 RF
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 16
 MP
 TP
@@ -4675,7 +4675,7 @@ SO
 13 14 WR
 12 15 ST
 12 15 RF
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 48
 MP
 TP
@@ -4796,7 +4796,7 @@ MF
 44 45 RD
 44 45 WR
 42 47 EX
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 21
 SO
 SO
@@ -4863,7 +4863,7 @@ MP
 20 18 WR
 20 16 ST
 20 16 RF
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 51
 MP
 MF
@@ -4978,7 +4978,7 @@ MF
 25 47 WR
 25 48 ST
 49 50 EX
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 22
 MP
 MF
@@ -5028,7 +5028,7 @@ MP
 17 20 FR
 20 19 UK
 20 21 IJ
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 75
 SO
 SO
@@ -5191,7 +5191,7 @@ MF
 69 71 RF
 73 72 WR
 73 74 WR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 14
 MF
 MP
@@ -5223,7 +5223,7 @@ MF
 11 12 RD
 11 12 WR
 1 13 UK
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 30
 MF
 TP
@@ -5304,7 +5304,7 @@ SF
 26 28 WR
 26 29 RD
 26 29 WR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 94
 MF
 MP
@@ -5513,7 +5513,7 @@ MP
 89 90 WR
 91 90 WR
 92 93 UK
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 12
 MF
 MP
@@ -5546,7 +5546,7 @@ SF
 9 11 RD
 9 11 WR
 9 10 UK
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 17
 MP
 MF
@@ -5587,7 +5587,7 @@ MF
 15 13 EX
 15 14 RF
 15 16 WR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 56
 MF
 MP
@@ -5716,7 +5716,7 @@ SO
 47 53 RD
 47 54 WR
 47 55 ST
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 15
 MF
 MF
@@ -5750,7 +5750,7 @@ MF
 11 12 WR
 11 13 WR
 2 14 UK
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 62
 TP
 TP
@@ -5921,7 +5921,7 @@ TF
 56 59 WR
 9 60 FR
 9 61 WR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 43
 SO
 MF
@@ -6037,7 +6037,7 @@ TF
 40 41 FR
 41 42 RD
 41 42 WR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 16
 MP
 SO
@@ -6070,7 +6070,7 @@ MF
 12 13 EX
 12 14 WR
 12 15 EX
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 12
 MF
 MP
@@ -6099,7 +6099,7 @@ TP
 1 11 FR
 9 8 RD
 11 7 EX
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 43
 MP
 MF
@@ -6185,7 +6185,7 @@ MF
 38 36 WR
 7 41 WR
 7 42 EX
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 64
 TP
 MF
@@ -6343,7 +6343,7 @@ MF
 59 61 RF
 59 62 WR
 59 63 WR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 49
 SO
 MF
@@ -6475,7 +6475,7 @@ TF
 46 44 WR
 42 47 FR
 42 48 WR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 61
 MP
 MF
@@ -6598,7 +6598,7 @@ TP
 57 56 RD
 58 59 WR
 58 60 FR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 38
 SO
 MP
@@ -6691,7 +6691,7 @@ MF
 32 35 ST
 32 36 RF
 32 37 RD
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 29
 MP
 MF
@@ -6760,7 +6760,7 @@ TF
 21 26 WR
 21 27 WR
 21 28 WR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 41
 MP
 MF
@@ -6852,7 +6852,7 @@ MF
 36 38 WR
 36 39 WR
 29 40 WR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 14
 MF
 SO
@@ -6885,7 +6885,7 @@ MF
 10 11 WR
 10 12 WR
 2 13 UK
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 71
 SO
 MF
@@ -7051,7 +7051,7 @@ TP
 70 67 WR
 70 68 WR
 70 69 WR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 46
 TP
 SO
@@ -7173,7 +7173,7 @@ SF
 42 39 WR
 43 44 FR
 43 45 UK
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 29
 MF
 MP
@@ -7232,7 +7232,7 @@ SF
 16 26 WR
 16 28 RD
 16 28 WR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 25
 MP
 MF
@@ -7287,7 +7287,7 @@ MP
 20 23 FR
 24 22 UK
 24 23 IJ
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 42
 MP
 MF
@@ -7398,7 +7398,7 @@ MP
 37 39 WR
 37 40 RF
 37 41 FR
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 22
 MP
 MF
@@ -7450,7 +7450,7 @@ MP
 17 20 FR
 21 19 UK
 21 20 IJ
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 100
 MF
 MP
@@ -7650,7 +7650,7 @@ MF
 93 97 IJ
 93 98 IJ
 93 99 RD
-#D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtxt.txt\D:\APT攻击知识抽取\graph_rule_completion\99_train_graphtx.dot
+#D:\graph_rule_completion\99_train_graphtxt.txt\D:\graph_rule_completion\99_train_graphtx.dot
 69
 MF
 MF
