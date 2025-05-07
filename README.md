@@ -33,14 +33,14 @@ python ner/run_entity.py \
 	--context_window 300 \
 	--task CTI \
 	--data_dir ner/dataset \
-	--model ner/allenai/enscibert_scivocab_uncased \
+	--model enscibert_scivocab_uncased \
 	--output_dir ner/dataset/output-en-test
 ```
 
 #### predict_ners
 
 ```shell
-python ner/predict_ner.py --task CTI --data_txt_dir ner/test_CTI --sentence_window 8 --data_dir ner/test_result/test_ner.json --output_dir ner/dataset/output-en-test --model ner/allenai/enscibert_scivocab_uncased --context_window 300 --test_pred_filename ner/test_result/test_ner_result.json
+python ner/predict_ner.py --task CTI --data_txt_dir ner/test_CTI --sentence_window 8 --data_dir ner/test_result/test_ner.json --output_dir ner/dataset/output-en-test --model enscibert_scivocab_uncased --context_window 300 --test_pred_filename ner/test_result/test_ner_result.json
 ```
 
 ####  ner2re
