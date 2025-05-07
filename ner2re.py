@@ -12,11 +12,9 @@ def calculate_sentence(start, data):
         for k in range(len(data["sentences"])):
             sum_len += len(data["sentences"][k])
             if start < sum_len:
-                # print(str(start)+"的句子是"+str(k))
                 return k
 
 def get_document_ner(data_js, w_s):
-    # 切分不同文章
     new_entity_js = []
     title_list = []
     data_txt_dict = {}
@@ -30,14 +28,13 @@ def get_document_ner(data_js, w_s):
 
     for k, v in data_txt_dict.items():
         if "-" in v[0]["doc_key"] and int(v[-1]["doc_key"].rsplit("-", 1)[1]) != len(v) - 1:
-            # if data_js_new2[-1]["window"] != len(data_js_new2)-1:
-            print(str(k) + "发现异常")  # 处理某些窗口被删除的异常
+            print(str(k) + "find error")
             continue
         else:
             new_data = dict()
             sentences = []
             win_id = 0
-            # 处理句子
+
             for win in v:
                 if win_id == 0:
                     for sent in win["sentences"]:
@@ -46,14 +43,13 @@ def get_document_ner(data_js, w_s):
                     sentences.append(win["sentences"][w_s - 1])
                 win_id += 1
             new_data["doc_key"] = k
-            print(new_data["doc_key"])
             new_data["sentences"] = sentences
             new_data["ner"] = [[] for i in range(len(sentences))]
-            # 处理实体的坐标
+ 
             win_id = 0
             sum_ner = []
             for win in v:
-                if win_id == 0:  # 第一个窗口内的实体坐标不需处理
+                if win_id == 0:
                     for sent_ner in win["predicted_ner"]:
                         for ner in sent_ner:
                             sum_ner.append(ner)
@@ -69,12 +65,12 @@ def get_document_ner(data_js, w_s):
                             new_ner = [ner_h] + [ner_t] + [ner[2]] + [ner[3]]
                             sum_ner.append(new_ner)
                 win_id += 1
-            # 得到整篇文章的token
+
             sum_sentence = []
             for sent in sentences:
                 for word in sent:
                     sum_sentence.append(word)
-            # 得到实体的span
+
             for ner in sum_ner:
                 ner_span = ""
                 for i in range(ner[0], ner[1] + 1):
@@ -83,7 +79,6 @@ def get_document_ner(data_js, w_s):
                         ner_span += ' '
                 ner.append(ner_span)
 
-            # 把实体按照h的坐标放入正确的句子里
             for ner in sum_ner:
                 new_data["ner"][calculate_sentence(ner[0], new_data)].append(ner)
 
@@ -131,14 +126,13 @@ def choose_ner(ner_js, final_path):
     return final_sum_js
 
 
-def give_window(x, y):  # 其中，x是步长，y是句子的个数
+def give_window(x, y):
     window_list = []
     if y < x - 1:
         small_list = []
         for x2 in range(0, y+1):
             small_list.append(x2)
         window_list.append(small_list)
-        # print("window_list", window_list)
     else:
         for i2 in range(0, y - x + 2):
             small_list = []
@@ -153,7 +147,7 @@ def get_sentence_length(list):
         sentence_len[sentence] = len(list[sentence])
     return sentence_len
 
-def calculate_sentence2(x,dic):#计算类似0、1、2的句子长度之和
+def calculate_sentence2(x,dic):
     merge = 0
     for i in range(0,x):
         merge += dic[i]
@@ -162,11 +156,7 @@ def calculate_sentence2(x,dic):#计算类似0、1、2的句子长度之和
 def window_qiefen(final_ner_js, w_s):
     win_sum_js = []
     for i in range(0, len(final_ner_js)):
-        len_1 = len(final_ner_js[i]["sentences"])  # 句子总数
-        # if len_1 <= w_s:
-        #     final_ner_js[i]["doc_key"] = final_ner_js[i]["doc_key"] + "-" + str(0)
-        #     win_sum_js.append(final_ner_js[i])
-        #     continue
+        len_1 = len(final_ner_js[i]["sentences"])
         new_list = give_window(w_s, len_1 - 1)
         i1 = 0
         for list1 in new_list:
@@ -191,7 +181,6 @@ def window_qiefen(final_ner_js, w_s):
                     entity1[1] -= before_length
                     entity_small.append(entity1)
                 new_json["ner"].append(entity_small)
-
 
             win_sum_js.append(new_json)
 
@@ -275,17 +264,13 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    # ner_result_path = r"E:\CTI_to_ASG\TTP_test\TTP_test_result.json"
-    # final_ner_result_path = r"E:\CTI_to_ASG\TTP_test\TTP_test_ner_result.json"
-    # re_data_path = r"E:\CTI_to_ASG\TTP_test\TTP_test_to_predict_re.json"
     win_data_js = read(args.data_ner_result)
     win_size = args.sentence_window
-    # 切分文章
+
     new_js= get_document_ner(win_data_js, win_size)
-    # print(new_js)
+
     final_ner_js = choose_ner(new_js, args.data_final_ner_result)
 
-    # 窗口划分
     win_final_ner_js = window_qiefen(final_ner_js, win_size)
-    # 关系数据集构建
+
     make_ner2re_data(args.data_re, win_final_ner_js)
