@@ -44,8 +44,8 @@ def change_ner(ner, js, sent):
 
 if __name__ == "__main__":
 
-    json_path = r'D:\APT攻击知识抽取\data_label\github\train.json'
-    data_path = r"D:\APT攻击知识抽取\data_label\github\train_annotated.json"
+    json_path = ""    # sciERC
+    data_path = ""    # DocRED
     f = open(data_path, 'w', encoding='utf-8')
     data_js = read(json_path)
 
