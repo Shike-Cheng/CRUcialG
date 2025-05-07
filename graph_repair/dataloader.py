@@ -1,7 +1,4 @@
 #coding=utf-8
-"""
-Anonymous author
-"""
 
 import numpy as np
 import networkx as nx
@@ -52,51 +49,29 @@ class PretrainZinkDataset(Dataset):
     def __len__(self):
         return self.n_molecule
 
-    def __getitem__(self, idx):#自定义的索引方法，用于获取数据集中指定索引位置的数据样本。
-        # print("idx")
-        # print(idx)
-        node_feature_copy = self.node_features[idx].copy() #(N)从 self.node_features 中复制指定索引 idx 处的节点特征数据，并将其存储在 node_feature_copy 中。
-        # print("node_feature_copy") #100
-        # print(node_feature_copy.size)
-        adj_feature_copy = self.adj_features[idx].copy().astype(np.float32) #(3, N, N)从 self.adj_features 中复制指定索引 idx 处的邻接特征数据，并将其存储在 adj_feature_copy 中。adj_feature_copy 的形状为 (3, N, N)，其中 3 表示邻接特征的类型数量，N 表示图中的节点数量
-        # print("adj_feature")
-        # print(adj_feature_copy.size) # 11，100，100
-        mol_size = self.mol_sizes[idx]#获取指定索引 idx 处的分子大小（图中的节点数量）。
-        # print("mol_size")
-        # print(mol_size)
+    def __getitem__(self, idx):
 
-        # get permutation and bfs
-        pure_adj = np.sum(adj_feature_copy, axis=0)[:mol_size, :mol_size] #(mol_size, mol_size)对 adj_feature_copy 沿着第一个维度求和，得到一个形状为 (molsize, molsize) 的纯邻接矩阵
-        # print("pure_adj")
-        # print(pure_adj.shape)
-        local_perm = np.random.permutation(mol_size) #(first perm graph)生成一个 mol_size 大小的随机排列数组 local_perm，用于对节点进行重新排序。
-        adj_perm = pure_adj[np.ix_(local_perm, local_perm)]#根据 local_perm 对 pure_adj 进行重新排序，得到重新排列的邻接矩阵 adj_perm。np.ix_笛卡尔积
-        adj_perm_matrix = np.asmatrix(adj_perm)#二维数组（或矩阵）转换为NumPy矩阵对象。
-        G = nx.from_numpy_matrix(adj_perm_matrix)#根据邻接矩阵生成无向图
+        node_feature_copy = self.node_features[idx].copy()
+        adj_feature_copy = self.adj_features[idx].copy().astype(np.float32)
+        mol_size = self.mol_sizes[idx]
+        pure_adj = np.sum(adj_feature_copy, axis=0)[:mol_size, :mol_size]
 
-        start_idx = np.random.randint(adj_perm.shape[0]) # operated on permed graph
-        # print(start_idx)
-        bfs_perm = np.array(bfs_seq(G, start_idx)) # get a bfs order of permed graph 基于重新排列的邻接矩阵 adj_perm 和起始节点索引 start_idx，获取 BFS（广度优先搜索）顺序的节点索引数组 bfs_perm。
-        # print(bfs_perm)
-        bfs_perm_origin = local_perm[bfs_perm] #根据 local_perm 重新映射 bfs_perm，得到原始图中的 BFS 排序节点索引数组 bfs_perm_origin。
-        # print(type(bfs_perm_origin))
-        # print(len(bfs_perm_origin))
+        local_perm = np.random.permutation(mol_size)
+        adj_perm = pure_adj[np.ix_(local_perm, local_perm)]
+        adj_perm_matrix = np.asmatrix(adj_perm)
+        G = nx.from_numpy_matrix(adj_perm_matrix)
+
+        start_idx = np.random.randint(adj_perm.shape[0])
+        bfs_perm = np.array(bfs_seq(G, start_idx))
+        bfs_perm_origin = local_perm[bfs_perm]
         if len(bfs_perm_origin) < mol_size:
             bfs_perm_origin = np.arange(mol_size)
-        bfs_perm_origin = np.concatenate([bfs_perm_origin, np.arange(mol_size, self.max_size)]) #将 bfs_perm_origin 和范围从 mol_size 到 self.max_size 的索引数组进行连接，以获得完整图中的节点索引。
-        # print(bfs_perm_origin) #一个排序序列
-        # print(len(bfs_perm_origin))#100
-        node_feature_copy = node_feature_copy[np.ix_(bfs_perm_origin)] #(N)根据 bfs_perm_origin 对 node_feature_copy 进行重新排序，以获得重新排列后的节点特征数据。
-        perm_index = np.ix_(bfs_perm_origin, bfs_perm_origin) #基于 bfs_perm_origin 创建一个索引元组 perm_index，用于对邻接特征进行重新排列。
-        # print(perm_index)
-        # print(len(perm_index[0]))#100
-        # print(len(perm_index[1]))#1
-        # for i in range(3):
+        bfs_perm_origin = np.concatenate([bfs_perm_origin, np.arange(mol_size, self.max_size)])
+        node_feature_copy = node_feature_copy[np.ix_(bfs_perm_origin)]
+        perm_index = np.ix_(bfs_perm_origin, bfs_perm_origin)
+
         for i in range(9):
-            # print("adj_feature_copy.size()")
-            # print(adj_feature_copy[i].shape)
-            # print(adj_feature_copy[i][perm_index].shape)
-            adj_feature_copy[i] = adj_feature_copy[i][perm_index] #对 adj_feature_copy 中的每个邻接特征类型进行索引操作，根据 perm_index 对其进行重新排序。
+            adj_feature_copy[i] = adj_feature_copy[i][perm_index]
 
         
         node_feature = np.zeros((self.max_size, self.node_dim), dtype=np.float32) # (N,10)
@@ -105,7 +80,7 @@ class PretrainZinkDataset(Dataset):
             node_feature[i, index] = 1.
         node_feature = node_feature[:, :-1] #(N, 9)
         adj_feature = np.concatenate([adj_feature_copy, 1 - np.sum(adj_feature_copy, axis=0, keepdims=True)], axis=0).astype(np.float32) # (4, N, N)
-        # for i in range(4):
+
         for i in range(10):
             adj_feature[i] += np.eye(self.max_size) # self connection is added for each slice. Note that we do not model the diagonal part in flow.
             # this operation will make the diagonal of 4-th slices become 2. But we neither use diagonal of 4-th in gcn nor use it in flow update.
