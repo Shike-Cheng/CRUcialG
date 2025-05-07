@@ -1,12 +1,6 @@
 # !/usr/bin/env python
 # -*-coding:utf-8 -*-
 
-"""
-# File       : logging.py
-# Time       ：2023/6/7 10:18
-# Author     ：Qixuan Yuan
-# Description：
-"""
 import sys
 import os
 import sys
@@ -36,21 +30,5 @@ def make_print_to_file(path='./'):
     fileName = datetime.datetime.now().strftime('day' + '%Y_%m_%d')
     sys.stdout = Logger(fileName + '.log', path=path)
 
-    #############################################################
-    # 这里输出之后的所有的输出的print 内容即将写入日志
-    #############################################################
-    print(fileName.center(60, '*'))
-
-
 if __name__ == '__main__':
     make_print_to_file(path='./')
-
-    #############################################################
-    # 这里输出之后的所有的输出的print 内容即将写入日志
-    #############################################################
-    print("1234124")
-    print("--")
-    print(":;;;")
-    print("")
-    print("阿斯顿发11111111111111111")
-    print("zzzzz")
