@@ -1,16 +1,6 @@
 # !/usr/bin/env python
 # -*-coding:utf-8 -*-
 
-"""
-# File       : model_CTI.py
-# Time       ：2023/7/5 21:08
-# Author     ：Qixuan Yuan
-# Description：
-"""
-# coding=utf-8
-"""
-Anonymous author
-"""
 import os
 import sys
 import numpy as np
@@ -59,7 +49,7 @@ class GraphFlowModel(nn.Module):
         if self.node_masks is None:
             self.node_masks, self.adj_masks, \
             self.link_prediction_index, self.flow_core_edge_masks = self.initialize_masks(max_node_unroll=self.max_size,
-                                                                                          max_edge_unroll=self.edge_unroll)     # 初始化mask
+                                                                                          max_edge_unroll=self.edge_unroll)
 
         self.latent_step = self.node_masks.size(
             0)  # (max_size) + (max_edge_unroll - 1) / 2 * max_edge_unroll + (max_size - max_edge_unroll) * max_edge_unroll
@@ -180,7 +170,7 @@ class GraphFlowModel(nn.Module):
 
         # if in_baseline is not None:
         #    in_baseline = torch.Tensor(in_baseline).float().cuda()
-        reward_baseline = torch.zeros([max_size_rl + 5, 2]).cuda() #这个维度不确定要不要改
+        reward_baseline = torch.zeros([max_size_rl + 5, 2]).cuda()
         # reward_baseline[:, 0] += 1. #TODO: make sure all element in [:,0] is none zero
 
         max_action_size = 25 * \
@@ -219,7 +209,7 @@ class GraphFlowModel(nn.Module):
                 cur_node_features = torch.zeros([1, max_size_rl, self.node_dim]).cuda()
                 cur_adj_features = torch.zeros([1, self.bond_dim, max_size_rl, max_size_rl]).cuda()
 
-                # rw_mol = Chem.RWMol()  # editable mol 可编辑mol
+                # rw_mol = Chem.RWMol()
                 mol = None
                 # mol_size = mol.GetNumAtoms()
 
@@ -273,7 +263,7 @@ class GraphFlowModel(nn.Module):
                     # print(num2symbol[feature_id])
                     cur_node_features[0, i, feature_id] = 1.0
                     cur_adj_features[0, :, i, i] = 1.0
-                    # rw_mol.AddAtom(Chem.Atom(num2atom[feature_id])) #加入新节点
+                    # rw_mol.AddAtom(Chem.Atom(num2atom[feature_id]))
 
                     # then generate edges
                     if i == 0:
@@ -397,7 +387,7 @@ class GraphFlowModel(nn.Module):
                 #    print('generating %d-th molecule done!' % batch_length)
                 batch_length += 1
                 # print('generating %d-th molecule with %d atoms' % (batch_length, num_atoms))
-                #看到这里
+
                 if num_atoms < max_size_rl:
                     # ! this implementation is buggy. we only mask the last node feature cont
                     # ! But we ignore the non-zero node features in generating edges
@@ -828,50 +818,48 @@ class GraphFlowModel(nn.Module):
 
     def rule_check(self, i,j2,edge_list, cur_adj_features):
         reasonal_list = [[1,3,1],[1,4,1],[1,5,1],[2,3,1],[2,4,1],[2,5,1],[1,3,2],[1,4,2],[1,5,2],[2,3,2],[2,4,2],[2,5,2],[1,3,3],[1,4,3],[1,5,3],[2,3,3],[2,4,3],[2,5,3],[1,3,4],[1,4,4],[1,5,4],[2,3,4],[2,4,4],[2,5,4],[1,1,4],[2,2,4],[1,2,4],[2,1,4],[1,3,5],[1,4,5],[1,5,5],[2,3,5],[2,4,5],[2,5,5],[1,1,6],[2,2,6],[2,1,6],[1,2,6],[1,1,7],[2,2,7],[2,1,7],[1,2,7],[1,6,8],[2,6,8],[6,1,9],[6,2,9],[3,1,1],[4,1,1],[5,1,1],[3,2,1],[4,2,1],[5,2,1],[3,1,2],[4,1,2],[5,1,2],[3,2,2],[4,2,2],[5,2,2],[3,1,3],[4,1,3],[5,1,3],[3,2,3],[4,2,3],[5,2,3],[3,1,4],[4,1,4],[5,1,4],[3,2,4],[4,2,4],[5,2,4],[3,1,5],[4,1,5],[5,1,5],[3,2,5],[4,2,5],[5,2,5],[6,1,8],[6,2,8],[1,6,9],[2,6,9]]
-        #生成的规则性判断
+
         file_list = [3,4,5]
         process_list = [1,2]
         socket_list = [6]
         file_action = [1,2,3,4,5]
         process_action = [1,2,3,4,5,6,7,8,9]
         flag = True
-        #首先进行最基础的实体关系逻辑性判断，如果不符合，直接置为false
         if edge_list not in reasonal_list:
             flag = False
-        #规则1 文件在被删后，无法被进行任何操作
+
         if ((edge_list[0] in file_list) or (edge_list[1] in file_list)) and (edge_list[2] in file_action) :
-            if edge_list[0] in file_list:#获取这个文件节点的id
+            if edge_list[0] in file_list:
                 file_node = i
             else:
                 file_node = j2
-            for i1 in range(0,self.max_size):#判断如果曾经有unlink关系
+            for i1 in range(0,self.max_size):
                 if cur_adj_features[0,3,file_node,i1] == 1.0:
                     flag = False
-        #规则3 进程在被删后，无法被进行任何操作
-        #规则5 进程在被删后，无法主动进行任何操作
-        if ((edge_list[0] in process_list) != (edge_list[1] in process_list)) and (edge_list[2] in process_action) : #只有包含一个P
-            if edge_list[0] in process_list:#获取这个文件节点的id
+
+        if ((edge_list[0] in process_list) != (edge_list[1] in process_list)) and (edge_list[2] in process_action) :
+            if edge_list[0] in process_list:
                 p_node = i
             else:
                 p_node = j2
-            for i1 in range(0,self.max_size):#判断如果曾经有unlink关系
+            for i1 in range(0,self.max_size):
                 if cur_adj_features[0,3,p_node,i1] == 1.0:
                     flag = False
-        if ((edge_list[0] in process_list) and (edge_list[1] in process_list)) and (edge_list[2] in process_action) : #包含两个P
+        if ((edge_list[0] in process_list) and (edge_list[1] in process_list)) and (edge_list[2] in process_action) :
             p_node_1 = i
             p_node_2 = j2
-            for i1 in range(0,self.max_size):#判断如果曾经有unlink关系
+            for i1 in range(0,self.max_size):
                 if cur_adj_features[0,3,p_node_1,i1] == 1.0 or cur_adj_features[0,3,p_node_2,i1] == 1.0:
                     flag = False
-        #规则2 如果进程之前已经主动发起某种操作，后续就不存在对它的fork操作
-        if ((edge_list[0] in process_list) and (edge_list[1] in process_list)) and (edge_list[2]==6):  # 包含两个P
+
+        if ((edge_list[0] in process_list) and (edge_list[1] in process_list)) and (edge_list[2]==6):
             p_node = i
             for i1 in range(0,self.max_size):
                 for i2 in process_action:
                     if cur_adj_features[0,i2-1,p_node,i1] == 1.0:
                         flag = False
-        #规则6 子进程无法操作主进程
-        if ((edge_list[0] in process_list) and (edge_list[1] in process_list)) and (edge_list[2] in process_action):  # 包含两个P
+
+        if ((edge_list[0] in process_list) and (edge_list[1] in process_list)) and (edge_list[2] in process_action):
             p_node_1 = i
             p_node_2 = j2
             for i1 in range(0,self.max_size):
@@ -879,15 +867,14 @@ class GraphFlowModel(nn.Module):
                     flag = False
         return flag
 
-    def generate(self, temperature=0.75, mute=False, max_atoms=48, cnt=None):  # 使用flow生成molecule
+    def generate(self, temperature=0.75, mute=False, max_atoms=48, cnt=None):
         """
         inverse flow to generate molecule
         Args:
             temp: temperature of normal distributions, we sample from (0, temp^2 * I)
         """
-        ##它通过学习一个映射函数，将来自某个随机分布的样本映射到目标分布中的样本。temp生成分子的多样性程度。较高的温度会产生更多变化的分子，而较低的温度会产生更一致的分子。
         generate_start_t = time()
-        with torch.no_grad():  # 所有计算得出的tensor的requires_grad都自动设置为False。
+        with torch.no_grad():
             # num2bond = {0: Chem.rdchem.BondType.SINGLE, 1: Chem.rdchem.BondType.DOUBLE, 2: Chem.rdchem.BondType.TRIPLE}
             # num2bond_symbol = {0: '=', 1: '==', 2: '==='}
             # # [6, 7, 8, 9, 15, 16, 17, 35, 53, 0]
@@ -900,21 +887,20 @@ class GraphFlowModel(nn.Module):
             reasonal_list_right = [[1,3,1],[1,4,1],[1,5,1],[2,3,1],[2,4,1],[2,5,1],[1,3,2],[1,4,2],[1,5,2],[2,3,2],[2,4,2],[2,5,2],[1,3,3],[1,4,3],[1,5,3],[2,3,3],[2,4,3],[2,5,3],[1,3,4],[1,4,4],[1,5,4],[2,3,4],[2,4,4],[2,5,4],[1,1,4],[2,2,4],[1,2,4],[2,1,4],[1,3,5],[1,4,5],[1,5,5],[2,3,5],[2,4,5],[2,5,5],[1,1,6],[2,2,6],[2,1,6],[1,2,6],[1,1,7],[2,2,7],[2,1,7],[1,2,7],[1,6,8],[2,6,8],[6,1,9],[6,2,9]]
             reasonal_list_reverse = [[3,1,1],[4,1,1],[5,1,1],[3,2,1],[4,2,1],[5,2,1],[3,1,2],[4,1,2],[5,1,2],[3,2,2],[4,2,2],[5,2,2],[3,1,3],[4,1,3],[5,1,3],[3,2,3],[4,2,3],[5,2,3],[3,1,4],[4,1,4],[5,1,4],[3,2,4],[4,2,4],[5,2,4],[3,1,5],[4,1,5],[5,1,5],[3,2,5],[4,2,5],[5,2,5],[6,1,8],[6,2,8],[1,6,9],[2,6,9]]
             prior_node_dist = torch.distributions.normal.Normal(torch.zeros([self.node_dim]).cuda(),
-                                                                temperature * torch.ones([self.node_dim]).cuda())  # 创建了一个正态分布对象，其均值为零，标准差为temperature。这个正态分布被用作生成化学图中节点特征的先验分布。
+                                                                temperature * torch.ones([self.node_dim]).cuda())
             prior_edge_dist = torch.distributions.normal.Normal(torch.zeros([self.bond_dim]).cuda(),
-                                                                temperature * torch.ones([self.bond_dim]).cuda())  # 创建了一个正态分布对象，其均值为零，标准差为temperature。这个正态分布被用作生成化学图中边特征的先验分布。
+                                                                temperature * torch.ones([self.bond_dim]).cuda())
 
-            cur_node_features = torch.zeros([1, max_atoms, self.node_dim]).cuda()  # 1，最大atmos数，节点维度
-            cur_adj_features = torch.zeros([1, self.bond_dim, max_atoms, max_atoms]).cuda()  # 1，边的维度，最大atmos数，最大atmos数
+            cur_node_features = torch.zeros([1, max_atoms, self.node_dim]).cuda()
+            cur_adj_features = torch.zeros([1, self.bond_dim, max_atoms, max_atoms]).cuda()
 
-            # rw_mol = Chem.RWMol()  # editable mol 创建了一个"可写入分子"（Read-Write Molecule，简称RWMol）的对象。(改,已注释)
             original_graph = ""
             mol = None
             # mol_size = mol.GetNumAtoms()
 
             is_continue = True
             total_resample = 0
-            each_node_resample = np.zeros([max_atoms])  # 这个数组将用于存储每个节点的重新采样标记。
+            each_node_resample = np.zeros([max_atoms])
             node_cnt = 0
             edge_cnt = 0
             for i in range(max_atoms):
@@ -928,116 +914,92 @@ class GraphFlowModel(nn.Module):
                     edge_total = self.edge_unroll
                     start = i - self.edge_unroll
 
-                # 首先生成节点
-                ## reverse flow
-                #强行要求第一个节点为MP
                 if i == 0:
                     cur_node_features[0,0,0] =1.0
                     feature_id = 0
                     original_graph = original_graph + " *" + num2atom[0]
                     node_cnt += 1
                 else:
-                    latent_node = prior_node_dist.sample().view(1,-1)  # (1, 9) 从先验分布 prior_node_dist 中采样一个样本，并将其形状转换为 (1, 9)。
-                    if self.dp:  # 当gpus》1时，dp为true
-                        latent_node = self.flow_core.module.reverse(cur_node_features, cur_adj_features,latent_node, mode=0).view(-1)  # (9, )#通过逆流模型（self.flow_core.module）将输入的节点特征、邻接特征和潜在节点（latent_node）进行反向转换，并将其形状转换为 (9,)。
+                    latent_node = prior_node_dist.sample().view(1,-1)
+                    if self.dp:
+                        latent_node = self.flow_core.module.reverse(cur_node_features, cur_adj_features,latent_node, mode=0).view(-1)
                     else:
-                        latent_node = self.flow_core.reverse(cur_node_features, cur_adj_features,latent_node, mode=0).view(-1)  # (9, )
+                        latent_node = self.flow_core.reverse(cur_node_features, cur_adj_features,latent_node, mode=0).view(-1)
                     ## node/adj postprocessing
                     # print(latent_node.shape) #(38, 9)
-                    feature_id = torch.argmax(latent_node).item()  # 取最大概率的特征
+                    feature_id = torch.argmax(latent_node).item()
                     # print(latent_node.size())#torch.Size([6])
                     # print(num2symbol[feature_id])
-                    cur_node_features[0, i, feature_id] = 1.0  # 修改node特征值
-                    # cur_adj_features[0, :, i, i] = 1.0  # 置邻接矩阵中两个节点的值为1,这个对训练会有影响吗？
-                    # rw_mol.AddAtom(Chem.Atom(num2atom[feature_id]))  # 向rw_mol添加原子（改，已注释）
+                    cur_node_features[0, i, feature_id] = 1.0
+                    # cur_adj_features[0, :, i, i] = 1.0
+                    # rw_mol.AddAtom(Chem.Atom(num2atom[feature_id]))
                     original_graph = original_graph + " *" +num2atom[feature_id]
                     node_cnt += 1
-                # print("生成第"+str(i)+"个节点"+num2atom[feature_id])
-                # 然后生成边
-                # then generate edges
-                # 判断一下是不是已经connect了
-                if i == 0:#如果此时只有1个节点 那肯定已经connect了
+
+                if i == 0:
                     is_connect = True
                 else:
                     is_connect = False
                 # cur_mol_size = mol.GetNumAtoms
 
-                for j in range(edge_total):  # edge to sample for current node 深度优先搜索算出来的那玩意 应该是12  这个循环是在考虑当前生成的节点与之前某个节点的边关系
+                for j in range(edge_total):
                     # print("edge_total "+str(edge_total))
                     valid = False
                     resample_edge = 0
                     invalid_bond_type_set = set()
-                    while not valid: #这个循环里是在考虑一条边
+                    while not valid:
                         # TODO: add cache. Some atom can not get the right edge type and is stuck in the loop
                         # TODO: add cache. invalid bond set
-                        #根据逆流模型获得两个节点之间可能的边类型
+
                         if len(invalid_bond_type_set) < 9 and resample_edge <= 100:  # haven't sampled all possible bond type or is not stuck in the loop
-                            latent_edge = prior_edge_dist.sample().view(1,-1)  # (1, 4) 从先验分布 prior_edge_dist 中采样一个样本，并将其形状转换为 (1, 4)。
+                            latent_edge = prior_edge_dist.sample().view(1,-1)
                             if self.dp:
-                                latent_edge = self.flow_core.module.reverse(cur_node_features, cur_adj_features,latent_edge,mode=1, edge_index=torch.Tensor([[j + start, i]]).long().cuda()).view(-1)  # (4, ) 使用逆流模型将输入的节点特征、邻接特征和潜在边进行反向转换，生成原始特征空间中的边表示，并将其形状转换为 (4,) 的一维张量。
+                                latent_edge = self.flow_core.module.reverse(cur_node_features, cur_adj_features,latent_edge,mode=1, edge_index=torch.Tensor([[j + start, i]]).long().cuda()).view(-1)
                             else:
                                 latent_edge = self.flow_core.reverse(cur_node_features, cur_adj_features, latent_edge,mode=1, edge_index=torch.Tensor([[j + start, i]]).long().cuda()).view(-1)  # (4, )
-                            edge_discrete_id = torch.argmax(latent_edge).item()  # 取最大概率的特征
+                            edge_discrete_id = torch.argmax(latent_edge).item()
                             if edge_discrete_id == 9:
-                                # 使用torch.argsort()对概率值张量排序，返回排序后的索引
                                 sorted_indices = torch.argsort(latent_edge, descending=True)
-                                # 获取第二大概率值的特征索引
+
                                 edge_discrete_id = sorted_indices[1].item()
-                            # print(latent_edge.size())#torch.Size([10])
-                            # print("此时预测出的边为" + num2bond[edge_discrete_id])
                         else:
                             # if not mute:
                             #     print('have tried all possible bond type, use virtual bond.')
                             assert resample_edge > 100 or len(invalid_bond_type_set) == 9
-                            edge_discrete_id = 9  # we have no choice but to choose not to add edge between (i, j+start) 在i和j+start之间不加节点了
-                            # print("重采样太多，直接设为9")
-                        #修改邻接矩阵的值
-                        # cur_adj_features[0, edge_discrete_id, i, j + start] = 1.0  # 修改邻接矩阵的值
-                        # cur_adj_features[0, edge_discrete_id, j + start, i] = 1.0  # 修改邻接矩阵的值
+                            edge_discrete_id = 9
 
-                        if edge_discrete_id == 9:  # 如果没有关系，valid就为true，不再继续生成
+                        if edge_discrete_id == 9:
                             valid = True
-                        else:  # single/double/triple bond
-                            # rw_mol.AddBond(i, j + start, num2bond[edge_discrete_id])  # 向rw_mol添加边(改，已注释)
-                            # original_graph = original_graph + " " +str(i) + " " + str(j+start) + " " + num2bond[edge_discrete_id]#已注释
+                        else:
                             edge_cnt += 1
-                            # print(cur_node_features.shape)
-                            #获得i和j+start号节点对应的节点类型
                             for x1 in range(0,6):
                                 if cur_node_features[0,i,x1] == 1:
                                     node1 = x1
                             for x2 in range(0,6):
                                 if cur_node_features[0,j+start,x2] == 1:
                                     node2 = x2
-                            #如果符合定义的节点间边类型
                             edge_list = [node1+1,node2+1,edge_discrete_id+1]
                             if edge_list in reasonal_list:
                                 check_flag = self.rule_check(i,j+start,edge_list,cur_adj_features)
                                 rechoose_cnt = 1
                                 while (not check_flag) and (rechoose_cnt != 9):
-                                    # print("不符合第二层规则检查，进行第"+str(rechoose_cnt)+"次重选边")
                                     rechoose_cnt += 1
                                     total_resample += 1.0
                                     each_node_resample[i] += 1.0
                                     resample_edge += 1.0
                                     invalid_bond_type_set.add(edge_discrete_id)
-                                    # 取得第二大和第三大的值的索引，k=2表示取两个最大值
                                     top_values, top_indices = torch.topk(latent_edge[:-1], k=9, largest=True)
-                                    # 取得第二大和第三大的值的索引
                                     edge_discrete_id = top_indices[rechoose_cnt-1].item()
-                                    # print("重选边类型为"+num2bond[edge_discrete_id])
-                                    # edge_discrete_id = torch.argmax(latent_edge).item()#改成在合理列表里并且取第二大特征的id
                                     edge_list[2] = edge_discrete_id+1
                                     check_flag = self.rule_check(i,j+start,edge_list,cur_adj_features)
-                                if check_flag == False:#试了各种类型的边都达不到要求，就改一些判断变量的值，最后改一下邻接矩阵的值，不用往数据集里写
-                                    edge_discrete_id = 9#就是没边
+                                if check_flag == False:
+                                    edge_discrete_id = 9
                                     edge_cnt -= 1
                                     valid = True
-                                    # is_connect = False
-                                else: #有边的，完全符合合理性判断
-                                    if ((" " + str(j+start) + " " + str(i) + " " + num2bond[edge_discrete_id]) or (" " + str(i) + " " + str(j+start) + " " + num2bond[edge_discrete_id])) not in (original_graph):#判断是否有重复边，有重复边就不再加边
+                                else:
+                                    if ((" " + str(j+start) + " " + str(i) + " " + num2bond[edge_discrete_id]) or (" " + str(i) + " " + str(j+start) + " " + num2bond[edge_discrete_id])) not in (original_graph):
                                         if ([node1+1,node2+1,edge_discrete_id+1]) in reasonal_list_right:
-                                            if ([node1+1,node2+1,edge_discrete_id+1] in [[1,1,6],[1,2,6],[2,1,6],[2,2,6],[1,1,4],[1,2,4],[2,1,4],[2,2,4],[1,1,7],[1,2,7],[2,1,7],[2,2,7]]) and (i > j+start): #合理，但是不满足关系的时序,已经解决规则4
+                                            if ([node1+1,node2+1,edge_discrete_id+1] in [[1,1,6],[1,2,6],[2,1,6],[2,2,6],[1,1,4],[1,2,4],[2,1,4],[2,2,4],[1,1,7],[1,2,7],[2,1,7],[2,2,7]]) and (i > j+start):
                                                 original_graph = original_graph + " " + str(j + start) + " " + str(i) + " " + num2bond[edge_discrete_id]
                                                 # print(str(j+start)+str(i))
                                             elif (j+start == 0) and (edge_discrete_id != 8):
@@ -1048,41 +1010,28 @@ class GraphFlowModel(nn.Module):
                                         elif ([node1+1,node2+1,edge_discrete_id+1]) in reasonal_list_reverse:
                                             original_graph = original_graph + " " + str(j+start) + " " + str(i) + " " + num2bond[edge_discrete_id]
                                     valid = True
-                                    is_connect = True  # 合理就连接了
-                                cur_adj_features[0, edge_discrete_id, i, j + start] = 1.0  # 修改邻接矩阵的值
-                                cur_adj_features[0, edge_discrete_id, j + start, i] = 1.0  # 修改邻接矩阵的值
-                            else:  # 关系不符合最初定义的基础不合理关系
+                                    is_connect = True
+                                cur_adj_features[0, edge_discrete_id, i, j + start] = 1.0
+                                cur_adj_features[0, edge_discrete_id, j + start, i] = 1.0
+                            else:
                                 edge_cnt -= 1
-                                # cur_adj_features[0, edge_discrete_id, i, j + start] = 0.0  # 修改邻接矩阵的值
-                                # cur_adj_features[0, edge_discrete_id, j + start, i] = 0.0  # 修改邻接矩阵的值
-                                total_resample += 1.0  # 重采样的值+1
-                                each_node_resample[i] += 1.0  # 记录这个被重采样的节点
-                                resample_edge += 1  # 重采样的值+1
-                                invalid_bond_type_set.add(edge_discrete_id)  # 无效边集合中加入该边对应的id
+                                # cur_adj_features[0, edge_discrete_id, i, j + start] = 0.0
+                                # cur_adj_features[0, edge_discrete_id, j + start, i] = 0.0
+                                total_resample += 1.0
+                                each_node_resample[i] += 1.0
+                                resample_edge += 1
+                                invalid_bond_type_set.add(edge_discrete_id)
 
                 if is_connect:  # new generated node has at least one bond with previous node, do not stop generation, backup mol from rw_mol to mol
                     is_continue = True
-                    # mol = rw_mol.GetMol()(已注释)
-                else:  # 如果新节点与之前的边并不连接，那也不用再继续了
+                else:
                     is_continue = False
 
             # mol = rw_mol.GetMol() # mol backup
             assert original_graph is not None, 'mol is None...'
 
-            # final_valid = check_valency(mol)
-            # final_valid = env.check_chemical_validity(mol)  # 最后又用化学包检查了一下化合物的有效性(已注释，可以在这加更多的限定规则)
             final_valid = True
             assert final_valid is True, 'warning: use valency check during generation but the final molecule is invalid!!!'
-
-            # final_mol = env.convert_radical_electrons_to_hydrogens(mol)  # 将分子中的自由基电子转换为氢原子（已注释）
-            # smiles = Chem.MolToSmiles(final_mol, isomericSmiles=True)  # 将最终的分子对象 final_mol 转换为 SMILES 表示法的字符串（已注释）
-            # assert '.' not in smiles, 'warning: use is_connect to check stop action, but the final molecule is disconnected!!!'（已注释，没有这种异常）
-
-            # final_mol = Chem.MolFromSmiles(smiles)
-
-            # mol = convert_radical_electrons_to_hydrogens(mol)
-            # num_atoms = final_mol.GetNumAtoms()（已注释，后面可再加入计算列表的）
-            # num_bonds = final_mol.GetNumBonds()
 
             pure_valid = 0
             if total_resample == 0:
@@ -1235,13 +1184,13 @@ class GraphFlowModel(nn.Module):
     def initialize_masks(self, max_node_unroll=38, max_edge_unroll=10):
         """
         Args:
-            max node unroll: maximal number of nodes in molecules to be generated (default: 38)   最大节点展开：要生成的分子中的最大节点数
-            max edge unroll: maximal number of edges to predict for each generated nodes (default: 12, calculated from zink250K data)   为每个生成的节点预测的最大边数
+            max node unroll: maximal number of nodes in molecules to be generated (default: 38)
+            max edge unroll: maximal number of edges to predict for each generated nodes (default: 12, calculated from zink250K data)
         Returns:
-            node_masks: node mask for each step   每个步骤的节点掩码
-            adj_masks: adjacency mask for each step   每个步骤的邻接掩码
-            is_node_update_mask: 1 indicate this step is for updating node features   1表示此步骤用于更新节点特性
-            flow_core_edge_mask: get the distributions we want to model in adjacency matrix    获取我们想要在邻接矩阵中建模的分布
+            node_masks: node mask for each step
+            adj_masks: adjacency mask for each step
+            is_node_update_mask: 1 indicate this step is for updating node features
+            flow_core_edge_mask: get the distributions we want to model in adjacency matrix
         """
         num_masks = int(
             max_node_unroll + (max_edge_unroll - 1) * max_edge_unroll / 2 + (max_node_unroll - max_edge_unroll) * (
@@ -1328,7 +1277,7 @@ class GraphFlowModel(nn.Module):
 
         return node_masks, adj_masks, link_prediction_index, flow_core_edge_masks
 
-    def log_prob(self, z, logdet, deq_logp=None, deq_logdet=None):#需要检查多元高斯分布的对数概率密度函数(log_prob)的公式。
+    def log_prob(self, z, logdet, deq_logp=None, deq_logdet=None):
 
         # TODO: check multivariate gaussian log_prob formula
         logdet[0] = logdet[
