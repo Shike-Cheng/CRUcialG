@@ -88,8 +88,7 @@ def batchify(samples, batch_size):
 
     for i in range(0, len(samples), batch_size):
         list_samples_batches.append(samples[i:i+batch_size])
-    # print("##################batchify#################")
-    # print(list_samples_batches)
+
     assert(sum([len(batch) for batch in list_samples_batches]) == num_samples)
 
     return list_samples_batches
@@ -134,8 +133,7 @@ def convert_dataset_to_samples(dataset, max_span_length, ner_label2id=None, cont
             }
             if context_window != 0 and len(sent.text) > context_window:
                 logger.info('Long sentence: {} {}'.format(sample, len(sent.text)))
-                # print('Exclude:', sample)
-                # continue
+
             sample['tokens'] = sent.text
             sample['sent_length'] = len(sent.text)
             sent_start = 0
@@ -158,7 +156,6 @@ def convert_dataset_to_samples(dataset, max_span_length, ner_label2id=None, cont
                     sent_end += len(context_to_add)
                     j -= 1
 
-                # add right context
                 j = i + 1
                 while j < len(doc) and add_right > 0:
                     context_to_add = doc[j].text[:add_right]
@@ -174,16 +171,12 @@ def convert_dataset_to_samples(dataset, max_span_length, ner_label2id=None, cont
             for ner in sent.ner:
                 sent_ner[ner.span.span_sent] = ner.label
 
-            # sent_ner_list = {}
             '''for ner, label in sent_ner.items():
                 ner_list = []
                 for n in range(ner[0], ner[1] + 1):
                     ner_list.append(n)
                 sent_ner_list[tuple(ner_list)] = label'''
 
-            #sample["sent_ner_list"] = sent_ner_list
-            #print(sent_ner_list)
-            #print(sent_ner)
 
             span2id = {}
             sample['spans'] = []
@@ -192,7 +185,7 @@ def convert_dataset_to_samples(dataset, max_span_length, ner_label2id=None, cont
                 for j in range(i, min(len(sent.text), i + max_span_length)):
                     sample['spans'].append((i + sent_start, j + sent_start, j - i + 1))
                     span2id[(i, j)] = len(sample['spans']) - 1
-                    # 放宽span限制
+
                     '''span_list = []
                     for s in range(i, j+1):
                         span_list.append(s)
@@ -209,10 +202,7 @@ def convert_dataset_to_samples(dataset, max_span_length, ner_label2id=None, cont
                         sample['spans_label'].append(0)
                     else:
                         sample['spans_label'].append(ner_label2id[sent_ner[(i, j)]])
-            # sent_ner_list = {}
-            # for spans_id in range(sample['spans_label'])
-            # print(len(sample['spans']), len(sample['spans_label']))
-            # print(sample)
+
             samples.append(sample)
     avg_length = sum([len(sample['tokens']) for sample in samples]) / len(samples)
     max_length = max([len(sample['tokens']) for sample in samples])
@@ -222,142 +212,6 @@ def convert_dataset_to_samples(dataset, max_span_length, ner_label2id=None, cont
     logger.info('Max Length: %d, max NER: %d' % (max_len, max_ner))
     return samples, num_ner
 
-
-
-'''def convert_dataset_to_samples(dataset, max_span_length, ner_label2id=None, context_window=0, split=0):
-    """
-    Extract sentences and gold entities from a dataset
-    """
-    # split: split the data into train and dev (for ACE04)
-    # split == 0: don't split
-    # split == 1: return first 90% (train)
-    # split == 2: return last 10% (dev)
-    samples = []
-    num_ner = 0
-    max_len = 0
-    max_ner = 0
-    num_overlap = 0
-    
-    if split == 0:
-        data_range = (0, len(dataset))
-    elif split == 1:
-        data_range = (0, int(len(dataset)*0.9))
-    elif split == 2:
-        data_range = (int(len(dataset)*0.9), len(dataset))
-
-    for c, doc in enumerate(dataset):
-        if c < data_range[0] or c >= data_range[1]:
-            continue
-        for i, sent in enumerate(doc):
-            # 这里面的sent是Document--self.sentences的形式
-            num_ner += len(sent.ner)
-            sample = {
-                'doc_key': doc._doc_key,
-                'sentence_ix': sent.sentence_ix,
-            }
-            # print("#################---convert_dataset_to_samples--sent---###############")
-            # print(sent)
-            # print(sent.ner)
-            # print(i)
-            # 这里sent.text是句子的token列表
-            if context_window != 0 and len(sent.text) > context_window:     # 这里判断句子的长度是否大于了窗口的大小
-                logger.info('Long sentence: {} {}'.format(sample, len(sent.text)))
-                # print('Exclude:', sample)
-                # continue
-            sample['tokens'] = sent.text
-            sample['sent_length'] = len(sent.text)
-            sent_start = 0
-            sent_end = len(sample['tokens'])
-
-            max_len = max(max_len, len(sent.text))    # 句子的token长度
-            max_ner = max(max_ner, len(sent.ner))     # 一个句子中实体的个数
-
-            if context_window > 0:   # 每个词左右窗口的大小
-                add_left = (context_window-len(sent.text)) // 2
-                add_right = (context_window-len(sent.text)) - add_left
-                
-                # add left context
-                j = i - 1
-                while j >= 0 and add_left > 0:
-                    context_to_add = doc[j].text[-add_left:]
-                    sample['tokens'] = context_to_add + sample['tokens']
-                    add_left -= len(context_to_add)
-                    sent_start += len(context_to_add)
-                    sent_end += len(context_to_add)
-                    j -= 1
-
-                # add right context
-                j = i + 1
-                while j < len(doc) and add_right > 0:
-                    context_to_add = doc[j].text[:add_right]
-                    sample['tokens'] = sample['tokens'] + context_to_add
-                    add_right -= len(context_to_add)
-                    j += 1
-
-            sample['sent_start'] = sent_start
-            sample['sent_end'] = sent_end
-            sample['sent_start_in_doc'] = sent.sentence_start
-            
-            sent_ner = {}
-            sent_ner1 = {}
-            sent_nner = []
-            # print("#################---convert_dataset_to_samples--sent.ner---###############")
-            # print(sent.ner)
-            for ner in sent.ner:
-                sent_ner2 = {}
-                for i in range(ner.span.span_sent[0], ner.span.span_sent[1]+1):
-                    for j in range(ner.span.span_sent[0], ner.span.span_sent[1]+1):
-                        if i <= j:
-                            sent_ner1[(i, j)] = ner.label
-                            sent_ner2[(i, j)] = ner_label2id[ner.label]
-                            # sent_nner[(i, j)] = ner.label
-                sent_nner.append(sent_ner2)
-
-                # print("#################---convert_dataset_to_samples--ner.span.span_sent---###############")
-                # print(ner.span.span_sent)
-                sent_ner[ner.span.span_sent] = ner.label
-            # print("#################---convert_dataset_to_samples--sent_ner---###############")
-            # print(sent_ner)
-            # print("#################---convert_dataset_to_samples--sent_nner---###############")
-            # print(sent_nner)
-            span2id = {}
-            sample['spans'] = []
-            sample['spans_label'] = []
-            # sample['same_ner'] = {}
-            span_id = 0
-            map_id = {}
-            for i in range(len(sent.text)):
-                for j in range(i, min(len(sent.text), i+max_span_length)):
-                    sample['spans'].append((i+sent_start, j+sent_start, j-i+1))
-                    span2id[(i, j)] = len(sample['spans'])-1
-                    # span_id += 1
-                    if (i, j) not in sent_ner:
-                        sample['spans_label'].append(0)
-                    else:
-                        sample['spans_label'].append(ner_label2id[sent_ner[(i, j)]])
-                    if (i, j) in sent_ner1:
-                        map_id[(i, j)] = span_id        # map_id是指(i, j)在sample['spans']的下标
-                    span_id += 1
-            # print("#################---convert_dataset_to_samples--map_id---###############")
-            # print(map_id)
-            sample['same_ner'] = {}
-            # print(sent_nner)
-            for same_la in sent_nner:
-                id_list = []
-                for k, v in same_la.items():
-                    n_label = v
-                    if k in map_id.keys():
-                        id_list.append(map_id[k])
-                sample['same_ner'][tuple(id_list)] = n_label
-            print(sample)
-            samples.append(sample)
-
-    avg_length = sum([len(sample['tokens']) for sample in samples]) / len(samples)
-    max_length = max([len(sample['tokens']) for sample in samples])
-    logger.info('# Overlap: %d'%num_overlap)
-    logger.info('Extracted %d samples from %d documents, with %d NER labels, %.3f avg input length, %d max length'%(len(samples), data_range[1]-data_range[0], num_ner, avg_length, max_length))
-    logger.info('Max Length: %d, max NER: %d'%(max_len, max_ner))
-    return samples, num_ner'''
 
 class NpEncoder(json.JSONEncoder):
     def default(self, obj):
