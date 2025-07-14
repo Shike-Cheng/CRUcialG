@@ -36,22 +36,17 @@ class Dataset:
         self.js = self._read(json_file, pred_file)
         if doc_range is not None:
             self.js = self.js[doc_range[0]:doc_range[1]]
-        # 总的数据集（一个总的列表）中的每一个文档进入Document
         self.documents = [Document(js) for js in self.js]
-        # self.documents是以0：xxxxx，1：xxxxx的形式记录doc
-        #print("#################---Dataset--self.documents---###############")
-        #print(self.documents)
+
 
     def update_from_js(self, js):
         self.js = js
         self.documents = [Document(js) for js in self.js]
 
     def _read(self, json_file, pred_file=None):
-        # 读取数据集的每一行数据变为一个总的列表
+
         gold_docs = [json.loads(line) for line in open(json_file)]
         if pred_file is None:
-            #print("#########################################################")
-            #print(gold_docs)
             return gold_docs
 
         pred_docs = [json.loads(line) for line in open(pred_file)]
@@ -76,22 +71,17 @@ class Dataset:
 class Document:
     def __init__(self, js):
         self._doc_key = js["doc_key"]
-        # 这里对数据集中每一行数据的形式做了一个转换：[{'sentences':[], 'ner':[], 'relations':[]}, {'sentences':[], 'ner':[], 'relations':[]}, ....]
         entries = fields_to_batches(js, ["doc_key", "clusters", "predicted_clusters", "section_starts", "window"])
-        #print("#################---Document--entries---###############")
-        #print(entries)
-        # sentence_lengths为一个文档中每个句子长度的列表
         sentence_lengths = [len(entry["sentences"]) for entry in entries]
         sentence_starts = np.cumsum(sentence_lengths)
         sentence_starts = np.roll(sentence_starts, 1)
         sentence_starts[0] = 0
         self.sentence_starts = sentence_starts
-        # 句子以及其所属的token
+
         self.sentences = [Sentence(entry, sentence_start, sentence_ix)
                           for sentence_ix, (entry, sentence_start)
                           in enumerate(zip(entries, sentence_starts))]
-        #print("#################---Document--self.sentences---###############")
-        #print(self.sentences)
+
         if "clusters" in js:
             self.clusters = [Cluster(entry, i, self)
                              for i, entry in enumerate(js["clusters"])]
@@ -253,7 +243,7 @@ class NER:
     def __init__(self, ner, text, sentence_start, flavor=None):
         self.span = Span(ner[0], ner[1], text, sentence_start)
         self.label = ner[2]
-        self.flavor = flavor     # 把ner的绝对位置转换为句内的相对位置
+        self.flavor = flavor
 
     def __repr__(self):
         return self.span.__repr__() + ": " + self.label
@@ -269,7 +259,7 @@ class Relation:
         start1, end1 = relation[0], relation[1]
         start2, end2 = relation[2], relation[3]
         label = relation[4]
-        span1 = Span(start1, end1, text, sentence_start)  # 这里关系的sub和obj都是相对位置
+        span1 = Span(start1, end1, text, sentence_start)
         span2 = Span(start2, end2, text, sentence_start)
         self.pair = (span1, span2)
         self.label = label
